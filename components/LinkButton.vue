@@ -1,5 +1,5 @@
 <template>
-  <a class="n-link-button px-5 py-3 rounded-lg text-white" :href="link">Link Button</a>
+  <a class="n-link-button px-5 py-3 rounded-lg text-white" :href="link">{{ label }}</a>
 </template>
 
 <script>

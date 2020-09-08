@@ -11,7 +11,7 @@
         <a href="#believe">acreditamos</a>
         <a href="#spaceship">espaço nave</a>
         <a href="#contact">contato</a>
-        <a href="#vacancies">vagas</a>
+        <link-button label="Vagas" link="#vacancies" />
       </nav>
     </div>
   </header>
