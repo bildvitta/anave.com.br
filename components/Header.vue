@@ -6,11 +6,12 @@
       </nuxt-link>
 
       <nav class="flex items-center justify-center md:ml-auto space-x-4">
-        <a data-scroll href="#bazinga">Sobre</a>
-        <a data-scroll href="#NossoTime">Nosso time</a>
-        <a data-scroll href="#Acreditamos">Acreditamos</a>
-        <a data-scroll href="#EspaçoNave">Espaço Nave</a>
-        <a data-scroll href="#Contato">Contato</a>
+        <a href="#about">sobre</a>
+        <a href="#Team">nosso time</a>
+        <a href="#believe">acreditamos</a>
+        <a href="#spaceship">espaço nave</a>
+        <a href="#contact">contato</a>
+        <a href="#vacancies">vagas</a>
       </nav>
     </div>
   </header>
