@@ -3,6 +3,10 @@ module.exports = {
     container: {
       center: true,
       padding: '1em'
+    },
+
+    fontFamily: {
+      montserrat: ['Montserrat', 'sans-serif']
     }
   },
 
