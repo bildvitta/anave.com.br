@@ -6,11 +6,11 @@
       </nuxt-link>
 
       <nav class="flex items-center justify-center md:ml-auto space-x-4">
-        <a href="#about">sobre</a>
-        <a href="#Team">nosso time</a>
-        <a href="#believe">acreditamos</a>
-        <a href="#spaceship">espaço nave</a>
-        <a href="#contact">contato</a>
+        <a class="duration-200 hover:text-nave-purple transition" href="#about">sobre</a>
+        <a class="duration-200 hover:text-nave-purple transition" href="#Team">nosso time</a>
+        <a class="duration-200 hover:text-nave-purple transition" href="#believe">acreditamos</a>
+        <a class="duration-200 hover:text-nave-purple transition" href="#spaceship">espaço nave</a>
+        <a class="duration-200 hover:text-nave-purple transition" href="#contact">contato</a>
         <link-button label="Vagas" link="#vacancies" />
       </nav>
     </div>
