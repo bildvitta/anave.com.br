@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="py-5">
     <div class="container flex flex-col flex-wrap items-center md:flex-row">
       <nuxt-link class="flex items-center mb-4 md:mb-0" to="/">
         Logo
