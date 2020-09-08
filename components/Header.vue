@@ -5,17 +5,21 @@
         Logo
       </nuxt-link>
 
-      <nav class="flex flex-wrap items-center justify-center md:ml-auto">
-        <n-nav-item class="mr-5" label="Sobre" to="/" />
-        <n-nav-item class="mr-5" label="Nosso time" to="/" />
-        <n-nav-item class="mr-5" label="Acreditamos" to="/" />
-        <n-nav-item class="mr-5" label="Espaço Nave" to="/" />
-        <n-nav-item class="mr-5" label="Contato" to="/" />
+      <nav class="flex items-center justify-center md:ml-auto space-x-4">
+        <a data-scroll href="#bazinga">Sobre</a>
+        <a data-scroll href="#NossoTime">Nosso time</a>
+        <a data-scroll href="#Acreditamos">Acreditamos</a>
+        <a data-scroll href="#EspaçoNave">Espaço Nave</a>
+        <a data-scroll href="#Contato">Contato</a>
       </nav>
     </div>
   </header>
 </template>
-
+<style>
+* { scroll-behavior: smooth; }
+</style>
 <script>
-export default {}
+export default {
+
+}
 </script>
