@@ -1,8 +1,13 @@
 <template>
-  <header class="py-5">
+  <header class="bg-white fixed header inset py-5 w-full z-10">
     <div class="container flex flex-col flex-wrap items-center md:flex-row">
       <nuxt-link class="flex items-center mb-4 md:mb-0" to="/">
-        Logo
+        <img alt="NAVE - Espaço Nave"
+             sizes="(max-width: 500px) 106px,
+                    212px"
+             src="~/assets/img/logo@2x.png" srcset="~/assets/img/logo@2x.png 500w,
+             ~/assets/img/logo.png 212w"
+        >
       </nuxt-link>
 
       <nav class="flex items-center justify-center md:ml-auto space-x-4">
