@@ -12,23 +12,11 @@ module.exports = {
 
     fontFamily: {
       montserrat: ['Montserrat', 'sans-serif']
-    },
-
-    screens: {
-      lg: { max: '1279px' },
-      // => @media (max-width: 1279px) { ... }
-
-      md: { max: '1023px' },
-      // => @media (max-width: 1023px) { ... }
-
-      sm: { max: '767px' }
-      // => @media (max-width: 639px) { ... }
     }
 
   },
 
   variants: {
-    display: ['responsive']
   },
 
   plugins: [],
