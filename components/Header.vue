@@ -10,12 +10,12 @@
         >
       </nuxt-link>
 
-      <nav class="flex items-center justify-center md:ml-auto space-x-4">
-        <a class="duration-200 hover:text-nave-purple transition" href="#about">sobre</a>
-        <a class="duration-200 hover:text-nave-purple transition" href="#Team">nosso time</a>
-        <a class="duration-200 hover:text-nave-purple transition" href="#believe">acreditamos</a>
-        <a class="duration-200 hover:text-nave-purple transition" href="#spaceship">espaço nave</a>
-        <a class="duration-200 hover:text-nave-purple transition" href="#contact">contato</a>
+      <nav class="flex items-center justify-center md:ml-auto">
+        <a class="duration-200 hover:text-nave-purple mr-10 transition" href="#about">sobre</a>
+        <a class="duration-200 hover:text-nave-purple mr-10 transition" href="#Team">nosso time</a>
+        <a class="duration-200 hover:text-nave-purple mr-10 transition" href="#believe">acreditamos</a>
+        <a class="duration-200 hover:text-nave-purple mr-10 transition" href="#spaceship">espaço nave</a>
+        <a class="duration-200 hover:text-nave-purple mr-10 transition" href="#contact">contato</a>
         <link-button label="Vagas" link="#vacancies" />
       </nav>
     </div>
