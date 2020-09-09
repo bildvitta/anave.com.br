@@ -1,11 +1,10 @@
 <template>
   <div>
-    <n-header />
+    <nave-header />
     <Nuxt />
   </div>
 </template>
 
 <script>
-export default {
-}
+export default {}
 </script>

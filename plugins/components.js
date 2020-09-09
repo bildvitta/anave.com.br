@@ -1,7 +1,7 @@
 import Vue from 'vue'
 
-import Header from '@/components/Header'
+import NaveHeader from '@/components/NaveHeader'
 import NavItem from '@/components/NavItem'
 
-Vue.component('n-header', Header)
+Vue.component('nave-header', NaveHeader)
 Vue.component('n-nav-item', NavItem)

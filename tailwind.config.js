@@ -5,7 +5,13 @@ module.exports = {
       padding: '1em'
     },
 
+    backgroundColor: theme => ({
+      ...theme('colors'),
+      primary: '#7F2BED'
+    }),
+
     gradientColorStops: theme => ({
+      ...theme('colors'),
       primary: '#7F2BED',
       secondary: '#401677',
       'primary-hover': '#8A46EA',
