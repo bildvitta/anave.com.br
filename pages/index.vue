@@ -1,5 +1,8 @@
 <template>
-  <div>
+  <main>
+    <section id="home" class="bg-white">
+      <home />
+    </section>
     <section id="about" class="bg-gray-600 py-24">
       <div class="container flex flex-col items-center md:flex-row">
         <h5>Sobre</h5>
@@ -48,7 +51,7 @@
         </p>
       </div>
     </section>
-  </div>
+  </main>
 </template>
 <script>
 
