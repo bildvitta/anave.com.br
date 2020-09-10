@@ -30,11 +30,16 @@ module.exports = {
         'purple-900': '#110721'
       },
 
+      letterSpacing: {
+        widest: '0.125em'
+      },
+
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif']
       }
-    }
-  },
+    },
+
+  variants: {},
 
   variants: {},
 
