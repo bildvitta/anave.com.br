@@ -2,22 +2,41 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: '2em'
+      padding: '1em'
     },
 
-    backgroundColor: theme => ({
-      ...theme('colors'),
-      primary: '#1b162d;'
-    }),
+    extend: {
+      gradientColorStops: {
+        primary: '#7F2BED',
+        secondary: '#401677',
+        'primary-500': '#8A46EA',
+        'secondary-500': '#452375'
+      },
 
-    fontFamily: {
-      montserrat: ['Montserrat', 'sans-serif']
+      backgroundColor: {
+        primary: '#7F2BED',
+        secondary: '#1b162d'
+      },
+
+      textColor: {
+        'purple-100': '#7C34EF',
+        'purple-200': '#6d2ed3',
+        'purple-300': '#6028ba',
+        'purple-400': '#6028ba',
+        'purple-500': '#461d87',
+        'purple-600': '#38186d',
+        'purple-700': '#2b1254',
+        'purple-800': '#1e0c3a',
+        'purple-900': '#110721'
+      },
+
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif']
+      }
     }
-
   },
 
-  variants: {
-  },
+  variants: {},
 
   plugins: [],
 
