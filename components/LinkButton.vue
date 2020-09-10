@@ -1,6 +1,6 @@
 <template>
   <a class="inline-block n-link-button px-5 py-3"
-     :class="[bgColor, borderRadius, textColor]"
+     :class="linkButtonClasses"
      :href="link"
   >
     {{ label }}
@@ -8,6 +8,16 @@
 </template>
 
 <script>
+const backgroundColors = {
+  primary: 'bg-gradient-to-r from-primary hover:from-primary-500 hover:to-secondary-500 to-secondary',
+  white: 'bg-white'
+}
+
+const textColors = {
+  primary: 'text-primary',
+  white: 'text-white'
+}
+
 export default {
   props: {
     label: {
@@ -20,24 +30,37 @@ export default {
       required: true
     },
 
-    roundedNone: {
-      type: Boolean
+    rounded: {
+      type: Boolean,
+      default: true
     },
 
     textColor: {
       type: String,
-      default: 'text-white'
+      default: 'white'
     },
 
     bgColor: {
       type: String,
-      default: 'bg-gradient-to-r from-primary hover:from-primary-hover hover:to-secondary-hover to-secondary'
+      default: 'primary'
     }
   },
 
   computed: {
     borderRadius () {
-      return this.roundedNone || 'rounded-lg'
+      return this.rounded && 'rounded-lg'
+    },
+
+    linkButtonClasses () {
+      return [this.backgroundClass, this.borderRadius, this.textClass]
+    },
+
+    backgroundClass () {
+      return backgroundColors[this.bgColor]
+    },
+
+    textClass () {
+      return textColors[this.textColor]
     }
   }
 

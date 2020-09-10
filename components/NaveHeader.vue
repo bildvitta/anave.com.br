@@ -1,13 +1,11 @@
-/* eslint-disable no-console */
 <template>
   <div>
-    <header class="bg-white fixed header inset py-5 w-full z-10">
+    <header class="bg-white fixed inset nave-header py-5 shadow-md w-full z-10">
       <div class="flex flex-wrap items-center lg:container md:flex-row mx-5">
         <nuxt-link class="md:mb-0" to="/">
           <img
             alt="NAVE - Espaço Nave"
-            sizes="(max-width: 1023px) 106px,
-                    53px"
+            :sizes="logoSrcsetSizes"
             src="~/assets/img/logo@2x.png"
             srcset="~/assets/img/logo@2x.png 106w, ~/assets/img/logo.png 53w"
             @click="moveToTop"
@@ -15,14 +13,13 @@
         </nuxt-link>
 
         <nav class="hidden items-center justify-center lg:flex md:ml-auto">
-          <a
-            v-for="link in links"
-            :key="link.label"
-            class="cursor-pointer duration-200 hover:text-nave-purple mr-10 transition"
-            :class="activeSection(link.href)"
-            :href="link.href"
-          >{{ link.label }}</a>
-          <link-button label="Vagas" link="#vacancies" />
+          <a v-for="(link, index) in links" :key="index"
+             class="cursor-pointer duration-200 hover:text-purple-100 lowercase mr-10 transition"
+             :href="link.href"
+          >
+            {{ link.label }}
+          </a>
+          <link-button class="lowercase" label="Vagas" link="#vacancies" />
         </nav>
 
         <!-- MENU MOBILE BUTTON -->
@@ -30,7 +27,7 @@
           alt="NAVE - Menu mobile"
           class="cursor-pointer lg:hidden ml-auto w-10"
           src="~/assets/icons/menu-outline.svg"
-          @click="openMobileMenu"
+          @click="toggleMobileMenu"
         >
       </div>
     </header>
@@ -43,34 +40,34 @@
     >
       <nav
         v-if="showMobileMenu"
-        class="bg-primary fixed h-screen header__mobile-menu inset lg:hidden w-screen z-10"
+        class="bg-primary fixed h-screen inset lg:hidden nave-header__mobile-menu w-screen z-10"
       >
         <img
           alt="NAVE - Menu mobile"
-          class="absolute cursor-pointer header__mobile-close lg:hidden w-10"
+          class="absolute cursor-pointer lg:hidden nave-header__mobile-close w-10"
           src="~/assets/icons/close-outline.svg"
-          @click="hideMobileMenu"
+          @click="toggleMobileMenu"
         >
         <div class="align-center flex flex-col h-full mt-20">
           <a
             v-for="link in links"
             :key="link.label"
-            class="block cursor-pointer p-3 text-center text-white w-full"
+            class="block cursor-pointer lowercase p-3 text-center text-white w-full"
             :href="link.href"
-            @click="hideMobileMenu"
+            @click="toggleMobileMenu"
           >{{ link.label }}</a>
           <link-button
-            bg-color="bg-white"
-            class="mt-6 text-center"
+            bg-color="white"
+            class="lowercase mt-6 text-center"
             label="Vagas"
             link="#vacancies"
-            rounded-none
-            text-color="text-primary"
+            :rounded="false"
+            text-color="primary"
           />
           <nuxt-link to="/">
             <img
               alt="NAVE - Mobile menu logo"
-              class="absolute header__mobile-menu-logo mx-auto w-56"
+              class="absolute mx-auto nave-header__mobile-menu-logo w-56"
               src="~/assets/img/NAVE-negativo.png"
               @click="moveToTop"
             >
@@ -80,34 +77,29 @@
     </transition>
   </div>
 </template>
-<style>
-* {
-  scroll-behavior: smooth;
-}
-</style>
 <script>
 export default {
   data () {
     return {
       links: [
         {
-          label: 'sobre',
+          label: 'Sobre',
           href: '#about'
         },
         {
-          label: 'nosso time',
+          label: 'Nosso time',
           href: '#Team'
         },
         {
-          label: 'acreditamos',
+          label: 'Acreditamos',
           href: '#believe'
         },
         {
-          label: 'espaço nave',
+          label: 'Espaço nave',
           href: '#spaceship'
         },
         {
-          label: 'contato',
+          label: 'Contato',
           href: '#contact'
         }
       ],
@@ -115,23 +107,19 @@ export default {
     }
   },
 
+  computed: {
+    logoSrcsetSizes () {
+      return '(max-width: 1023px) 106px, 53px'
+    }
+  },
+
   methods: {
-    activeSection (elementHref) {
-      const hash = this.$route.hash
-
-      return hash === elementHref && 'text-nave-purple'
-    },
-
-    openMobileMenu () {
-      this.showMobileMenu = true
-    },
-
-    hideMobileMenu () {
-      this.showMobileMenu = false
+    toggleMobileMenu () {
+      this.showMobileMenu = !this.showMobileMenu
     },
 
     moveToTop () {
-      this.hideMobileMenu()
+      this.toggleMobileMenu()
       window.scrollTo({ top: 0 })
     }
   }
@@ -139,7 +127,7 @@ export default {
 </script>
 
 <style lang="scss">
-.header {
+.nave-header {
   &__mobile-close {
     right: 10px;
     top: 10px;
