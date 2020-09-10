@@ -1,11 +1,12 @@
 <template>
-  <div v-bind="$attrs" class="ml-64 nave-slider relative-position" :class="expandedClass">
+  <div v-bind="$attrs" class="nave-slider relative-position" :class="expandedClass">
     <div :id="sliderSlug" ref="slider" class="nave-slider__container" :class="expandedContainerClass" v-on="$listeners" @mousedown="mouseDown" @mousemove="mouseMove">
-      <div ref="sliderContent" class="nave-slider__content">
+      <div ref="sliderContent" class="lg:ml-48 md:ml-24 ml-16 nave-slider__content">
         <slot />
       </div>
     </div>
-    <div class="container text-right">
+    <!-- TODO Estilizar botão -->
+    <div class="mr-8 text-right">
       <button ref="arrow" style="border: none; outline: inherit;" @click="next"><img class="w-10" :hidden="hiddenArrow" src="@/assets/img/proximo .png"></button>
     </div>
   </div>
@@ -126,14 +127,14 @@ export default {
       })
 
       // TODO inverter botão e fazer voltar para o inicio
-      if (this.element.scrollLeft >= event.clientX) {
-        this.$refs.arrow.style.transform = 'rotate(-180deg)'
-        this.$refs.arrow.style.transition = 'all 1s'
-        this.element.scroll({
-          left: this.element.scrollLeft - 2000,
-          behavior: 'smooth'
-        })
-      }
+      // if (this.element.scrollLeft >= event.clientX) {
+      //   this.$refs.arrow.style.transform = 'rotate(-180deg)'
+      //   this.$refs.arrow.style.transition = 'all 1s'
+      //   this.element.scroll({
+      //     left: this.element.scrollLeft - 2000,
+      //     behavior: 'smooth'
+      //   })
+      // }
     }
   }
 }

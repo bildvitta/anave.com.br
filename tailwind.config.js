@@ -39,21 +39,22 @@ module.exports = {
       }
     },
 
-  variants: {},
+    variants: {},
 
-  variants: {},
+    variants: {},
 
-  plugins: [],
+    plugins: [],
 
-  purge: {
-    enabled: process.env.NODE_ENV === 'production',
+    purge: {
+      enabled: process.env.NODE_ENV === 'production',
 
-    content: [
-      'components/**/*.vue',
-      'layouts/**/*.vue',
-      'pages/**/*.vue',
-      'plugins/**/*.js',
-      'nuxt.config.js'
-    ]
+      content: [
+        'components/**/*.vue',
+        'layouts/**/*.vue',
+        'pages/**/*.vue',
+        'plugins/**/*.js',
+        'nuxt.config.js'
+      ]
+    }
   }
 }

@@ -74,7 +74,7 @@ export default {
         },
         {
           label: 'Nosso time',
-          href: '#Team'
+          href: '#team'
         },
         {
           label: 'Acreditamos',
