@@ -2,7 +2,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: '1em'
+      padding: '2em'
     },
 
     extend: {
@@ -38,6 +38,7 @@ module.exports = {
         montserrat: ['Montserrat', 'sans-serif']
       }
     }
+
   },
 
   variants: {},
