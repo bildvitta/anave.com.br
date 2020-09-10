@@ -14,7 +14,8 @@ module.exports = {
       },
 
       backgroundColor: {
-        primary: '#7F2BED'
+        primary: '#7F2BED',
+        secondary: '#1b162d'
       },
 
       textColor: {
@@ -27,6 +28,10 @@ module.exports = {
         'purple-700': '#2b1254',
         'purple-800': '#1e0c3a',
         'purple-900': '#110721'
+      },
+
+      letterSpacing: {
+        widest: '0.125em'
       },
 
       fontFamily: {

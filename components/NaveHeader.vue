@@ -8,27 +8,26 @@
             :sizes="logoSrcsetSizes"
             src="~/assets/img/logo@2x.png"
             srcset="~/assets/img/logo@2x.png 106w, ~/assets/img/logo.png 53w"
-            @click="moveToTop"
+            @click="scrollToTop"
           >
         </nuxt-link>
 
         <nav class="hidden items-center justify-center lg:flex md:ml-auto">
           <a v-for="(link, index) in links" :key="index"
-             class="cursor-pointer duration-200 hover:text-purple-100 lowercase mr-10 transition"
+             class="cursor-pointer duration-200 hover:text-purple-100 lowercase mr-10 tracking-widest transition"
              :href="link.href"
           >
             {{ link.label }}
           </a>
-          <link-button class="lowercase" label="Vagas" link="#vacancies" />
+          <link-button class="lowercase tracking-widest" label="Vagas" link="#vacancies" />
         </nav>
 
         <!-- MENU MOBILE BUTTON -->
-        <img
-          alt="NAVE - Menu mobile"
-          class="cursor-pointer lg:hidden ml-auto w-10"
-          src="~/assets/icons/menu-outline.svg"
-          @click="toggleMobileMenu"
-        >
+        <div class="cursor-pointer lg:hidden menu-icon ml-auto w-10" :class="openedMobileMenu" @click="toggleMobileMenu">
+          <div class="bg-gray-900 duration-500 ease-linear h-1 menu-icon__bar--1 transition-all w-6" />
+          <div class="bg-gray-900 duration-500 ease-linear h-1 menu-icon__bar--2 mt-1 transition-all w-6" />
+          <div class="bg-gray-900 duration-500 ease-linear h-1 menu-icon__bar--3 mt-1 transition-all w-6" />
+        </div>
       </div>
     </header>
 
@@ -40,38 +39,25 @@
     >
       <nav
         v-if="showMobileMenu"
-        class="bg-primary fixed h-screen inset lg:hidden nave-header__mobile-menu w-screen z-10"
+        class="bg-primary fixed lg:hidden nave-header__mobile-menu w-screen z-5"
       >
-        <img
-          alt="NAVE - Menu mobile"
-          class="absolute cursor-pointer lg:hidden nave-header__mobile-close w-10"
-          src="~/assets/icons/close-outline.svg"
-          @click="toggleMobileMenu"
-        >
-        <div class="align-center flex flex-col h-full mt-20">
+        <div class="align-center flex flex-col h-full justify-center">
           <a
             v-for="link in links"
             :key="link.label"
-            class="block cursor-pointer lowercase p-3 text-center text-white w-full"
+            class="block cursor-pointer lowercase p-3 text-center text-white text-xl tracking-widest w-full"
             :href="link.href"
             @click="toggleMobileMenu"
           >{{ link.label }}</a>
           <link-button
             bg-color="white"
-            class="lowercase mt-6 text-center"
+            class="lowercase mt-6 text-center text-xl tracking-widest"
             label="Vagas"
             link="#vacancies"
             :rounded="false"
             text-color="primary"
+            @click.native="toggleMobileMenu"
           />
-          <nuxt-link to="/">
-            <img
-              alt="NAVE - Mobile menu logo"
-              class="absolute mx-auto nave-header__mobile-menu-logo w-56"
-              src="~/assets/img/NAVE-negativo.png"
-              @click="moveToTop"
-            >
-          </nuxt-link>
         </div>
       </nav>
     </transition>
@@ -109,7 +95,11 @@ export default {
 
   computed: {
     logoSrcsetSizes () {
-      return '(max-width: 1023px) 106px, 53px'
+      return '(max-width: 1023px) 80px, 53px'
+    },
+
+    openedMobileMenu () {
+      return this.showMobileMenu && 'mobile-menu-opened'
     }
   },
 
@@ -118,8 +108,8 @@ export default {
       this.showMobileMenu = !this.showMobileMenu
     },
 
-    moveToTop () {
-      this.toggleMobileMenu()
+    scrollToTop () {
+      this.showMobileMenu = false
       window.scrollTo({ top: 0 })
     }
   }
@@ -128,6 +118,25 @@ export default {
 
 <style lang="scss">
 .nave-header {
+  .mobile-menu-opened {
+    .menu-icon__bar--1 {
+      transform: translateY(8px) rotate(-45deg);
+    }
+
+    .menu-icon__bar--2 {
+      opacity: 0;
+    }
+
+    .menu-icon__bar--3 {
+      transform: translateY(-8px) rotate(45deg);
+    }
+  }
+
+  &__mobile-menu {
+    height: calc(100vh - 80px);
+    top: 80px;
+  }
+
   &__mobile-close {
     right: 10px;
     top: 10px;
