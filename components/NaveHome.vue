@@ -15,48 +15,50 @@
 </template>
 
 <style lang="scss">
-.nave__home-container {
-  height: calc(100vh - 88px);
+.nave__home {
+  &-container {
+    height: calc(100vh - 88px);
 
-  @media (max-width: 640px) {
-    height: auto;
-  }
-
-  @media (min-width: 640px) and (max-width: 1024px) {
-    background-image: url('../assets/img/imagem_home_rocket.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    .n-link-button {
-      background-color: #fff;
-      background-image: none;
-      color: #110721;
+    @media (max-width: 640px) {
+      height: auto;
     }
-  }
-
-  &__image {
-    background-image: url('../assets/img/imagem_home_rocket.jpg');
-    background-position: 0 -100px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 500px;
-    width: 100%;
 
     @media (min-width: 640px) and (max-width: 1024px) {
-      display: none;
+      background-image: url('../assets/img/imagem_home_rocket.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .n-link-button {
+        background-color: #fff;
+        background-image: none;
+        color: #110721;
+      }
     }
-  }
 
-  &__title {
-    line-height: 1.3;
+    &__image {
+      background-image: url('../assets/img/imagem_home_rocket.jpg');
+      background-position: 0 -100px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 500px;
+      width: 100%;
 
-    @media (min-width: 640px) and (max-width: 1024px) {
-      color: #fff;
-      font-size: 5rem;
+      @media (min-width: 640px) and (max-width: 1024px) {
+        display: none;
+      }
+    }
 
-      &-wrapper {
-        grid-column: none;
+    &__title {
+      line-height: 1.3;
+
+      @media (min-width: 640px) and (max-width: 1024px) {
+        color: #fff;
+        font-size: 5rem;
+
+        &-wrapper {
+          grid-column: none;
+        }
       }
     }
   }

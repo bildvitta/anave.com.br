@@ -22,7 +22,6 @@ export default {
 
   created () {
     this.$slots.default[0].data.attrs.class = 'nave-flex-embed__content'
-    console.log(this.$slots.default[0].data.attrs)
   }
 
 }
