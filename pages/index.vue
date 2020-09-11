@@ -1,7 +1,7 @@
 <template>
   <main>
     <section id="home" class="bg-white">
-      <home />
+      <nave-home />
     </section>
     <section id="about" class="bg-gray-600 py-24">
       <div class="container flex flex-col items-center md:flex-row">

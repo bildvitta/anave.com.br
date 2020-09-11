@@ -1,28 +1,28 @@
 <template>
-  <div class="container grid grid-cols-12 home-container items-center lg:py-0 py-8">
-    <div class="col-span-12 home-container__title-wrapper lg:col-span-5">
+  <div class="container grid grid-cols-12 items-center lg:py-0 navehome-container py-8">
+    <div class="col-span-12 lg:col-span-5 navehome-container__title-wrapper">
       <div class="items-center row">
-        <h1 class="font-bold home-container__title lg:text-4xl text-3xl xl:text-5xl">
+        <h1 class="font-bold lg:text-4xl navehome-container__title text-3xl xl:text-5xl">
           Desenhamos e lançamos produtos digitais que transformam empresas.
         </h1>
         <link-button class="lg:mb-0 mb-10 mt-8" label="Quero trabalhar na Nave" link="#vacancies" />
       </div>
     </div>
     <div class="col-end-13 col-start-1 lg:col-end-13 lg:col-start-7">
-      <div class="home-container__image" />
+      <div class="navehome-container__image" />
     </div>
   </div>
 </template>
 
 <style lang="scss">
-.home-container {
+.navehome-container {
   height: calc(100vh - 88px);
 
-  @media (max-width: 1023px) {
+  @media (max-width: 640px) {
     height: auto;
   }
 
-  @media (width: 1024px) and (height: 1366px) {
+  @media (min-width: 640px) and (max-width: 1024px) {
     background-image: url('../assets/img/imagem_home_rocket.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -43,23 +43,15 @@
     height: 500px;
     width: 100%;
 
-    @media (max-width: 1023px) {
-      height: 300px;
-    }
-
-    @media (width: 1024px) and (height: 1366px) {
+    @media (min-width: 640px) and (max-width: 1024px) {
       display: none;
-    }
-
-    @media (width: 768px) and (height: 1024px) {
-      background-position: 0 -220px;
     }
   }
 
   &__title {
     line-height: 1.3;
 
-    @media (width: 1024px) and (height: 1366px) {
+    @media (min-width: 640px) and (max-width: 1024px) {
       color: #fff;
       font-size: 5rem;
 
