@@ -1,21 +1,21 @@
 <template>
-  <div class="container grid grid-cols-12 items-center lg:py-0 navehome-container py-8">
-    <div class="col-span-12 lg:col-span-5 navehome-container__title-wrapper">
+  <div class="grid grid-cols-12 items-center lg:container lg:py-0 nave__home-container py-8">
+    <div class="col-span-12 lg:col-span-5 lg:mx-0 mx-5 nave__home-container__title-wrapper">
       <div class="items-center row">
-        <h1 class="font-bold lg:text-4xl navehome-container__title text-3xl xl:text-5xl">
+        <h1 class="font-bold lg:text-4xl nave__home-container__title text-3xl xl:text-5xl">
           Desenhamos e lançamos produtos digitais que transformam empresas.
         </h1>
         <link-button class="lg:mb-0 mb-10 mt-8" label="Quero trabalhar na Nave" link="#vacancies" />
       </div>
     </div>
-    <div class="col-end-13 col-start-1 lg:col-end-13 lg:col-start-7">
-      <div class="navehome-container__image" />
+    <div class="col-end-13 col-start-1 lg:col-end-13 lg:col-start-7 lg:mx-0 mx-5">
+      <div class="nave__home-container__image" />
     </div>
   </div>
 </template>
 
 <style lang="scss">
-.navehome-container {
+.nave__home-container {
   height: calc(100vh - 88px);
 
   @media (max-width: 640px) {
