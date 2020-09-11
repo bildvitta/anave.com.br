@@ -61,14 +61,10 @@ export default {
   mounted () {
     this.getPosition()
     this.element = this.$refs.slider
+
     window.__forceSmoothScrollPolyfill__ = true
     smoothscroll.polyfill()
     window.addEventListener('mouseup', this.mouseUp)
-  },
-
-  created () {
-    // Polyfill for scrolling
-
   },
 
   destroyed () {
