@@ -52,10 +52,9 @@
           >{{ link.label }}</a>
           <link-button
             bg-color="white"
-            class="lowercase mt-6 text-center text-xl tracking-widest"
+            class="lowercase mt-6 mx-auto text-center text-xl tracking-widest w-56"
             label="Vagas"
             link="#vacancies"
-            :rounded="false"
             text-color="primary"
             @click.native="toggleMobileMenu"
           />
