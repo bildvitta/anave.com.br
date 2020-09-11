@@ -64,6 +64,8 @@ const vacancies = [
   { title: 'VUE.JS', resume: 'Pessoa desenvolvedora Frontend', description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.', img: '/assets/img/vuejs.png' },
   { title: 'VUE.JS', resume: 'Pessoa desenvolvedora Frontend', description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.', img: '/assets/img/vuejs.png' },
   { title: 'VUE.JS', resume: 'Pessoa desenvolvedora Frontend', description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.', img: '/assets/img/vuejs.png' },
+  { title: 'VUE.JS', resume: 'Pessoa desenvolvedora Frontend', description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.', img: '/assets/img/vuejs.png' },
+  { title: 'VUE.JS', resume: 'Pessoa desenvolvedora Frontend', description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.', img: '/assets/img/vuejs.png' },
   { title: 'VUE.JS', resume: 'Pessoa desenvolvedora Frontend', description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.', img: '/assets/img/vuejs.png' }
 ]
 

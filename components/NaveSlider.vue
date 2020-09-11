@@ -1,13 +1,12 @@
 <template>
   <div v-bind="$attrs" class="nave-slider relative-position" :class="expandedClass">
     <div :id="sliderSlug" ref="slider" class="nave-slider__container" :class="expandedContainerClass" v-on="$listeners" @mousedown="mouseDown" @mousemove="mouseMove">
-      <div ref="sliderContent" class="lg:ml-48 md:ml-24 ml-16 nave-slider__content">
+      <div ref="sliderContent" class="lg:ml-32 md:ml-20 ml-16 nave-slider__content">
         <slot />
       </div>
     </div>
-    <!-- TODO Estilizar botão -->
     <div class="mr-8 text-right">
-      <button ref="arrow" style="border: none; outline: inherit;" @click="next"><img class="w-10" :hidden="hiddenArrow" src="@/assets/img/proximo .png"></button>
+      <button ref="arrow" class="h-10" style="border: none; outline: inherit;" @click="next"><img class="w-10" :hidden="hiddenArrow" src="@/assets/img/proximo .png"></button>
     </div>
   </div>
 </template>
@@ -29,6 +28,11 @@ export default {
     sliderSlug: {
       type: String,
       default: ''
+    },
+
+    id: {
+      type: String,
+      default: ''
     }
   },
 
@@ -39,7 +43,8 @@ export default {
       drag: false,
       hideBar: false,
       element: null,
-      hiddenArrow: false
+      hiddenArrow: false,
+      position: 0
     }
   },
 
@@ -54,6 +59,7 @@ export default {
   },
 
   mounted () {
+    this.getPosition()
     this.element = this.$refs.slider
     window.__forceSmoothScrollPolyfill__ = true
     smoothscroll.polyfill()
@@ -62,6 +68,7 @@ export default {
 
   created () {
     // Polyfill for scrolling
+
   },
 
   destroyed () {
@@ -83,6 +90,15 @@ export default {
     mouseMove (event) {
       if (!this.drag) {
         return null
+      }
+
+      const hidden = window.innerWidth + this.element.scrollLeft
+
+      if (hidden < this.position) {
+        this.hiddenArrow = false
+      }
+      if (hidden > this.position) {
+        this.hiddenArrow = true
       }
 
       if (!event) {
@@ -120,22 +136,33 @@ export default {
       this.animationOnScroll && animate()
     },
 
-    next (event) {
+    getPosition () {
+      let offsetTrail = this.$refs.sliderContent.lastChild
+      let offsetLeft = 0
+      while (offsetTrail) {
+        offsetLeft += offsetTrail.offsetLeft
+        offsetTrail = offsetTrail.offsetParent
+      }
+
+      if (navigator.userAgent.includes('Mac') &&
+        typeof document.body.leftMargin !== 'undefined') {
+        offsetLeft += document.body.leftMargin
+      }
+
+      this.position = offsetLeft
+    },
+
+    next () {
       this.element.scroll({
         left: this.element.scrollLeft + 420,
         behavior: 'smooth'
       })
-
-      // TODO inverter botão e fazer voltar para o inicio
-      // if (this.element.scrollLeft >= event.clientX) {
-      //   this.$refs.arrow.style.transform = 'rotate(-180deg)'
-      //   this.$refs.arrow.style.transition = 'all 1s'
-      //   this.element.scroll({
-      //     left: this.element.scrollLeft - 2000,
-      //     behavior: 'smooth'
-      //   })
-      // }
+      const hidden = window.innerWidth + this.element.scrollLeft
+      if (hidden > this.position) {
+        this.hiddenArrow = true
+      }
     }
+
   }
 }
 </script>
