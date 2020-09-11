@@ -14,12 +14,13 @@
 
         <nav class="hidden items-center justify-center lg:flex md:ml-auto">
           <a v-for="(link, index) in links" :key="index"
-             class="cursor-pointer duration-200 hover:text-purple-100 lowercase mr-10 tracking-widest transition"
+             :ref="link.href"
+             class="cursor-pointer desktop-menu-link duration-200 hover:text-purple-100 lowercase mr-10 tracking-widest transition"
              :href="link.href"
           >
             {{ link.label }}
           </a>
-          <link-button class="lowercase tracking-widest" label="Vagas" link="#vacancies" />
+          <link-button class="desktop-menu-link lowercase tracking-widest" label="Vagas" link="#vacancies" />
         </nav>
 
         <!-- MENU MOBILE BUTTON -->
@@ -74,7 +75,7 @@ export default {
         },
         {
           label: 'Nosso time',
-          href: '#Team'
+          href: '#team'
         },
         {
           label: 'Acreditamos',
@@ -89,7 +90,8 @@ export default {
           href: '#contact'
         }
       ],
-      showMobileMenu: false
+      showMobileMenu: false,
+      sectionsYPositions: {}
     }
   },
 

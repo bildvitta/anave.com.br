@@ -11,7 +11,7 @@
         </p>
       </div>
     </section>
-    <section id="Team" class="bg-gray-500 py-24">
+    <section id="team" class="bg-gray-500 py-24">
       <div class="container flex flex-col items-center md:flex-row">
         <h5>NossoTime</h5>
         <p>
