@@ -37,6 +37,14 @@ module.exports = {
 
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif']
+      },
+
+      zIndex: {
+        2: 2
+      },
+
+      height: {
+        70: '21rem'
       }
     }
 
