@@ -5,7 +5,7 @@
         <h1 class="font-bold lg:text-4xl nave__home-container__title text-3xl xl:text-5xl">
           Desenhamos e lançamos produtos digitais que transformam empresas.
         </h1>
-        <link-button class="lg:mb-0 mb-10 mt-8" label="Quero trabalhar na Nave" link="#vacancies" />
+        <nave-link-button class="lg:mb-0 mb-10 mt-8" label="Quero trabalhar na Nave" link="#vacancies" />
       </div>
     </div>
     <div class="col-end-13 col-start-1 lg:col-end-13 lg:col-start-7 lg:mx-0 mx-5">
@@ -29,7 +29,7 @@
       background-repeat: no-repeat;
       background-size: cover;
 
-      .n-link-button {
+      .nave-link-button {
         background-color: #fff;
         background-image: none;
         color: #110721;

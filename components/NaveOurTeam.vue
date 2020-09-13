@@ -1,6 +1,6 @@
 <template>
   <div class="grid grid-cols-12 items-center md:container md:flex-row mx-5 nave-our-team__container">
-    <div class="col-end-12 col-start-1 lg:col-end-10 lg:col-start-3 lg:text-center nave-our-team__text">
+    <div class="col-end-12 col-start-1 lg:col-end-11 lg:col-start-3 lg:text-center nave-our-team__text">
       <h2 class="font-bold mb-4 text-4xl">Inovação é feita de pessoas!</h2>
       <p class="mb-10 text-base text-gray-400">
         é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o

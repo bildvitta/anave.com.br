@@ -1,5 +1,5 @@
 <template>
-  <a class="inline-block n-link-button px-5 py-3"
+  <a class="inline-block nave-link-button px-5 py-3"
      :class="linkButtonClasses"
      :href="link"
   >

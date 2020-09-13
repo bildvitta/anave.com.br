@@ -15,7 +15,7 @@
           >
             {{ link.label }}
           </a>
-          <link-button class="desktop-menu-link lowercase tracking-widest" label="Vagas" link="#vacancies" />
+          <nave-link-button class="desktop-menu-link lowercase tracking-widest" label="Vagas" link="#vacancies" />
         </nav>
 
         <!-- MENU MOBILE BUTTON -->
@@ -39,8 +39,8 @@
              class="block cursor-pointer lowercase p-3 text-center text-white text-xl tracking-widest w-full"
              :href="link.href" @click="toggleMobileMenu"
           >{{ link.label }}</a>
-          <link-button bg-color="white" class="lowercase mt-6 mx-auto text-center text-xl tracking-widest w-56"
-                       label="Vagas" link="#vacancies" text-color="primary" @click.native="toggleMobileMenu"
+          <nave-link-button bg-color="white" class="lowercase mt-6 mx-auto text-center text-xl tracking-widest w-56"
+                            label="Vagas" link="#vacancies" text-color="primary" @click.native="toggleMobileMenu"
           />
         </div>
       </nav>
