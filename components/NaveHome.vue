@@ -54,7 +54,8 @@
 
       @media (min-width: 640px) and (max-width: 1024px) {
         color: #fff;
-        font-size: 5rem;
+        // font-size: 5rem;
+        font-size: 3.5rem;
 
         &-wrapper {
           grid-column: none;

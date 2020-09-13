@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="bg-white fixed inset nave-header py-5 shadow-md w-full z-10">
+    <header class="bg-white fixed inset nave-header py-5 shadow-md w-full z-50">
       <div class="flex flex-wrap items-center lg:container md:flex-row mx-5">
         <nuxt-link class="md:mb-0" to="/">
           <img alt="NAVE - Espaço Nave" :sizes="logoSrcsetSizes" src="~/assets/img/logo@2x.png"
@@ -33,7 +33,7 @@
       leave-active-class="animated fadeOutUp"
       name="fade"
     >
-      <nav v-if="showMobileMenu" class="bg-primary fixed lg:hidden nave-header__mobile-menu w-screen z-5">
+      <nav v-if="showMobileMenu" class="bg-primary fixed lg:hidden nave-header__mobile-menu w-screen z-10">
         <div class="align-center flex flex-col h-full justify-center">
           <a v-for="link in links" :key="link.label"
              class="block cursor-pointer lowercase p-3 text-center text-white text-xl tracking-widest w-full"

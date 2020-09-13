@@ -1,8 +1,8 @@
 <template>
-  <div class="container grid grid-cols-12 items-center nave__about-container">
+  <div class="grid grid-cols-12 items-center md:container mx-5 nave-about__container">
     <div class="col-span-12 lg:col-span-6 lg:col-start-1">
       <nave-embed-ratio>
-        <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+        <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="lg:mx-0 mx-auto"
                 frameborder="0" height="378" src="https://www.youtube.com/embed/E48ThA7WqZ4" width="560"
         />
       </nave-embed-ratio>
