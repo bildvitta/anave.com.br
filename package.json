@@ -18,8 +18,7 @@
     "@nuxtjs/style-resources": "^1.0.0",
     "nuxt": "^2.14.0",
     "smoothscroll-polyfill": "^0.4.4",
-    "vue-typed-js": "^0.1.2",
-    "vue2-touch-events": "^2.3.2"
+    "vue-typed-js": "^0.1.2"
   },
   "devDependencies": {
     "@ava/babel": "^1.0.1",

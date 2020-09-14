@@ -1,16 +1,16 @@
 <template>
   <div v-bind="$attrs" class="bg-primary card">
-    <div class="bg-white my-5 pb-8 px-10 rounded-lg shadow-lg">
+    <div class="bg-white h-auto my-5 pb-8 px-10 rounded-lg shadow-lg w-full">
       <div class="mx-1 py-10 rounded-lg">
-        <img alt="Sunset in the mountains" class="w-full" :src="fields.img">
+        <img alt="Sunset in the mountains" class="h-32 w-full" :src="field.img">
       </div>
       <div>
-        <div class="font-bold mb-2 text-gray-500 text-xl">{{ fields.title }}</div>
-        <div class="font-bold mb-2 text-md">{{ fields.resume }}</div>
+        <div class="font-bold mb-2 text-gray-500 text-xl">{{ field.title }}</div>
+        <div class="font-bold mb-2 text-md">{{ field.resume }}</div>
       </div>
       <div class="text-gray-700">
-        <div class="text-justify whitespace-normal">
-          {{ fields.description }}
+        <div class="card__description text-justify whitespace-normal">
+          {{ field.description }}
         </div>
       </div>
       <div class="font-bold pt-5 underline">
@@ -28,9 +28,17 @@ export default {
       default: () => ({})
     }
   },
-  mounted () {
-    // eslint-disable-next-line no-console
-    console.log(this.fields)
+
+  data () {
+    return {
+      return: {
+        field: {}
+      }
+    }
+  },
+
+  created () {
+    this.field = this.fields
   }
 }
 </script>
@@ -43,6 +51,13 @@ export default {
 
     &:last-child {
       padding-right: 20px;
+    }
+
+    &__description {
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
     }
   }
 </style>
