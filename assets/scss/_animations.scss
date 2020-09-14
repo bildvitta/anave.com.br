@@ -10,7 +10,7 @@
   }
 }
 
-.fadeInDown {
+.fade-in-down {
   animation-duration: 0.5s;
   animation-name: fadeInDown;
 }
@@ -26,7 +26,22 @@
   }
 }
 
-.fadeOutUp {
+.fade-out-up {
   animation-duration: 0.5s;
   animation-name: fadeOutUp;
+}
+
+@keyframes animateText {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-text {
+  animation-duration: 1s;
+  animation-name: animateText;
 }

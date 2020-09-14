@@ -29,8 +29,8 @@
 
     <!-- MENU MOBILE -->
     <transition
-      enter-active-class="animated fadeInDown"
-      leave-active-class="animated fadeOutUp"
+      enter-active-class="animated fade-in-down"
+      leave-active-class="animated fade-out-up"
       name="fade"
     >
       <nav v-if="showMobileMenu" class="bg-primary fixed lg:hidden nave-header__mobile-menu w-screen z-10">
