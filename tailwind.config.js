@@ -2,7 +2,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: '2em'
+      padding: '1em'
     },
 
     extend: {
@@ -50,23 +50,22 @@ module.exports = {
       width: {
         70: '21rem'
       }
+    },
+
+    variants: {},
+
+    plugins: [],
+
+    purge: {
+      enabled: process.env.NODE_ENV === 'production',
+
+      content: [
+        'components/**/*.vue',
+        'layouts/**/*.vue',
+        'pages/**/*.vue',
+        'plugins/**/*.js',
+        'nuxt.config.js'
+      ]
     }
-
-  },
-
-  variants: {},
-
-  plugins: [],
-
-  purge: {
-    enabled: process.env.NODE_ENV === 'production',
-
-    content: [
-      'components/**/*.vue',
-      'layouts/**/*.vue',
-      'pages/**/*.vue',
-      'plugins/**/*.js',
-      'nuxt.config.js'
-    ]
   }
 }
