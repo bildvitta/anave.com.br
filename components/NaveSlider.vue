@@ -1,7 +1,7 @@
 <template>
   <div v-bind="$attrs" class="nave-slider relative-position" :class="expandedClass">
-    <div :id="sliderSlug" ref="slider" class="nave-slider__container" :class="expandedContainerClass" v-on="$listeners" @mousedown="mouseDown" @mousemove="mouseMove">
-      <div ref="sliderContent" class="lg:ml-32 md:ml-20 ml-16 nave-slider__content">
+    <div ref="slider" class="nave-slider__container" :class="expandedContainerClass" v-on="$listeners" @mousedown="mouseDown" @mousemove="mouseMove">
+      <div ref="sliderContent" class="nave-slider__content nave-slider__list">
         <slot />
       </div>
     </div>
@@ -28,11 +28,6 @@ export default {
     sliderSlug: {
       type: String,
       default: ''
-    },
-
-    id: {
-      type: String,
-      default: ''
     }
   },
 
@@ -44,7 +39,8 @@ export default {
       hideBar: false,
       element: null,
       hiddenArrow: false,
-      position: 0
+      position: 0,
+      lastCardChild: null
     }
   },
 
@@ -60,6 +56,7 @@ export default {
 
   mounted () {
     this.getPosition()
+    this.lastCardChild = this.$refs.sliderContent.lastChild
     this.element = this.$refs.slider
 
     window.__forceSmoothScrollPolyfill__ = true
@@ -88,14 +85,7 @@ export default {
         return null
       }
 
-      const hidden = window.innerWidth + this.element.scrollLeft
-
-      if (hidden < this.position) {
-        this.hiddenArrow = false
-      }
-      if (hidden > this.position) {
-        this.hiddenArrow = true
-      }
+      // this.hiddenScrollArrow()
 
       if (!event) {
         event = window.event
@@ -104,6 +94,7 @@ export default {
       event.preventDefault()
       this.difference = this.start - (event.clientX + this.element.scrollLeft)
       this.element.scrollLeft += this.difference
+      this.hiddenScrollArrow()
     },
 
     mouseUp (event) {
@@ -140,20 +131,24 @@ export default {
         offsetTrail = offsetTrail.offsetParent
       }
 
-      if (navigator.userAgent.includes('Mac') &&
-        typeof document.body.leftMargin !== 'undefined') {
-        offsetLeft += document.body.leftMargin
-      }
-
       this.position = offsetLeft
     },
 
     next () {
       this.element.scroll({
-        left: this.element.scrollLeft + 420,
+        left: this.element.scrollLeft + this.lastCardChild.offsetWidth,
         behavior: 'smooth'
       })
+
+      this.hiddenScrollArrow()
+    },
+
+    hiddenScrollArrow () {
       const hidden = window.innerWidth + this.element.scrollLeft
+
+      if (hidden < this.position) {
+        this.hiddenArrow = false
+      }
       if (hidden > this.position) {
         this.hiddenArrow = true
       }
@@ -200,6 +195,22 @@ export default {
     margin-left: -(#{20px});
     margin-right: -(#{20px});
     width: auto;
+  }
+
+  &__list {
+    margin: 0 20px 0;
+  }
+
+  @media screen and (min-width: 1024px) {
+    &__list {
+      margin: 0  calc((100% - 1024px) / 2) 0;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    &__list {
+      margin: 0  calc((100% - 1280px) / 2) 0;
+    }
   }
 }
 </style>
