@@ -122,9 +122,7 @@ export default {
     },
 
     getPosition () {
-      const offsetLeft = this.$refs.sliderContent.lastChild.offsetLeft
-
-      this.position = offsetLeft
+      this.position = this.$refs.sliderContent.lastChild.offsetLeft
     },
 
     next () {

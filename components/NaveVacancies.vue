@@ -2,7 +2,7 @@
   <section id="vacancies" class="bg-primary py-24">
     <div class="overflow-hidden">
       <nave-slider>
-        <nave-card v-for="(vacancie, index) in vacanciesList" :key="index" :fields="vacancie" />
+        <nave-card v-for="(vacancie, index) in vacanciesList" :key="index" :content="vacancie" />
       </nave-slider>
     </div>
   </section>
