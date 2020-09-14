@@ -8,12 +8,7 @@
       </p>
     </div>
     <div class="col-span-12 flex flex-wrap justify-between nave-spaceship__gallery">
-      <img alt="" class="mb-4 nave-spaceship__gallery-image" src="https://i.ytimg.com/vi/TmTpMxkzHwc/maxresdefault.jpg">
-      <img alt="" class="mb-4 nave-spaceship__gallery-image" src="https://i.ytimg.com/vi/TmTpMxkzHwc/maxresdefault.jpg">
-      <img alt="" class="mb-4 nave-spaceship__gallery-image" src="https://i.ytimg.com/vi/TmTpMxkzHwc/maxresdefault.jpg">
-      <img alt="" class="mb-4 nave-spaceship__gallery-image" src="https://i.ytimg.com/vi/TmTpMxkzHwc/maxresdefault.jpg">
-      <img alt="" class="mb-4 nave-spaceship__gallery-image" src="https://i.ytimg.com/vi/TmTpMxkzHwc/maxresdefault.jpg">
-      <img alt="" class="mb-4 nave-spaceship__gallery-image" src="https://i.ytimg.com/vi/TmTpMxkzHwc/maxresdefault.jpg">
+      <img v-for="n in 6" :key="n" alt="" class="mb-4 nave-spaceship__gallery-image" src="https://i.ytimg.com/vi/TmTpMxkzHwc/maxresdefault.jpg">
     </div>
   </div>
 </template>

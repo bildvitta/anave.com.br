@@ -14,8 +14,7 @@
 export default {
   props: {
     reverse: {
-      type: Boolean,
-      default: false
+      type: Boolean
     }
   },
 
@@ -28,7 +27,6 @@ export default {
       return this.reverse ? 'lg:mt-4' : 'lg:mb-4'
     }
   }
-
 }
 </script>
 
