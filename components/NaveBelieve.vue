@@ -1,6 +1,8 @@
 <template>
-  <section id="believe" class="container flex flex-col items-center md:flex-row nave-believe py-48">
-    <nave-vertical-carousel :phrases="phrases" />
+  <section id="believe" class="flex flex-col items-center md:flex-row nave-believe py-48">
+    <div class="lg:container w-full">
+      <nave-vertical-carousel :phrases="phrases" :slide-timer="3000" />
+    </div>
   </section>
 </template>
 
@@ -9,13 +11,13 @@ export default {
   data () {
     return {
       phrases: [
-        'Ser apaixonado pelo problema e não pela solução',
-        'Dude, where is my car?',
-        'Oh my God, we did it again',
-        'Hello my fren',
-        'It`s me, Charlie!',
-        'Hi, how are you?',
-        'My dear love, I love you'
+        { text: 'Ser apaixonado pelo problema e não pela solução', index: 0 },
+        { text: 'Dude, where is my car?', index: 1 },
+        { text: 'Oh my God, we did it again', index: 2 },
+        { text: 'Hello my fren', index: 3 },
+        { text: 'It`s me, Charlie!', index: 4 },
+        { text: 'Hi, how are you?', index: 5 },
+        { text: 'My dear love, I love you', index: 6 }
       ]
     }
   }
