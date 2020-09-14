@@ -1,5 +1,5 @@
 <template>
-  <div class="col-span-6 nave-flex-embed nave__about-video-wrapper">
+  <div class="nave-about__video-wrapper nave-flex-embed">
     <div class="nave-flex-embed__ratio" :class="ratioClass" />
     <slot />
   </div>
@@ -23,7 +23,6 @@ export default {
   created () {
     this.$slots.default[0].data.attrs.class = 'nave-flex-embed__content'
   }
-
 }
 </script>
 

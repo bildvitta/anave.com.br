@@ -1,14 +1,14 @@
 <template>
   <div class="grid grid-cols-12 items-center md:container mx-5 nave-about__container">
     <div class="col-span-12 lg:col-span-6 lg:col-start-1">
-      <nave-embed-ratio>
+      <nave-embed-ratio class="col-span-6">
         <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="lg:mx-0 mx-auto"
                 frameborder="0" height="378" src="https://www.youtube.com/embed/E48ThA7WqZ4" width="560"
         />
       </nave-embed-ratio>
     </div>
 
-    <div class="col-span-12 lg:col-span-5 lg:col-start-8 lg:mt-0 mt-10 nave__about--text-wrapper">
+    <div class="col-span-12 lg:col-span-5 lg:col-start-8 lg:mt-0 mt-10 nave-about__text-wrapper">
       <h2 class="font-bold text-5xl text-white">Vamos falar sobre propósito?</h2>
       <p class="mt-4 text-base text-white">
         é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o
@@ -18,9 +18,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-
-}
-</script>

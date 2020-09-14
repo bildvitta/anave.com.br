@@ -32,12 +32,13 @@ export default {
   },
 
   methods: {
+
+    // TODO: work in progress
     setActiveText () {
       setInterval(() => {
         if (this.activeIndex < this.phrases.length) {
           this.changeTextIndex()
           this.activateNumber()
-          console.log(this.activeIndex, this.phrases.length)
           this.activeIndex++
         } else {
           this.activeIndex = 0

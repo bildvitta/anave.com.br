@@ -14,12 +14,6 @@
   </div>
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
 <style lang="scss">
 .nave-our-team {
   &__gallery {
