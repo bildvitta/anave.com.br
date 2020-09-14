@@ -1,5 +1,5 @@
 <template>
-  <div class="container grid grid-cols-12 nave-spaceship__container">
+  <section id="spaceship" class="container grid grid-cols-12 nave-spaceship py-24">
     <div class="col-end-12 col-start-1 lg:col-end-11 lg:col-start-3 lg:text-center">
       <h2 class="font-bold mb-4 nave-spaceship__title text-4xl">Espaço Nave</h2>
       <p class="block mb-10 mx-auto text-base text-gray-400">
@@ -10,14 +10,8 @@
     <div class="col-span-12 flex flex-wrap justify-between nave-spaceship__gallery">
       <img v-for="n in 6" :key="n" alt="" class="mb-4 nave-spaceship__gallery-image" src="https://i.ytimg.com/vi/TmTpMxkzHwc/maxresdefault.jpg">
     </div>
-  </div>
+  </section>
 </template>
-
-<script>
-export default {
-
-}
-</script>
 
 <style lang="scss">
 .nave-spaceship {

@@ -1,7 +1,7 @@
 <template>
-  <div class="container flex flex-col items-center md:flex-row">
+  <section id="believe" class="container flex flex-col items-center md:flex-row nave-believe py-48">
     <nave-vertical-carousel :phrases="phrases" />
-  </div>
+  </section>
 </template>
 
 <script>
@@ -19,6 +19,14 @@ export default {
       ]
     }
   }
-
 }
 </script>
+
+<style lang="scss">
+.nave-believe {
+  background-image: url('../assets/img/nave_premissas.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>

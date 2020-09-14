@@ -12,7 +12,6 @@
 
 <script>
 export default {
-
   props: {
     phrases: {
       type: Array,
@@ -32,7 +31,6 @@ export default {
   },
 
   methods: {
-
     // TODO: work in progress
     setActiveText () {
       setInterval(() => {
@@ -56,7 +54,6 @@ export default {
       return index === this.activeIndex && 'nave-vertical-carousel__slide-number--active'
     }
   }
-
 }
 </script>
 

@@ -1,20 +1,20 @@
 <template>
   <main>
-    <section id="home" class="bg-white">
-      <nave-home />
-    </section>
-    <section id="about" class="flex items-center nave-about__section py-24">
-      <nave-about />
-    </section>
-    <section id="team" class="nave-our-team__section py-24">
-      <nave-our-team />
-    </section>
-    <section id="believe" class="nave-believe__section py-48">
-      <nave-believe />
-    </section>
-    <section id="spaceship" class="nave-spaceship__section py-24">
-      <nave-spaceship />
-    </section>
+    <!-- Seção Home -->
+    <nave-home />
+
+    <!-- Seção Sobre -->
+    <nave-about />
+
+    <!-- Seção Nosso Time -->
+    <nave-our-team />
+
+    <!-- Seção Believe -->
+    <nave-believe />
+
+    <!-- Seção Espaço Nave -->
+    <nave-spaceship />
+
     <section id="vacancies" class="bg-gray-200 py-24">
       <div class="container flex flex-col items-center md:flex-row">
         <h5>Vagas</h5>
@@ -33,25 +33,3 @@
     </section>
   </main>
 </template>
-<script>
-
-export default {
-
-}
-</script>
-
-<style lang="scss">
-  .nave-about__section {
-    background-image: url('../assets/img/nave_tela-proposito_.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .nave-believe__section {
-    background-image: url('../assets/img/nave_premissas.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-</style>

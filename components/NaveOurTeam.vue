@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-12 items-center md:container md:flex-row mx-5 nave-our-team__container">
+  <section id="team" class="grid grid-cols-12 items-center md:container md:flex-row mx-5 nave-our-team py-24">
     <div class="col-end-12 col-start-1 lg:col-end-11 lg:col-start-3 lg:text-center nave-our-team__text">
       <h2 class="font-bold mb-4 text-4xl">Inovação é feita de pessoas!</h2>
       <p class="mb-10 text-base text-gray-400">
@@ -11,7 +11,7 @@
       <nave-flex-gallery class="col-span-12 lg:col-span-6 nave-our-team__galery" />
       <nave-flex-gallery class="col-span-12 lg:col-span-6 nave-our-team__galery" reverse />
     </div>
-  </div>
+  </section>
 </template>
 
 <style lang="scss">
