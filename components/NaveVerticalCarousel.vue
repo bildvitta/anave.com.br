@@ -1,12 +1,14 @@
 <template>
   <div class="flex flex-col-reverse items-center lg:flex-row lg:order-1 nave-vertical-carousel w-full">
     <div class="flex flex-row h-auto justify-between lg:flex-col lg:h-70 lg:mt-0 lg:w-8 mt-20 nave-vertical-carousel__slider-items-wrapper relative sm:w-70 w-64">
-      <div v-for="n in phrasesLength" :key="n" class="cursor-pointer flex font-bold h-6 items-center justify-center lg:w-full nave-vertical-carousel__slide-number sm:h-8 sm:w-8 text-black w-6 z-2" :class="activateNumber(n - 1)" @click="changeActiveIndex(n)">{{ n }}</div>
+      <div v-for="item in phrasesLength" :key="item" class="cursor-pointer flex font-bold h-6 items-center justify-center lg:w-full nave-vertical-carousel__slide-number sm:h-8 sm:w-8 text-black w-6 z-2" :class="activateNumber(item - 1)" @click="changeActiveIndex(item)">
+        {{ item }}
+      </div>
     </div>
 
     <div class="lg:w-7/12 mx-auto nave-vertical-carousel__text-area w-full">
-      <transition animated enter-active-class="animateText" mode="out-in">
-        <p v-if="activeIndex === activeText.index" :key="activeIndex" class="font-bold lg:px-0 lg:text-6xl nave-vertical-carousel__text px-4 text-5xl text-center text-white w-full">{{ activeText.text }}</p>
+      <transition animated enter-active-class="animate-text" mode="out-in">
+        <p v-if="showText" :key="activeIndex" class="font-bold lg:px-0 lg:text-6xl nave-vertical-carousel__text px-4 text-5xl text-center text-white w-full">{{ activeText.text }}</p>
       </transition>
     </div>
   </div>
@@ -38,6 +40,10 @@ export default {
   computed: {
     phrasesLength () {
       return this.phrases.length
+    },
+
+    showText () {
+      return this.activeIndex === this.activeText.index
     }
   },
 
