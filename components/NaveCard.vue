@@ -1,5 +1,5 @@
 <template>
-  <div v-bind="$attrs" class="bg-primary card">
+  <div v-bind="$attrs" class="bg-primary nave-card">
     <div class="bg-white h-auto my-5 pb-8 px-10 rounded-lg shadow-lg w-full">
       <div class="mx-1 py-10 rounded-lg">
         <img alt="Sunset in the mountains" class="h-32 w-full" :src="field.img">
@@ -9,7 +9,7 @@
         <div class="font-bold mb-2 text-md">{{ field.resume }}</div>
       </div>
       <div class="text-gray-700">
-        <div class="card__description text-justify whitespace-normal">
+        <div class="nave-card__description text-justify whitespace-normal">
           {{ field.description }}
         </div>
       </div>
@@ -44,7 +44,7 @@ export default {
 </script>
 
 <style lang="scss">
-  .card {
+  .nave-card {
     & + & {
       margin-left: 90px;
     }

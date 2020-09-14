@@ -85,8 +85,6 @@ export default {
         return null
       }
 
-      // this.hiddenScrollArrow()
-
       if (!event) {
         event = window.event
       }
@@ -124,12 +122,7 @@ export default {
     },
 
     getPosition () {
-      let offsetTrail = this.$refs.sliderContent.lastChild
-      let offsetLeft = 0
-      while (offsetTrail) {
-        offsetLeft += offsetTrail.offsetLeft
-        offsetTrail = offsetTrail.offsetParent
-      }
+      const offsetLeft = this.$refs.sliderContent.lastChild.offsetLeft
 
       this.position = offsetLeft
     },
@@ -146,12 +139,7 @@ export default {
     hiddenScrollArrow () {
       const hidden = window.innerWidth + this.element.scrollLeft
 
-      if (hidden < this.position) {
-        this.hiddenArrow = false
-      }
-      if (hidden > this.position) {
-        this.hiddenArrow = true
-      }
+      this.hiddenArrow = hidden > this.position
     }
 
   }
