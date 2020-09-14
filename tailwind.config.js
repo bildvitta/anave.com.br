@@ -27,7 +27,8 @@ module.exports = {
         'purple-600': '#38186d',
         'purple-700': '#2b1254',
         'purple-800': '#1e0c3a',
-        'purple-900': '#110721'
+        'purple-900': '#110721',
+        'text-gray-400': '#A5A5A5'
       },
 
       letterSpacing: {
@@ -36,6 +37,14 @@ module.exports = {
 
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif']
+      },
+
+      zIndex: {
+        2: 2
+      },
+
+      height: {
+        70: '21rem'
       }
     }
 
