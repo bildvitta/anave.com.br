@@ -1,5 +1,5 @@
 <template>
-  <div class="nave-about__video-wrapper nave-flex-embed">
+  <div v-bind="$attrs" class="nave-about__video-wrapper nave-flex-embed">
     <div class="nave-flex-embed__ratio" :class="ratioClass" />
     <slot />
   </div>
