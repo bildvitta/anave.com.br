@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="bg-white fixed inset nave-header py-5 shadow-md w-full z-50">
+    <header ref="header" class="bg-white fixed inset nave-header py-5 shadow-md w-full z-50">
       <div class="flex flex-wrap items-center lg:container md:flex-row mx-5">
         <nuxt-link class="md:mb-0" to="/">
           <img alt="NAVE - Espaço Nave" :sizes="logoSrcsetSizes" src="~/assets/img/logo@2x.png"
@@ -9,9 +9,9 @@
         </nuxt-link>
 
         <nav class="hidden items-center justify-center lg:flex md:ml-auto">
-          <a v-for="(link, index) in links" :key="index" :ref="link.href"
+          <a v-for="(link, index) in links" :key="index"
              class="cursor-pointer desktop-menu-link duration-200 hover:text-purple-100 lowercase mr-10 tracking-widest transition"
-             :href="link.href"
+             :href="link.href" @click="scrollTo(link.href)"
           >
             {{ link.label }}
           </a>
@@ -49,6 +49,7 @@
 </template>
 <script>
 export default {
+
   data () {
     return {
       links: [
@@ -96,6 +97,15 @@ export default {
     scrollToTop () {
       this.showMobileMenu = false
       window.scrollTo({ top: 0 })
+    },
+
+    scrollTo (anchor) {
+      const scrollToElement = require('scroll-to-element')
+
+      const element = document.querySelector(anchor)
+      scrollToElement(element, {
+        duration: 100
+      })
     }
   }
 }

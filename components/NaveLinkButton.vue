@@ -2,6 +2,7 @@
   <a class="inline-block nave-link-button px-5 py-3"
      :class="linkButtonClasses"
      :href="link"
+     @click="scrollTo(link)"
   >
     {{ label }}
   </a>
@@ -61,6 +62,17 @@ export default {
 
     textClass () {
       return textColors[this.textColor]
+    }
+  },
+
+  methods: {
+    scrollTo (anchor) {
+      const scrollToElement = require('scroll-to-element')
+
+      const element = document.querySelector(anchor)
+      scrollToElement(element, {
+        duration: 100
+      })
     }
   }
 

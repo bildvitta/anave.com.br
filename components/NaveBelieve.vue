@@ -1,5 +1,5 @@
 <template>
-  <section id="believe" class="flex flex-col items-center md:flex-row nave-believe py-48">
+  <section id="believe" ref="believe" class="flex flex-col items-center md:flex-row nave-believe py-48">
     <div class="lg:container w-full">
       <nave-vertical-carousel :phrases="phrases" :slide-timer="3000" />
     </div>
