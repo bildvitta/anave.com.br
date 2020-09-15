@@ -5,6 +5,14 @@ module.exports = {
       padding: '1em'
     },
 
+    aspectRatio: {
+      none: 0,
+      square: [1, 1],
+      '16/9': [16, 9],
+      '4/3': [4, 3],
+      '21/9': [21, 9]
+    },
+
     extend: {
       gradientColorStops: {
         primary: '#7F2BED',
@@ -52,9 +60,14 @@ module.exports = {
       }
     },
 
-    variants: {},
+    variants: {
+      aspectRatio: ['responsive']
+    },
 
-    plugins: [],
+    plugins: [
+      require('tailwindcss-responsive-embed'),
+      require('tailwindcss-aspect-ratio')
+    ],
 
     purge: {
       enabled: process.env.NODE_ENV === 'production',
