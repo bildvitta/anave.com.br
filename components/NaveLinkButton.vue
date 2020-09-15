@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import scrollHelper from '../mixins/scrollHelper'
+
 const backgroundColors = {
   primary: 'bg-gradient-to-r from-primary hover:from-primary-500 hover:to-secondary-500 to-secondary',
   white: 'bg-white'
@@ -20,6 +22,10 @@ const textColors = {
 }
 
 export default {
+  mixins: [
+    scrollHelper
+  ],
+
   props: {
     label: {
       type: String,
@@ -62,17 +68,6 @@ export default {
 
     textClass () {
       return textColors[this.textColor]
-    }
-  },
-
-  methods: {
-    scrollTo (anchor) {
-      const scrollToElement = require('scroll-to-element')
-
-      const element = document.querySelector(anchor)
-      scrollToElement(element, {
-        duration: 100
-      })
     }
   }
 

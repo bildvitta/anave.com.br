@@ -48,7 +48,12 @@
   </div>
 </template>
 <script>
+import scrollHelper from '../mixins/scrollHelper'
+
 export default {
+  mixins: [
+    scrollHelper
+  ],
 
   data () {
     return {
@@ -97,15 +102,6 @@ export default {
     scrollToTop () {
       this.showMobileMenu = false
       window.scrollTo({ top: 0 })
-    },
-
-    scrollTo (anchor) {
-      const scrollToElement = require('scroll-to-element')
-
-      const element = document.querySelector(anchor)
-      scrollToElement(element, {
-        duration: 100
-      })
     }
   }
 }
