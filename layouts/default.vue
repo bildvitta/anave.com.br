@@ -2,7 +2,7 @@
   <div>
     <nave-header />
     <Nuxt />
-    <navefooter data-active-link="contact" />
+    <nave-footer data-active-link="contact" />
   </div>
 </template>
 
