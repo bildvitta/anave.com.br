@@ -1,6 +1,5 @@
 <template>
-  <div v-bind="$attrs" class="nave-about__video-wrapper nave-flex-embed">
-    <div class="nave-flex-embed__ratio" :class="ratioClass" />
+  <div v-bind="$attrs" class="embed-responsive nave-about__video-wrapper" :class="ratioClass">
     <slot />
   </div>
 </template>
@@ -16,39 +15,12 @@ export default {
 
   computed: {
     ratioClass () {
-      return `nave-flex-embed__ratio--${this.ratio.replace(':', 'by')}`
+      return `aspect-ratio-${this.ratio.replace(':', '/')}`
     }
   },
 
   created () {
-    this.$slots.default[0].data.attrs.class = 'nave-flex-embed__content'
+    this.$slots.default[0].data.attrs.class = 'embed-responsive-item'
   }
 }
 </script>
-
-<style lang="scss">
-.nave-flex-embed {
-  display: block;
-  overflow: hidden;
-  position: relative;
-
-  &__ratio {
-    display: block;
-    padding-bottom: 100%;
-    width: 100%;
-
-    &--16by9 {
-      padding-bottom: 56.25%;
-    }
-  }
-
-  &__content {
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-}
-</style>
