@@ -118,8 +118,8 @@ export default {
   }
 
   &__mobile-menu {
-    height: calc(100vh - 80px);
-    top: 80px;
+    height: calc(100vh - 77px);
+    top: 77px;
   }
 
   &__mobile-close {
