@@ -10,7 +10,6 @@
 import { setActiveLink, state } from '../helpers/active-link'
 
 export default {
-
   computed: {
     activeLink () {
       return state.activeLink

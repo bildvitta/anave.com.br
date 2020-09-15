@@ -2,7 +2,8 @@ import Vue from 'vue'
 
 const state = Vue.observable({ activeLink: '' })
 
-function setActiveLink (previousActive) {
+function setActiveLink (previousActive, headerSelector = '.nave-header') {
+  const headerElement = document.querySelector(headerSelector)
   const elements = document.querySelectorAll('[data-active-link]')
   const elementList = {}
 
@@ -17,7 +18,7 @@ function setActiveLink (previousActive) {
     })
 
     for (const key in elementList) {
-      const currentScroll = window.scrollY + 90
+      const currentScroll = window.scrollY + headerElement.offsetHeight + 2
       const { from, to } = elementList[key]
 
       if (currentScroll >= from && currentScroll <= to) {
