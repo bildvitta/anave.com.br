@@ -1,5 +1,5 @@
 <template>
-  <section id="about" ref="about" class="flex items-center nave-about py-24">
+  <section id="about" class="flex items-center nave-about py-24">
     <div class="grid grid-cols-12 items-center md:container mx-5">
       <div class="col-span-12 lg:col-span-6 lg:col-start-1">
         <nave-embed-ratio class="col-span-6" ratio="16:9">

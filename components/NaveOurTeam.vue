@@ -1,5 +1,5 @@
 <template>
-  <section id="team" ref="team" class="grid grid-cols-12 items-center md:container md:flex-row mx-5 nave-our-team py-24">
+  <section id="team" class="grid grid-cols-12 items-center md:container md:flex-row mx-5 nave-our-team py-24">
     <div class="col-end-12 col-start-1 lg:col-end-11 lg:col-start-3 lg:text-center nave-our-team__text">
       <h2 class="font-bold mb-4 text-4xl">Inovação é feita de pessoas!</h2>
       <p class="mb-10 text-base text-gray-400">

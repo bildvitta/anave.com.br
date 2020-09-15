@@ -1,5 +1,5 @@
 <template>
-  <footer id="contact" class="bg-secondary pb-32 pt-12">
+  <footer id="contact" class="bg-secondary pb-32 pt-32">
     <div class="flex flex-col items-center lg:container md:flex-row md:items-end md:justify-between mx-5">
       <div class="text-white">
         <section class="md:text-left text-center">
