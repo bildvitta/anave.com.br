@@ -1,7 +1,7 @@
 <template>
   <section id="believe" class="flex flex-col items-center md:flex-row nave-believe py-48">
     <div class="lg:container w-full">
-      <nave-vertical-carousel :phrases="phrases" :slide-timer="3000" />
+      <nave-vertical-carousel :phrases="phrases" :slide-timer="4000" />
     </div>
   </section>
 </template>
@@ -11,13 +11,13 @@ export default {
   data () {
     return {
       phrases: [
-        { text: 'Ser apaixonado pelo problema e não pela solução', index: 0 },
-        { text: 'Dude, where is my car?', index: 1 },
-        { text: 'Oh my God, we did it again', index: 2 },
-        { text: 'Hello my fren', index: 3 },
-        { text: 'It`s me, Charlie!', index: 4 },
-        { text: 'Hi, how are you?', index: 5 },
-        { text: 'My dear love, I love you', index: 6 }
+        { text: 'Entender o core do negócio.', index: 0 },
+        { text: 'Ser apaixonado pelo problema e não pela solução.', index: 1 },
+        { text: 'Pensar simples.', index: 2 },
+        { text: 'Liberdade com responsabilidade.', index: 3 },
+        { text: 'Elimine as "burocras" and get the shit done!', index: 4 },
+        { text: 'Trabalhe em equipe e lute por ela.', index: 5 },
+        { text: 'Superar as expectativas do cliente.', index: 6 }
       ]
     }
   }
