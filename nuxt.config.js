@@ -32,7 +32,8 @@ export default {
   css: [
     '~/assets/scss/base.scss',
     '~/assets/scss/_variables.scss',
-    '~/assets/scss/_animations.scss'
+    '~/assets/scss/_animations.scss',
+    '~/assets/scss/_embed-responsive-aspect-ratio.scss'
   ],
 
   styleResources: {
