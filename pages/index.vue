@@ -2,22 +2,22 @@
 <template>
   <main>
     <!-- Seção Home -->
-    <nave-home />
+    <nave-home data-active-link="home" />
 
     <!-- Seção Sobre -->
-    <nave-about />
+    <nave-about data-active-link="about" />
 
     <!-- Seção Nosso Time -->
-    <nave-our-team />
+    <nave-our-team data-active-link="team" />
 
     <!-- Seção Believe -->
-    <nave-believe />
+    <nave-believe data-active-link="believe" />
 
     <!-- Seção Espaço Nave -->
-    <nave-spaceship />
+    <nave-spaceship data-active-link="spaceship" />
 
     <!-- Seção vagas -->
-    <nave-vacancies />
+    <nave-vacancies data-active-link="vacancies" />
   </main>
 </template>
 
