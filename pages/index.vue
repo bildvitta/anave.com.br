@@ -10,7 +10,7 @@
     <nave-our-team data-active-link="team" />
 
     <!-- Seção Believe -->
-    <nave-believe data-active-link="belive" />
+    <nave-believe data-active-link="believe" />
 
     <!-- Seção Espaço Nave -->
     <nave-spaceship data-active-link="spaceship" />
