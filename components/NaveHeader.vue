@@ -9,9 +9,9 @@
         </nuxt-link>
 
         <nav class="hidden items-center justify-center lg:flex md:ml-auto">
-          <a v-for="(link, index) in links" :key="index" :ref="link.href"
+          <a v-for="(link, index) in links" :key="index"
              class="cursor-pointer desktop-menu-link duration-200 hover:text-purple-100 lowercase mr-10 tracking-widest transition"
-             :href="link.href"
+             :class="activateLink(link.href)" :href="link.href"
           >
             {{ link.label }}
           </a>
@@ -35,7 +35,7 @@
     >
       <nav v-if="showMobileMenu" class="bg-primary fixed lg:hidden nave-header__mobile-menu w-screen z-10">
         <div class="align-center flex flex-col h-full justify-center">
-          <a v-for="link in links" :key="link.label"
+          <a v-for="link in links" :key="link.label" :ref="link.href"
              class="block cursor-pointer lowercase p-3 text-center text-white text-xl tracking-widest w-full"
              :href="link.href" @click="toggleMobileMenu"
           >{{ link.label }}</a>
@@ -48,6 +48,8 @@
   </div>
 </template>
 <script>
+import { state } from '@/helpers/active-link'
+
 export default {
   data () {
     return {
@@ -79,6 +81,10 @@ export default {
   },
 
   computed: {
+    activeLink () {
+      return state.activeLink
+    },
+
     logoSrcsetSizes () {
       return '(max-width: 1023px) 80px, 53px'
     },
@@ -96,6 +102,10 @@ export default {
     scrollToTop () {
       this.showMobileMenu = false
       window.scrollTo({ top: 0 })
+    },
+
+    activateLink (href) {
+      return `#${this.activeLink}` === href ? 'active-link' : ''
     }
   }
 }
@@ -132,5 +142,9 @@ export default {
     left: calc(50% + 5px);
     transform: translateX(-50%);
   }
+}
+
+.active-link {
+  color: $color-primary;
 }
 </style>
