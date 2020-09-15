@@ -2,12 +2,15 @@
   <a class="inline-block nave-link-button px-5 py-3"
      :class="linkButtonClasses"
      :href="link"
+     @click="scrollTo(link)"
   >
     {{ label }}
   </a>
 </template>
 
 <script>
+import scrollHelper from '../mixins/scrollHelper'
+
 const backgroundColors = {
   primary: 'bg-gradient-to-r from-primary hover:from-primary-500 hover:to-secondary-500 to-secondary',
   white: 'bg-white'
@@ -19,6 +22,10 @@ const textColors = {
 }
 
 export default {
+  mixins: [
+    scrollHelper
+  ],
+
   props: {
     label: {
       type: String,

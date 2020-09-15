@@ -12,6 +12,7 @@
           <a v-for="(link, index) in links" :key="index"
              class="cursor-pointer desktop-menu-link duration-200 hover:text-purple-100 lowercase mr-10 tracking-widest transition"
              :class="activateLink(link.href)" :href="link.href"
+             @click="scrollTo(link.href)"
           >
             {{ link.label }}
           </a>
@@ -37,7 +38,7 @@
         <div class="align-center flex flex-col h-full justify-center">
           <a v-for="link in links" :key="link.label" :ref="link.href"
              class="block cursor-pointer lowercase p-3 text-center text-white text-xl tracking-widest w-full"
-             :href="link.href" @click="toggleMobileMenu"
+             :href="link.href" @click="toggleMobileMenu(), scrollTo(link.href)"
           >{{ link.label }}</a>
           <nave-link-button bg-color="white" class="lowercase mt-6 mx-auto text-center text-xl tracking-widest w-56"
                             label="Vagas" link="#vacancies" text-color="primary" @click.native="toggleMobileMenu"
@@ -49,8 +50,13 @@
 </template>
 <script>
 import { state } from '@/helpers/active-link'
+import scrollHelper from '../mixins/scrollHelper'
 
 export default {
+  mixins: [
+    scrollHelper
+  ],
+
   data () {
     return {
       links: [
