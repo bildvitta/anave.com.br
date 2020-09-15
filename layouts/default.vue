@@ -2,10 +2,23 @@
   <div>
     <nave-header />
     <Nuxt />
-    <nave-footer />
+    <navefooter data-active-link="contact" />
   </div>
 </template>
 
 <script>
-export default {}
+import { setActiveLink, state } from '../helpers/active-link'
+
+export default {
+
+  computed: {
+    activeLink () {
+      return state.activeLink
+    }
+  },
+
+  mounted () {
+    setActiveLink('contact')
+  }
+}
 </script>
