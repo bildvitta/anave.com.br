@@ -8,5 +8,9 @@ html {
 }
 
 main {
-  padding-top: 78px;
+  padding-top: 88px;
+
+  @media (max-width: 1024px) {
+    padding-top: 78px;
+  }
 }

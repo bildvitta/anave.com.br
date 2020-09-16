@@ -18,6 +18,10 @@
 .nave-home {
   height: calc(100vh - 88px);
 
+  @media (max-width: 1024px) {
+    height: calc(100vh - 78px);
+  }
+
   @media (max-width: 640px) {
     height: auto;
   }
