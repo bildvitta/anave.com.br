@@ -20,7 +20,7 @@
         </nav>
 
         <!-- MENU MOBILE BUTTON -->
-        <div class="cursor-pointer lg:hidden menu-icon ml-auto w-10" :class="openedMobileMenu" @click="toggleMobileMenu">
+        <div class="cursor-pointer lg:hidden menu-icon ml-auto" :class="openedMobileMenu" @click="toggleMobileMenu">
           <div class="bg-gray-900 duration-500 ease-linear h-1 menu-icon__bar--1 transition-all w-6" />
           <div class="bg-gray-900 duration-500 ease-linear h-1 menu-icon__bar--2 mt-1 transition-all w-6" />
           <div class="bg-gray-900 duration-500 ease-linear h-1 menu-icon__bar--3 mt-1 transition-all w-6" />
