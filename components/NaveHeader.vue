@@ -10,13 +10,13 @@
 
         <nav class="hidden items-center justify-center lg:flex md:ml-auto">
           <a v-for="(link, index) in links" :key="index"
-             class="cursor-pointer desktop-menu-link duration-200 hover:text-purple-100 lowercase mr-10 tracking-widest transition"
+             class="cursor-pointer duration-200 hover:text-purple-100 lowercase mr-10 nave-header__desktop-menu-link tracking-widest transition"
              :class="activateLink(link.href)" :href="link.href"
              @click="scrollTo(link.href)"
           >
             {{ link.label }}
           </a>
-          <nave-link-button class="desktop-menu-link lowercase tracking-widest" label="Vagas" link="#vacancies" />
+          <nave-link-button class="lowercase nave-header__desktop-menu-link tracking-widest" label="Vagas" link="#vacancies" />
         </nav>
 
         <!-- MENU MOBILE BUTTON -->
@@ -34,7 +34,7 @@
       leave-active-class="animated fade-out-up"
       name="fade"
     >
-      <nav v-if="showMobileMenu" class="bg-primary fixed lg:hidden nave-header__mobile-menu w-screen z-10">
+      <nav v-if="showMobileMenu" class="bg-primary fixed lg:hidden nave-header__mobile-menu w-screen z-40">
         <div class="align-center flex flex-col h-full justify-center">
           <a v-for="link in links" :key="link.label" :ref="link.href"
              class="block cursor-pointer lowercase p-3 text-center text-white text-xl tracking-widest w-full"
@@ -111,7 +111,7 @@ export default {
     },
 
     activateLink (href) {
-      return `#${this.activeLink}` === href ? 'active-link' : ''
+      return `#${this.activeLink}` === href ? 'is-active' : ''
     }
   }
 }
@@ -119,6 +119,12 @@ export default {
 
 <style lang="scss">
 .nave-header {
+  &__desktop-menu-link {
+    &.is-active {
+      color: $color-primary;
+    }
+  }
+
   .mobile-menu-opened {
     .menu-icon__bar--1 {
       transform: translateY(8px) rotate(-45deg);
@@ -148,9 +154,5 @@ export default {
     left: calc(50% + 5px);
     transform: translateX(-50%);
   }
-}
-
-.active-link {
-  color: $color-primary;
 }
 </style>

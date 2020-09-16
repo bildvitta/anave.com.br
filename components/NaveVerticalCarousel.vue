@@ -74,7 +74,7 @@ export default {
     },
 
     activateNumber (index) {
-      return index === this.activeIndex && 'nave-vertical-carousel__slide-number--active'
+      return index === this.activeIndex && 'is-active'
     },
 
     resetSlide () {
@@ -113,7 +113,7 @@ export default {
     background-color: #fff;
     border-radius: 100%;
 
-    &--active {
+    &.is-active {
       background-color: $color-primary;
       color: #fff;
     }

@@ -3,6 +3,7 @@
     <nave-header />
     <Nuxt />
     <nave-footer data-active-link="contact" />
+    <nave-floating-button />
   </div>
 </template>
 
