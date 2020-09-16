@@ -16,7 +16,6 @@
 
 <script>
 export default {
-  inheritAttrs: false,
   props: {
     content: {
       type: Object,
