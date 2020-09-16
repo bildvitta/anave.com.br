@@ -199,6 +199,12 @@ export default {
     }
   }
 
+  @media screen and (min-width: 720px) {
+    &__list {
+      margin: 0  calc((100% - 720px) / 2) 0;
+    }
+  }
+
   @media screen and (min-width: 1024px) {
     &__list {
       margin: 0  calc((100% - 995px) / 2) 0;
