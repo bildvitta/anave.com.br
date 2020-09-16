@@ -8,7 +8,7 @@
       </p>
     </div>
     <div class="col-span-12 flex flex-wrap justify-between nave-spaceship__gallery">
-      <img v-for="n in 6" :key="n" alt="" class="mb-4 nave-spaceship__gallery-image self-start" src="https://i.ytimg.com/vi/TmTpMxkzHwc/maxresdefault.jpg">
+      <img v-for="n in 6" :key="n" alt="" class="mb-4 nave-spaceship__gallery-image self-start" src="~/assets/img/PHP-logo.png">
     </div>
   </section>
 </template>
