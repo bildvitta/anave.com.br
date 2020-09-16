@@ -34,7 +34,7 @@
       leave-active-class="animated fade-out-up"
       name="fade"
     >
-      <nav v-if="showMobileMenu" class="bg-primary fixed lg:hidden nave-header__mobile-menu w-screen z-10">
+      <nav v-if="showMobileMenu" class="bg-primary fixed lg:hidden nave-header__mobile-menu w-screen z-40">
         <div class="align-center flex flex-col h-full justify-center">
           <a v-for="link in links" :key="link.label" :ref="link.href"
              class="block cursor-pointer lowercase p-3 text-center text-white text-xl tracking-widest w-full"

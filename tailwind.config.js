@@ -26,6 +26,10 @@ module.exports = {
         secondary: '#1b162d'
       },
 
+      boxShadow: {
+        floating: '0 2px 4px 0 rgba(124, 52, 239, 1)'
+      },
+
       textColor: {
         'purple-100': '#7C34EF',
         'purple-200': '#6d2ed3',

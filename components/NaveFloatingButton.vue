@@ -1,0 +1,56 @@
+<template>
+  <a class="block fixed font-bold lg:hidden nave-floating-button px-6 py-4 shadow-floating z-10" :class="floatingBtnClass" @click="scrollTo('#vacancies')">Quero ser NAVERO</a>
+</template>
+
+<style lang="scss">
+.nave-floating-button {
+  background-color: $color-primary;
+  border-radius: $default-radius;
+  bottom: 20px;
+  color: #fff;
+  left: 50%;
+  opacity: 0;
+  text-align: center;
+  transform: translateX(-50%) translateY(100px);
+  transition: all 0.3s ease-in-out;
+  width: 300px;
+}
+
+.show-floating-btn {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+</style>
+
+<script>
+import scrollTo from '@/mixins/scrollHelper'
+import { state } from '@/helpers/active-link'
+
+export default {
+
+  mixins: [scrollTo],
+  data () {
+    return {
+      scrollY: 0,
+      windowWidth: 0
+    }
+  },
+
+  computed: {
+    showFloatingBtn () {
+      return this.windowWidth < 1024 && this.scrollY > 300 && state.activeLink !== 'vacancies'
+    },
+
+    floatingBtnClass () {
+      return this.showFloatingBtn && 'show-floating-btn'
+    }
+  },
+
+  mounted () {
+    window.addEventListener('scroll', () => {
+      this.scrollY = window.scrollY
+      this.windowWidth = window.innerWidth
+    })
+  }
+}
+</script>
