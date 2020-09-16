@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-primary nave-card">
-    <div class="bg-white content-between flex flex-wrap h-full px-8 rounded-lg shadow-lg" :style="cardSize">
+  <div v-bind="$attrs" class="bg-primary nave-card">
+    <div class="bg-white content-between flex flex-wrap h-full px-8 rounded-lg shadow-lg" :class="classes">
       <div class="mx-1 py-10 rounded-lg">
         <img alt="Sunset in the mountains" class="h-32 w-full" :src="content.img">
       </div>
@@ -16,6 +16,7 @@
 
 <script>
 export default {
+  inheritAttrs: false,
   props: {
     content: {
       type: Object,
@@ -25,66 +26,30 @@ export default {
     size: {
       type: Number,
       default: 0
-    }
-  },
+    },
 
-  data () {
-    return {
-      windowSize: 0
-    }
-  },
-
-  computed: {
-    cardSize () {
-      return this.windowSize > 320 ? `width:${this.size}px;` : `width:${this.size * 0.80}px;`
-    }
-  },
-
-  mounted () {
-    window.addEventListener('resize', this.setWindowWidht)
-  },
-
-  created () {
-    this.setWindowWidht()
-  },
-
-  destroyed () {
-    window.removeEventListener('resize', this.setWindowWidht)
-  },
-
-  methods: {
-    setWindowWidht () {
-      if (process.browser) {
-        this.windowSize = window.innerWidth
-      }
+    classes: {
+      type: [String, Object, Array],
+      default: ''
     }
   }
-
 }
 </script>
 
 <style lang="scss">
-  .nave-card {
-    & + & {
-      margin-left: 90px;
-    }
-
-    &:last-child {
-      padding-right: 20px;
-    }
-
-    &__description {
-      -webkit-box-orient: vertical;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      overflow: hidden;
-    }
-
-    &__resume {
-      -webkit-box-orient: vertical;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      overflow: hidden;
-    }
+.nave-card {
+  &__description {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
   }
+
+  &__resume {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+}
 </style>

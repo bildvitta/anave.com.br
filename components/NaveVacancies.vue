@@ -1,15 +1,14 @@
 <template>
-  <section id="vacancies" class="bg-primary pb-24 pt-32">
+  <section id="vacancies" class="bg-primary nave-vacancies pb-24 pt-32">
     <div class="overflow-hidden">
       <nave-slider>
-        <nave-card v-for="(vacancie, index) in vacanciesList" :key="index" :content="vacancie" :size="350" />
+        <nave-card v-for="(vacancie, index) in vacanciesList" :key="index" class="nave-vacancies__card" classes="w-64 sm:w-350" :content="vacancie" />
       </nave-slider>
     </div>
   </section>
 </template>
 
 <script>
-
 const vacancies = [
   { title: 'php', resume: 'Pessoa ', description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.', img: require('../assets/img/PHP-logo.png') },
   { title: 'Rubi on Rails', resume: 'Pessoa desenvolvedora backend', description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.', img: require('../assets/img/Ruby_On_Rails_Logo.png') },
@@ -32,3 +31,23 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.nave-vacancies {
+  &__card {
+    &:last-child {
+      padding-right: 20px;
+    }
+
+    & + & {
+      margin-left: 90px;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    &__card + &__card {
+      margin-left: 30px;
+    }
+  }
+}
+</style>
