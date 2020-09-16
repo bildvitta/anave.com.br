@@ -1,5 +1,5 @@
 <template>
-  <a class="block fixed font-bold lg:hidden nave-floating-button px-6 py-4 shadow-floating z-10" :class="floatingBtnClass" @click="scrollTo('#vacancies')">Quero ser NAVERO</a>
+  <a class="block fixed font-bold lg:hidden nave-floating-button px-6 py-4 shadow-floating z-10" :class="activeFloatingButton" @click="scrollTo('#vacancies')">Quero ser NAVERO</a>
 </template>
 
 <style lang="scss">
@@ -14,12 +14,13 @@
   transform: translateX(-50%) translateY(100px);
   transition: all 0.3s ease-in-out;
   width: 300px;
+
+  &.is-active {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
-.show-floating-btn {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
 </style>
 
 <script>
@@ -37,12 +38,12 @@ export default {
   },
 
   computed: {
-    showFloatingBtn () {
+    showFloatingButton () {
       return this.windowWidth < 1024 && this.scrollY > 300 && state.activeLink !== 'vacancies'
     },
 
-    floatingBtnClass () {
-      return this.showFloatingBtn && 'show-floating-btn'
+    activeFloatingButton () {
+      return this.showFloatingButton && 'is-active'
     }
   },
 

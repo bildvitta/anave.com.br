@@ -70,6 +70,5 @@ export default {
       return textColors[this.textColor]
     }
   }
-
 }
 </script>
