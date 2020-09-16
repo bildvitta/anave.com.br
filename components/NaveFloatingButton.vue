@@ -47,11 +47,19 @@ export default {
     }
   },
 
+  destroyed () {
+    window.removeEventListener('scroll', this.getScrollHeight)
+  },
+
   mounted () {
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', this.getScrollHeight)
+  },
+
+  methods: {
+    getScrollHeight () {
       this.scrollY = window.scrollY
       this.windowWidth = window.innerWidth
-    })
+    }
   }
 }
 </script>
