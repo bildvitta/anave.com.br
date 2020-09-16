@@ -8,7 +8,7 @@
 
     <div class="lg:w-7/12 mx-auto nave-vertical-carousel__text-area w-full">
       <transition animated enter-active-class="animate-text" mode="out-in">
-        <p v-if="showText" :key="activeIndex" class="font-bold lg:px-0 lg:text-6xl nave-vertical-carousel__text px-4 text-5xl text-white w-full">{{ activeText.text }}</p>
+        <p v-if="showText" :key="activeIndex" class="break-words font-bold lg:px-0 lg:text-6xl nave-vertical-carousel__text px-4 text-5xl text-white w-full">{{ activeText.text }}</p>
       </transition>
     </div>
   </div>
