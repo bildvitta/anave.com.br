@@ -48,12 +48,14 @@ export default {
     this.setWindowWidht()
   },
 
+  destroyed () {
+    window.removeEventListener('resize', this.setWindowWidht)
+  },
+
   methods: {
     setWindowWidht () {
       if (process.browser) {
         this.windowSize = window.innerWidth
-        // eslint-disable-next-line no-console
-        console.log(this.windowSize)
       }
     }
   }
