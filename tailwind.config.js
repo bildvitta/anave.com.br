@@ -62,27 +62,27 @@ module.exports = {
       width: {
         70: '21rem'
       }
-    },
-
-    variants: {
-      aspectRatio: ['responsive']
-    },
-
-    plugins: [
-      require('tailwindcss-responsive-embed'),
-      require('tailwindcss-aspect-ratio')
-    ],
-
-    purge: {
-      enabled: process.env.NODE_ENV === 'production',
-
-      content: [
-        'components/**/*.vue',
-        'layouts/**/*.vue',
-        'pages/**/*.vue',
-        'plugins/**/*.js',
-        'nuxt.config.js'
-      ]
     }
+  },
+
+  variants: {
+    aspectRatio: ['responsive']
+  },
+
+  plugins: [
+    require('tailwindcss-responsive-embed'),
+    require('tailwindcss-aspect-ratio')
+  ],
+
+  purge: {
+    enabled: process.env.NODE_ENV === 'production',
+
+    content: [
+      'components/**/*.vue',
+      'layouts/**/*.vue',
+      'pages/**/*.vue',
+      'plugins/**/*.js',
+      'nuxt.config.js'
+    ]
   }
 }
