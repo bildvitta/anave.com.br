@@ -1,5 +1,5 @@
 <template>
-  <a class="block cursor-pointer fixed font-bold lg:hidden nave-floating-button px-6 py-4 shadow-floating z-10" :class="activeFloatingButton" @click="scrollTo('#vacancies')">Quero trabalhar na Nave</a>
+  <a class="bg-gradient-to-r block cursor-pointer fixed font-bold from-primary lg:hidden nave-floating-button px-6 py-4 shadow-floating to-secondary z-10" :class="activeFloatingButton" @click="scrollTo('#vacancies')">Quero trabalhar na Nave</a>
 </template>
 
 <script>
@@ -18,7 +18,7 @@ export default {
 
   computed: {
     showFloatingButton () {
-      return this.windowWidth < 1024 && this.scrollY > 300 && state.activeLink !== 'vacancies'
+      return this.windowWidth < 768 && this.scrollY > 300 && state.activeLink !== 'vacancies'
     },
 
     activeFloatingButton () {
@@ -45,7 +45,6 @@ export default {
 
 <style lang="scss">
 .nave-floating-button {
-  background-color: $color-primary;
   border-radius: $default-radius;
   bottom: 20px;
   color: #fff;

@@ -5,10 +5,10 @@
         <h1 class="font-bold lg:text-4xl nave-home__title text-3xl xl:text-5xl">
           Desenhamos e lançamos produtos digitais que transformam empresas.
         </h1>
-        <nave-link-button class="lg:mb-0 mb-10 mt-8" label="Quero trabalhar na Nave" link="#vacancies" />
+        <nave-link-button class="hidden lg:mb-0 mb-10 mt-8 sm:inline-block" label="Quero trabalhar na Nave" link="#vacancies" />
       </div>
     </div>
-    <div class="col-end-13 col-start-1 lg:col-end-13 lg:col-start-7 lg:mx-0 mx-5">
+    <div class="col-end-13 col-start-1 lg:col-end-13 lg:col-start-7 lg:mx-0 mt-8 mx-5 sm:mt-0">
       <div class="nave-home__image" />
     </div>
   </section>
@@ -19,7 +19,7 @@
   height: calc(100vh - 88px);
 
   @media (max-width: 1024px) {
-    height: calc(100vh - 78px);
+    height: calc(100vh - 58px);
   }
 
   @media (max-width: 640px) {
@@ -50,6 +50,10 @@
 
     @media (min-width: 640px) and (max-width: 1024px) {
       display: none;
+    }
+
+    @media (max-width: 640px) {
+      height: 350px;
     }
   }
 
