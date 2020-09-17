@@ -11,13 +11,14 @@
 }
 
 .fade-in-down {
-  animation-duration: 0.5s;
+  animation-duration: 0.3s;
   animation-name: fadeInDown;
 }
 
 @keyframes fadeOutUp {
   from {
     opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 
   to {
@@ -27,7 +28,7 @@
 }
 
 .fade-out-up {
-  animation-duration: 0.5s;
+  animation-duration: 0.45s;
   animation-name: fadeOutUp;
 }
 

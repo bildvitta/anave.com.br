@@ -27,7 +27,7 @@ module.exports = {
       },
 
       boxShadow: {
-        floating: '0 2px 4px 0 rgba(124, 52, 239, 1)'
+        floating: '0 2px 20px 10px rgba(124, 52, 239, .2)'
       },
 
       textColor: {
