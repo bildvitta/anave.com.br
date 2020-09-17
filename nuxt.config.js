@@ -19,10 +19,14 @@ export default {
   */
   head: {
     title: process.env.npm_package_name || '',
+    htmlAttrs: {
+      lang: 'pt-br'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      { 'http-equiv': 'Content-Language', content: 'pt-br' },
       { property: 'og:url', content: 'https://bildvitta.github.io/nave' },
       { property: 'og:title', content: 'Bild Vitta | NAVE' },
       { property: 'og:description', content: 'Desenhamos e lançamos produtos digitais que transformam empresas.' },
