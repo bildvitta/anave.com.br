@@ -3,7 +3,6 @@
   <main>
     <!-- Seção Home -->
     <nave-home data-active-link="home" />
-
     <!-- Seção Sobre -->
     <nave-about data-active-link="about" />
 

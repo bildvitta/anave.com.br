@@ -20,7 +20,9 @@ export default {
   },
 
   created () {
-    this.$slots.default[0].data.attrs.class = 'embed-responsive-item'
+    if (this.$slots.default) {
+      this.$slots.default[0].data.attrs.class = 'embed-responsive-item'
+    }
   }
 }
 </script>

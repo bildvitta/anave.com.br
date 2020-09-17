@@ -1,14 +1,19 @@
 <template>
-  <section id="vacancies" class="bg-primary nave-vacancies pb-24 pt-32">
-    <div class="overflow-hidden">
-      <nave-slider>
-        <nave-card v-for="(vacancie, index) in vacanciesList" :key="index" class="nave-vacancies__card" classes="w-64 sm:w-350" :content="vacancie" />
-      </nave-slider>
-    </div>
-  </section>
+  <nave-intersect root-margin="60px 0px 0px 0px" @~enter="onEnter('vacancies')">
+    <section id="vacancies" class="bg-primary nave-vacancies pb-24 pt-32">
+      <div v-if="renders.vacancies" class="overflow-hidden">
+        <nave-slider>
+          <nave-card v-for="(vacancie, index) in vacanciesList" :key="index" class="nave-vacancies__card" classes="w-64 sm:w-350" :content="vacancie" />
+        </nave-slider>
+      </div>
+    </section>
+  </nave-intersect>
 </template>
 
 <script>
+import naveIntersect from '../helpers/Intersect'
+import intersect from '../mixins/intersect'
+
 const vacancies = [
   { title: 'php', resume: 'backend ', description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.', img: require('../assets/img/PHP-logo.png') },
   { title: 'Rubi on Rails', resume: ' backend', description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.', img: require('../assets/img/Ruby_On_Rails_Logo.png') },
@@ -24,6 +29,14 @@ const vacancies = [
 ]
 
 export default {
+  components: {
+    naveIntersect
+  },
+
+  mixins: [
+    intersect
+  ],
+
   computed: {
     vacanciesList () {
       return vacancies
