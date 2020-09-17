@@ -1,5 +1,6 @@
 <template>
-  <section id="vacancies" class="bg-primary nave-vacancies pb-24 pt-32">
+  <section id="vacancies" class="bg-primary nave-vacancies py-24">
+    <h2 class="font-bold leading-none mb-16 md:text-5xl sm:text-4xl text-3xl text-center text-white">Embarque na Nave</h2>
     <div class="overflow-hidden">
       <nave-slider>
         <nave-card v-for="(vacancie, index) in vacanciesList" :key="index" class="nave-vacancies__card" classes="w-64 sm:w-350" :content="vacancie" />
