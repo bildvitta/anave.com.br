@@ -22,10 +22,6 @@
     height: calc(100vh - 58px);
   }
 
-  // @media (max-width: 639px) {
-  //   height: auto;
-  // }
-
   @media (min-width: 768px) and (max-width: 1024px) {
     background-image: url('../assets/img/imagem_home_rocket.jpg');
     background-position: center;
