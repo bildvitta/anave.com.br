@@ -22,7 +22,13 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      { property: 'og:url', content: 'https://bildvitta.github.io/nave' },
+      { property: 'og:title', content: 'Bild Vitta | NAVE' },
+      { property: 'og:description', content: 'Desenhamos e lançamos produtos digitais que transformam empresas.' },
+      { property: 'og:image', content: '~/assets/img/og_image_sharing.jpg' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:locale', content: 'pt-BR' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
