@@ -10,7 +10,7 @@
 
 <script>
 import intersect from '../mixins/intersect'
-import naveIntersect from '../helpers/Intersect'
+import naveIntersect from './NaveIntersect'
 
 export default {
   components: {

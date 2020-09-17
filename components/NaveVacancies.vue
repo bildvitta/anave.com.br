@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import naveIntersect from '../helpers/Intersect'
 import intersect from '../mixins/intersect'
+import naveIntersect from './NaveIntersect'
 
 const vacancies = [
   { title: 'php', resume: 'backend ', description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.', img: require('../assets/img/PHP-logo.png') },
