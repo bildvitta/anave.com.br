@@ -21,9 +21,9 @@
 
         <!-- MENU MOBILE BUTTON -->
         <div class="cursor-pointer lg:hidden menu-icon ml-auto" :class="openedMobileMenu" @click="toggleMobileMenu">
-          <div class="bg-gray-900 duration-500 ease-linear h-1 menu-icon__bar--1 transition-all w-6" />
-          <div class="bg-gray-900 duration-500 ease-linear h-1 menu-icon__bar--2 mt-1 transition-all w-6" />
-          <div class="bg-gray-900 duration-500 ease-linear h-1 menu-icon__bar--3 mt-1 transition-all w-6" />
+          <div class="bg-gray-900 duration-300 ease-linear h-1 menu-icon__bar--1 transition-all w-6" />
+          <div class="bg-gray-900 duration-300 ease-linear h-1 menu-icon__bar--2 mt-1 transition-all w-6" />
+          <div class="bg-gray-900 duration-300 ease-linear h-1 menu-icon__bar--3 mt-1 transition-all w-6" />
         </div>
       </div>
     </header>
@@ -92,7 +92,7 @@ export default {
     },
 
     logoSrcsetSizes () {
-      return '(max-width: 1023px) 80px, 53px'
+      return '(max-width: 1023px) 50px, 53px'
     },
 
     openedMobileMenu () {
@@ -140,8 +140,8 @@ export default {
   }
 
   &__mobile-menu {
-    height: calc(100vh - 77px);
-    top: 77px;
+    height: calc(100vh - 58px);
+    top: 58px;
   }
 
   &__mobile-close {

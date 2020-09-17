@@ -39,7 +39,7 @@ export default {
   &__image {
     border-radius: $default-radius;
 
-    @media (max-width: 1023px) {
+    @media (max-width: 640px) {
       width: 100%;
     }
   }

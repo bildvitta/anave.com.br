@@ -1,13 +1,13 @@
 <template>
   <div v-bind="$attrs" class="bg-primary nave-card">
-    <div class="bg-white content-between flex flex-wrap h-full px-8 rounded-lg shadow-lg" :class="classes">
-      <div class="mx-1 py-10 rounded-lg">
-        <img alt="Sunset in the mountains" class="h-32 w-full" :src="content.img">
+    <div class="bg-white content-between flex flex-wrap h-full overflow-hidden rounded-lg shadow-lg" :class="classes">
+      <div class="bg-gray-300 h-40 py-10 w-full">
+        <img alt="Sunset in the mountains" class="h-auto mx-auto w-32" :src="content.img">
       </div>
-      <div class="font-bold mb-2 text-gray-500 text-xl w-full">{{ content.title }}</div>
-      <div class="font-bold mb-2 nave-card__resume text-md whitespace-normal">{{ content.resume }}</div>
-      <div class="nave-card__description text-gray-700 text-justify whitespace-normal">{{ content.description }}</div>
-      <div class="font-bold py-5 underline">
+      <div class="font-bold mb-2 mt-6 px-8 text-gray-500 text-sm uppercase w-full">{{ content.title }}</div>
+      <div class="font-bold mb-2 nave-card__resume px-8 text-base whitespace-normal">{{ content.resume }}</div>
+      <div class="mb-2 nave-card__description px-8 text-base text-gray-700 text-justify whitespace-normal">{{ content.description }}</div>
+      <div class="font-bold pb-6 px-8 text-base underline">
         <a href="#">Quero me Candidatar</a>
       </div>
     </div>
@@ -40,7 +40,7 @@ export default {
   &__description {
     -webkit-box-orient: vertical;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 5;
     overflow: hidden;
   }
 
