@@ -5,7 +5,7 @@
         <section class="md:text-left text-center">
           <!-- logo -->
           <div class="flex justify-center md:justify-start text-4xl">
-            <img alt="logo nave" class="w-48" src="@/assets/img/NAVE-negativo.png">
+            <img alt="logo nave" class="self-start w-48" src="@/assets/img/NAVE-negativo.png">
           </div>
           <div class="flex justify-center mb-16 md:justify-start md:ml-2 mr-2">
             <img alt="Bild Vitta - NAVE" class="mt-6 w-32" src="@/assets/img/Bild_Vitta.svg">
