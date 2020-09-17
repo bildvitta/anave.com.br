@@ -8,7 +8,7 @@
         <nave-link-button class="hidden lg:mb-0 mb-10 md:inline-block mt-8" label="Quero trabalhar na Nave" link="#vacancies" />
       </div>
     </div>
-    <div class="col-end-13 col-start-1 lg:col-end-13 lg:col-start-7 lg:mx-0 mt-8 mx-5 sm:mt-0">
+    <div class="col-end-13 col-start-1 lg:col-end-13 lg:col-start-7 lg:mx-0 md:mt-0 mt-8 mx-5">
       <div class="nave-home__image" />
     </div>
   </section>
@@ -19,7 +19,8 @@
   height: calc(100vh - 88px);
 
   @media (max-width: 1024px) {
-    height: calc(100vh - 58px);
+    height: auto;
+    min-height: calc(100vh - 58px);
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
