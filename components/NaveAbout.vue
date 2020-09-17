@@ -2,11 +2,13 @@
   <section id="about" class="flex items-center nave-about py-24">
     <div class="grid grid-cols-12 items-center md:container mx-5">
       <div class="col-span-12 lg:col-span-6 lg:col-start-1">
-        <nave-embed-ratio class="col-span-6" ratio="16:9">
-          <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="lg:mx-0 mx-auto w-full"
-                  frameborder="0" src="https://www.youtube.com/embed/qzVW_TiSmSY"
-          />
-        </nave-embed-ratio>
+        <nave-intersect root-margin="60px 0px 0px 0px" @~enter="onEnter('youtubeEmbed')">
+          <nave-embed-ratio class="col-span-6" ratio="16:9">
+            <iframe v-if="renders.youtubeEmbed" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="lg:mx-0 mx-auto w-full"
+                    frameborder="0" src="https://www.youtube.com/embed/E48ThA7WqZ4"
+            />
+          </nave-embed-ratio>
+        </nave-intersect>
       </div>
 
       <div class="col-span-12 lg:col-span-5 lg:col-start-8 lg:mt-0 mt-10 nave-about__text-wrapper">
@@ -20,6 +22,21 @@
     </div>
   </section>
 </template>
+
+<script>
+import intersect from '../mixins/intersect'
+import naveIntersect from './NaveIntersect'
+
+export default {
+  components: {
+    naveIntersect
+  },
+
+  mixins: [
+    intersect
+  ]
+}
+</script>
 
 <style lang="scss">
   .nave-about {
