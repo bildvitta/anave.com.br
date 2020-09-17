@@ -19,7 +19,11 @@
     border-radius: $default-radius;
     width: calc(33% - 8px);
 
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
+      width: calc(50% - 8px);
+    }
+
+    @media (max-width: 640px) {
       width: 100%;
     }
   }
