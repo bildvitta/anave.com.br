@@ -5,7 +5,7 @@
         <nave-intersect root-margin="60px 0px 0px 0px" @~enter="onEnter('youtubeEmbed')">
           <nave-embed-ratio class="col-span-6" ratio="16:9">
             <iframe v-if="renders.youtubeEmbed" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="lg:mx-0 mx-auto w-full"
-                    frameborder="0" src="https://www.youtube.com/embed/E48ThA7WqZ4"
+                    frameborder="0" src="https://www.youtube.com/embed/qzVW_TiSmSY"
             />
           </nave-embed-ratio>
         </nave-intersect>
