@@ -18,7 +18,7 @@ export default {
 
   computed: {
     showFloatingButton () {
-      return this.windowWidth < 768 && this.scrollY > 300 && state.activeLink !== 'vacancies'
+      return this.windowWidth < 768 && state.activeLink !== 'vacancies'
     },
 
     activeFloatingButton () {
