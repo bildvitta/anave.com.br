@@ -1,5 +1,5 @@
 <template>
-  <a class="block fixed font-bold lg:hidden nave-floating-button px-6 py-4 shadow-floating z-10" :class="activeFloatingButton" @click="scrollTo('#vacancies')">Quero ser NAVERO</a>
+  <a class="block cursor-pointer fixed font-bold lg:hidden nave-floating-button px-6 py-4 shadow-floating z-10" :class="activeFloatingButton" @click="scrollTo('#vacancies')">Quero trabalhar na Nave</a>
 </template>
 
 <script>
