@@ -17,9 +17,9 @@ export default {
     naveIntersect
   },
 
-  mixins: {
+  mixins: [
     intersect
-  },
+  ],
 
   data () {
     return {

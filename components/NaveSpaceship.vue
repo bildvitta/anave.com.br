@@ -1,5 +1,5 @@
 <template>
-  <nave-intersect root-margin="60px 0px 0px 0px" @~enter="onEnter">
+  <nave-intersect root-margin="60px 0px 0px 0px" @~enter="onEnter(spaceShip)">
     <section id="spaceship" class="container grid grid-cols-12 nave-spaceship py-24">
       <div class="col-end-12 col-start-1 lg:col-end-11 lg:col-start-3 lg:text-center">
         <h2 class="font-bold mb-4 nave-spaceship__title text-4xl">Espaço Nave</h2>
@@ -8,7 +8,7 @@
           impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma
         </p>
       </div>
-      <div v-if="isRendered" class="col-span-12 flex flex-wrap justify-between nave-spaceship__gallery">
+      <div v-if="renders.spaceShip" class="col-span-12 flex flex-wrap justify-between nave-spaceship__gallery">
         <img v-for="n in 6" :key="n" alt="" class="mb-4 nave-spaceship__gallery-image self-start" src="~/assets/img/PHP-logo.png">
       </div>
     </section>
@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import intersect from '../mixins/intersect'
 import naveIntersect from '../helpers/Intersect'
 
 export default {
@@ -23,19 +24,9 @@ export default {
     naveIntersect
   },
 
-  data () {
-    return {
-      isRendered: false
-    }
-  },
-
-  methods: {
-    onEnter () {
-      // eslint-disable-next-line no-console
-      console.log('SpaceShip')
-      this.isRendered = true
-    }
-  }
+  mixins: [
+    intersect
+  ]
 }
 </script>
 
