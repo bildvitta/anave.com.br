@@ -37,7 +37,7 @@
   }
 
   &__image {
-    background-image: url('../assets/img/imagem_home_rocket.jpg');
+    background-image: url('../assets/img/imagem_home_rocket_small.webp');
     background-position: 0 -100px;
     background-repeat: no-repeat;
     background-size: cover;
