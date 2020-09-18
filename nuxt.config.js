@@ -30,7 +30,7 @@ export default {
       { property: 'og:url', content: 'https://bildvitta.github.io/nave' },
       { property: 'og:title', content: 'Bild Vitta | NAVE' },
       { property: 'og:description', content: 'Desenhamos e lançamos produtos digitais que transformam empresas.' },
-      { property: 'og:image', content: '~/assets/img/og_image_sharing.jpg' },
+      { property: 'og:image', content: 'https://bildvitta.github.io/nave/og-image.jpg' },
       { property: 'og:type', content: 'website' },
       { property: 'og:locale', content: 'pt-BR' }
     ],
