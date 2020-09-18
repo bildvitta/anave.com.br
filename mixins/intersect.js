@@ -1,8 +1,6 @@
 export default {
   computed: {
     rootMargin () {
-      // eslint-disable-next-line no-console
-      console.log(this.windowSize)
       return this.windowSize < 1024 ? '58px 0px 0px 0px' : '88px 0px 0px 0px'
     }
   },
