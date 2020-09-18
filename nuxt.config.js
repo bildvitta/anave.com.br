@@ -35,8 +35,7 @@ export default {
       { property: 'og:locale', content: 'pt-BR' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   /*
@@ -46,7 +45,8 @@ export default {
     '~/assets/scss/base.scss',
     '~/assets/scss/_variables.scss',
     '~/assets/scss/_animations.scss',
-    '~/assets/scss/_embed-responsive-aspect-ratio.scss'
+    '~/assets/scss/_embed-responsive-aspect-ratio.scss',
+    '~/assets/scss/_fonts.scss'
   ],
 
   styleResources: {
