@@ -2,7 +2,7 @@
   <section id="about" class="flex items-center nave-about py-24">
     <div class="grid grid-cols-12 items-center md:container mx-5">
       <div class="col-span-12 lg:col-span-6 lg:col-start-1">
-        <nave-intersect root-margin="60px 0px 0px 0px" @~enter="onEnter('youtubeEmbed')">
+        <nave-intersect :root-margin="rootMargin" @~enter="onEnter('youtubeEmbed')">
           <nave-embed-ratio class="col-span-6" ratio="16:9">
             <iframe v-if="renders.youtubeEmbed" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="lg:mx-0 mx-auto w-full"
                     frameborder="0" src="https://www.youtube.com/embed/qzVW_TiSmSY"
@@ -14,6 +14,7 @@
       <div class="col-span-12 lg:col-span-5 lg:col-start-8 lg:mt-0 mt-10 nave-about__text-wrapper">
         <h2 class="font-bold text-5xl text-white">Vamos falar sobre propósito?</h2>
         <p class="mt-4 text-base text-white">
+          {{ rootMargin }}
           é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o
           século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos.
         </p>
