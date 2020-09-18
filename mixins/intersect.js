@@ -1,7 +1,7 @@
 export default {
   computed: {
     rootMargin () {
-      return `${this.windowSize < 1024 ? '58px' : '88px'} 0x 0px 0px`
+      return `${this.windowSize < 1024 ? '58px' : '88px'} 0px 0px 0px`
     }
   },
 
