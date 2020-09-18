@@ -1,5 +1,5 @@
 <template>
-  <nave-intersect root-margin="60px 0px 0px 0px" @~enter="onEnter('spaceShip')">
+  <nave-intersect :root-margin="rootMargin" @~enter="onEnter('spaceShip')">
     <section id="spaceship" class="container grid grid-cols-12 nave-spaceship py-24">
       <div class="col-end-12 col-start-1 lg:col-end-11 lg:col-start-3 lg:text-center">
         <h2 class="font-bold mb-4 nave-spaceship__title text-4xl">Espaço Nave</h2>

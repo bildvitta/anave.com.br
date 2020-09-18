@@ -1,5 +1,5 @@
 <template>
-  <nave-intersect root-margin="60px 0px 0px 0px" @~enter="onEnter('vacancies')">
+  <nave-intersect :root-margin="rootMargin" @~enter="onEnter('vacancies')">
     <section id="vacancies" class="bg-primary nave-vacancies pb-24 pt-32">
       <h2 class="font-bold leading-none mb-16 md:text-5xl sm:text-4xl text-3xl text-center text-white">Embarque na Nave</h2>
       <div v-if="renders.vacancies" class="overflow-hidden">
