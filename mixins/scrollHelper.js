@@ -4,7 +4,7 @@ export default {
   methods: {
     scrollTo (anchor) {
       const element = document.querySelector(anchor)
-      const headerOffset = document.querySelector('.nave-header').clientHeight
+      const headerOffset = document.querySelector('.nave-header').offsetHeight
 
       scrollToElement(element, {
         duration: 100,
