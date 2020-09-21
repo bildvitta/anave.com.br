@@ -59,8 +59,8 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-    '~/plugins/components.js',
-    '~/plugins/modernizr-custom.client.js'
+    { src: '~/plugins/components.js' },
+    { src: '~/plugins/modernizr-custom.js', mode: 'client' }
   ],
   /*
   ** Auto import components

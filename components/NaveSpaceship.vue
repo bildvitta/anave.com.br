@@ -9,7 +9,10 @@
         </p>
       </div>
       <div v-if="renders.spaceShip" class="col-span-12 flex flex-wrap justify-between nave-spaceship__gallery">
-        <img v-for="n in 6" :key="n" alt="" class="mb-4 nave-spaceship__gallery-image self-start" src="~/assets/img/PHP-logo.png">
+        <picture v-for="n in 6" :key="n" class="mb-4 nave-spaceship__gallery-image self-start">
+          <source srcset="~/assets/img/PHP-logo.webp" type="image/webp">
+          <img alt="Alt Text!" src="~/assets/img/PHP-logo.png">
+        </picture>
       </div>
     </section>
   </nave-intersect>

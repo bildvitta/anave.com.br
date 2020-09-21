@@ -1,11 +1,20 @@
 <template>
   <div class="flex flex-wrap nave-flex-gallery w-full">
     <div class="flex flex-wrap justify-between nave-flex-gallery__small-wrapper" :class="[reverseImage, addHorizontalMargin]">
-      <img alt="" class="block lg:h-full lg:mb-0 mb-4 nave-flex-gallery__image nave-flex-gallery__image--small self-start" src="~/assets/img/PHP-logo.png">
-      <img alt="" class="block lg:h-full lg:mb-0 mb-4 nave-flex-gallery__image nave-flex-gallery__image--small self-start" src="~/assets/img/PHP-logo.png">
+      <picture class="nave-flex-gallery__image nave-flex-gallery__image--small">
+        <source srcset="~/assets/img/PHP-logo.webp" type="image/webp">
+        <img alt="Alt Text!" class="block lg:mb-0 mb-4 self-start" src="~/assets/img/PHP-logo.png">
+      </picture>
+      <picture class="nave-flex-gallery__image nave-flex-gallery__image--small">
+        <source srcset="~/assets/img/PHP-logo.webp" type="image/webp">
+        <img alt="Alt Text!" class="block lg:mb-0 mb-4 self-start" src="~/assets/img/PHP-logo.png">
+      </picture>
     </div>
     <div class="flex nave-flex-gallery__bigger-wrapper">
-      <img alt="" class="block lg:mb-0 mb-4 nave-flex-gallery__image nave-flex-gallery__image--big self-start" src="~/assets/img/PHP-logo.png">
+      <picture class="nave-flex-gallery__image">
+        <source srcset="~/assets/img/PHP-logo.webp" type="image/webp">
+        <img alt="Alt Text!" class="block lg:mb-0 mb-4 self-start" src="~/assets/img/PHP-logo.png">
+      </picture>
     </div>
   </div>
 </template>

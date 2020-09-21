@@ -45,4 +45,8 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  .webp .nave-about {
+    background-image: url('../assets/img/nave_tela-proposito_.webp');
+  }
 </style>
