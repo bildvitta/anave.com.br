@@ -16,17 +16,30 @@ import intersect from '../mixins/intersect'
 import naveIntersect from './NaveIntersect'
 
 const vacancies = [
-  { title: 'php', resume: 'backend ', description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.', img: require('../assets/img/PHP-logo.png') },
-  { title: 'Rubi on Rails', resume: ' backend', description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.', img: require('../assets/img/Ruby_On_Rails_Logo.png') },
-  { title: 'VUE.JS', resume: ' Frontend', description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.', img: require('../assets/img/vuejs.png') },
-  { title: 'php', resume: ' ', description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.', img: require('../assets/img/PHP-logo.png') },
-  { title: 'VUE.JS', resume: ' Frontend Frontend', description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.', img: require('../assets/img/PHP-logo.png') },
-  { title: 'VUE.JS', resume: ' Frontend', description: 'é simplesmente uma simulação .', img: require('../assets/img/PHP-logo.png') },
-  { title: 'VUE.JS', resume: ' Frontend', description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.', img: require('../assets/img/PHP-logo.png') },
-  { title: 'VUE.JS', resume: ' Frontend', description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.', img: require('../assets/img/PHP-logo.png') },
-  { title: 'VUE.JS', resume: ' Frontend', description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.', img: require('../assets/img/PHP-logo.png') },
-  { title: 'VUE.JS', resume: ' Frontend', description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.', img: require('../assets/img/PHP-logo.png') },
-  { title: 'VUE.JS', resume: ' Frontend', description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.', img: require('../assets/img/PHP-logo.png') }
+  {
+    title: 'php',
+    resume: 'backend ',
+    description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.',
+    img: require('../assets/img/PHP-logo.png')
+  },
+  {
+    title: 'Rubi on Rails',
+    resume: ' backend',
+    description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.',
+    img: require('../assets/img/Ruby_On_Rails_Logo.png')
+  },
+  {
+    title: 'VUE.JS',
+    resume: ' Frontend',
+    description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.',
+    img: require('../assets/img/vuejs.png')
+  },
+  {
+    title: 'php',
+    resume: 'Test',
+    description: 'é simplesmente uma simulação',
+    img: require('../assets/img/PHP-logo.png')
+  }
 ]
 
 export default {
@@ -49,6 +62,8 @@ export default {
 <style lang="scss">
 .nave-vacancies {
   &__card {
+    min-height: 420px;
+
     &:last-child {
       padding-right: 20px;
     }
