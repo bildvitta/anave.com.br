@@ -40,7 +40,6 @@ export default {
 
 <style lang="scss">
   .nave-about {
-    background-image: url('../assets/img/nave_tela-proposito_.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -48,5 +47,9 @@ export default {
 
   .webp .nave-about {
     background-image: url('../assets/img/nave_tela-proposito_.webp');
+  }
+
+  .no-webp .nave-about {
+    background-image: url('../assets/img/nave_tela-proposito_.png');
   }
 </style>
