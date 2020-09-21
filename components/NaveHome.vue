@@ -1,5 +1,5 @@
 <template>
-  <section id="home" class="bg-white grid grid-cols-12 items-center lg:container lg:py-0 nave-home py-8">
+  <section id="home" class="bg-white grid grid-cols-12 items-center lg:container lg:py-0 nave-home py-12">
     <div class="col-span-12 lg:col-span-5 lg:mx-0 mx-5 nave-home__title-wrapper">
       <div class="items-center row">
         <h1 class="font-bold lg:text-4xl nave-home__title text-3xl xl:text-5xl">
