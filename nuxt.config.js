@@ -38,6 +38,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+
   /*
   ** Global CSS
   */
@@ -58,7 +59,8 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-    '~/plugins/components.js'
+    { src: '~/plugins/components.js' },
+    { src: '~/plugins/modernizr-custom.js', mode: 'client' }
   ],
   /*
   ** Auto import components

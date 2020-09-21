@@ -37,7 +37,7 @@
   }
 
   &__image {
-    background-image: url('../assets/img/imagem_home_rocket.jpg');
+    background-image: url('../assets/img/imagem_home_rocket_small.jpg');
     background-position: 0 -100px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -65,6 +65,17 @@
         grid-column: none;
       }
     }
+  }
+}
+
+.webp .nave-home__image {
+  background-image: url('../assets/img/imagem_home_rocket_small.webp');
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .webp .nave-home {
+    background-image: url('../assets/img/imagem_home_rocket_small.webp');
+    background-position: 0 -50px;
   }
 }
 </style>
