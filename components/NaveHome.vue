@@ -24,7 +24,6 @@
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
-    background-image: url('../assets/img/imagem_home_rocket.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -37,7 +36,6 @@
   }
 
   &__image {
-    background-image: url('../assets/img/imagem_home_rocket_small.jpg');
     background-position: 0 -100px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -72,10 +70,18 @@
   background-image: url('../assets/img/imagem_home_rocket_small.webp');
 }
 
+.no-webp .nave-home__image {
+  background-image: url('../assets/img/nave_tela-proposito_.png');
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .webp .nave-home {
     background-image: url('../assets/img/imagem_home_rocket_small.webp');
     background-position: 0 -50px;
+  }
+
+  .no-webp .nave-home {
+    background-image: url('../assets/img/imagem_home_rocket_small.jpg');
   }
 }
 </style>
