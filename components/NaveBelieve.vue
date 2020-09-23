@@ -1,6 +1,6 @@
 <template>
   <nave-intersect :root-margin="rootMargin" @~enter="onEnter('believe')">
-    <section id="believe" class="flex flex-col items-center md:flex-row nave-believe py-48">
+    <section id="believe" class="flex flex-col items-center md:flex-row nave-believe py-12">
       <div v-if="renders.believe" class="lg:container w-full">
         <nave-vertical-carousel :phrases="phrases" :slide-timer="4000" />
       </div>
