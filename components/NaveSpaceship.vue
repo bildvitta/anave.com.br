@@ -23,7 +23,6 @@ import intersect from '../mixins/intersect'
 import naveIntersect from './NaveIntersect'
 
 export default {
-
   components: {
     naveIntersect
   },
@@ -31,6 +30,7 @@ export default {
   mixins: [
     intersect
   ],
+
   data () {
     return {
       spaceshipImages: [
