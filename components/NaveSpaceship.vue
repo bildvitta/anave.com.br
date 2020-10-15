@@ -4,8 +4,7 @@
       <div class="col-end-12 col-start-1 lg:col-end-11 lg:col-start-3 lg:text-center">
         <h2 class="font-bold mb-4 nave-spaceship__title text-4xl">Espaço Nave</h2>
         <p class="block mb-10 mx-auto text-base text-gray-800">
-          é simplesmente uma simulação de texto da indústria tipográfica e de
-          impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma
+          Com um andar inteiro dedicado à construção de um ambiente plural, criativo e inovador, a NAVE está de portas abertas para receber toda a comunidade de tecnologia e promover a transformação do futuro.
         </p>
       </div>
       <div v-if="renders.spaceShip" class="col-span-12 flex flex-wrap justify-between nave-spaceship__gallery">
