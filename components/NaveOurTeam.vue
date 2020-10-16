@@ -2,10 +2,11 @@
   <nave-intersect :root-margin="rootMargin" @~enter="onEnter('ourTeam')">
     <section id="team" class="grid grid-cols-12 items-center md:container md:flex-row mx-5 nave-our-team py-12">
       <div class="col-end-12 col-start-1 lg:col-end-11 lg:col-start-3 lg:text-center nave-our-team__text">
-        <h2 class="font-bold mb-4 text-4xl">Inovação é feita de pessoas!</h2>
+        <h2 class="font-bold mb-4 text-4xl">Trabalhamos em equipe e lutamos por ela</h2>
         <p class="mb-10 text-base text-gray-800">
-          é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o
-          século XVI, quando um impressor desconhecido pegou uma
+          Colaboramos, ensinamos, dividimos e crescemos juntos.
+          Gostamos de pessoas que sonham grande, querem empreender e não têm medo de tentar, prezando sempre pela diversidade de ideias, personalidades e opiniões que transformam.
+          Saca só quem já faz parte disso!
         </p>
       </div>
       <div v-if="renders.ourTeam" class="col-span-12 flex grid grid-cols-12 justify-between lg:gap-4">
