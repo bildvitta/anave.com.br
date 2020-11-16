@@ -4,7 +4,7 @@
       <h2 class="font-bold leading-none mb-16 md:text-5xl sm:text-4xl text-3xl text-center text-white">Embarque na Nave</h2>
       <div v-if="renders.vacancies" class="overflow-hidden">
         <nave-slider>
-          <nave-card v-for="(vacancie, index) in vacanciesList" :key="index" class="nave-vacancies__card" classes="w-64 sm:w-350" :content="vacancie" />
+          <nave-card v-for="(vacancie, index) in vacanciesList" :key="index" class="nave-vacancies__card" classes="w-auto sm:w-350" :content="vacancie" />
         </nave-slider>
       </div>
     </section>
@@ -17,28 +17,28 @@ import naveIntersect from './NaveIntersect'
 
 const vacancies = [
   {
-    title: 'php',
-    resume: 'backend ',
+    title: '',
+    resume: 'Pessoa desenvolvedora backend',
     description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.',
-    img: require('../assets/img/PHP-logo.png')
+    img: require('../assets/img/ilustra_backend_1.webp')
   },
   {
-    title: 'Rubi on Rails',
-    resume: ' backend',
+    title: '',
+    resume: 'Pessoa desenvolvedora frontend',
     description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.',
-    img: require('../assets/img/Ruby_On_Rails_Logo.png')
+    img: require('../assets/img/ilustra_frontend_1.webp')
   },
   {
-    title: 'VUE.JS',
-    resume: ' Frontend',
+    title: '',
+    resume: 'Product Designer',
     description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.',
-    img: require('../assets/img/vuejs.png')
+    img: require('../assets/img/ilustra_design_1.webp')
   },
   {
-    title: 'php',
-    resume: 'Test',
-    description: 'é simplesmente uma simulação',
-    img: require('../assets/img/PHP-logo.png')
+    title: '',
+    resume: 'Product Owner',
+    description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.',
+    img: require('../assets/img/ilustra_po_1.webp')
   }
 ]
 
@@ -62,7 +62,7 @@ export default {
 <style lang="scss">
 .nave-vacancies {
   &__card {
-    min-height: 420px;
+    min-height: 366px;
 
     &:last-child {
       padding-right: 20px;

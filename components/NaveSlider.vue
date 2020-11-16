@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="mr-8 nave-slider__button text-right">
-      <button ref="arrow" class="h-10" style="border: none; outline: inherit;" @click="next"><img class="w-10" :hidden="hiddenArrow" src="@/assets/img/proximo .png"></button>
+      <button ref="arrow" class="h-10" style="border: none; outline: inherit;" @click="next"><img class="w-8" :hidden="hiddenArrow" src="@/assets/img/proximo .png"></button>
     </div>
   </div>
 </template>
