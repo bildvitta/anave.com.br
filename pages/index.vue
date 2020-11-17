@@ -1,15 +1,25 @@
+
 <template>
-  <div>
-    <section class="py-24">
-      <div class="container flex flex-col items-center md:flex-row">
-        <div>S1</div>
-        <div>E1</div>
-      </div>
-    </section>
-  </div>
+  <main>
+    <!-- Seção Home -->
+    <nave-home data-active-link="home" />
+    <!-- Seção Sobre -->
+    <nave-about data-active-link="about" />
+
+    <!-- Seção Nosso Time -->
+    <nave-our-team data-active-link="team" />
+
+    <!-- Seção Believe -->
+    <nave-believe data-active-link="believe" />
+
+    <!-- Seção Espaço Nave -->
+    <nave-spaceship data-active-link="spaceship" />
+
+    <!-- Seção vagas -->
+    <nave-vacancies data-active-link="vacancies" />
+  </main>
 </template>
 
 <script>
-export default {
-}
+export default {}
 </script>

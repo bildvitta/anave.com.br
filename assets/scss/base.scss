@@ -1,0 +1,16 @@
+* {
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+
+main {
+  padding-top: 88px;
+
+  @media (max-width: 1024px) {
+    padding-top: 58px;
+  }
+}

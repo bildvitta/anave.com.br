@@ -10,32 +10,57 @@ export default {
   ** See https://nuxtjs.org/api/configuration-target
   */
   target: 'static',
+  router: {
+    base: '/nave/'
+  },
   /*
   ** Headers of the page
   ** See https://nuxtjs.org/api/configuration-head
   */
   head: {
     title: process.env.npm_package_name || '',
+    htmlAttrs: {
+      lang: 'pt-br'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      { 'http-equiv': 'Content-Language', content: 'pt-br' },
+      { property: 'og:url', content: 'https://bildvitta.github.io/nave' },
+      { property: 'og:title', content: 'Bild Vitta | NAVE' },
+      { property: 'og:description', content: 'Desenhamos e lançamos produtos digitais que transformam empresas.' },
+      { property: 'og:image', content: 'https://bildvitta.github.io/nave/_nuxt/img/og-image.jpg' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:locale', content: 'pt-BR' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+
   /*
   ** Global CSS
   */
   css: [
+    '~/assets/scss/base.scss',
+    '~/assets/scss/_variables.scss',
+    '~/assets/scss/_animations.scss',
+    '~/assets/scss/_embed-responsive-aspect-ratio.scss',
+    '~/assets/scss/_fonts.scss'
   ],
+
+  styleResources: {
+    scss: ['~/assets/scss/*.scss']
+  },
+
   /*
   ** Plugins to load before mounting the App
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-    '~/plugins/components.js'
+    { src: '~/plugins/components.js' },
+    { src: '~/plugins/modernizr-custom.js', mode: 'client' }
   ],
   /*
   ** Auto import components
@@ -51,12 +76,14 @@ export default {
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/style-resources'
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/style-resources'
   ],
   /*
   ** Build configuration
