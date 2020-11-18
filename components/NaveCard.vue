@@ -12,7 +12,7 @@
       <!-- TODO oculto por ora, aguardando conteúdo -->
       <!-- <div class="mb-2 nave-card__description px-8 text-base text-gray-700 text-justify whitespace-normal">{{ content.description }}</div> -->
       <div class="mb-8 px-4 sm:px-8 text-base w-full">
-        <nave-link-button class="font-bold tracking-widest" label="Quero me Candidatar" link="#" />
+        <nave-link-button class="font-bold tracking-widest" :href="content.link" label="Quero me Candidatar" target="_bank" />
       </div>
     </div>
   </div>
