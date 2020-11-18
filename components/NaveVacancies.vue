@@ -4,7 +4,7 @@
       <h2 class="font-bold leading-none mb-16 md:text-5xl sm:text-4xl text-3xl text-center text-white">Embarque na Nave</h2>
       <div v-if="renders.vacancies" class="overflow-hidden">
         <nave-slider>
-          <nave-card v-for="(vacancie, index) in vacanciesList" :key="index" class="nave-vacancies__card" classes="w-64 sm:w-350" :content="vacancie" />
+          <nave-card v-for="(vacancie, index) in vacanciesList" :key="index" class="nave-vacancies__card" classes="w-auto sm:w-350" :content="vacancie" />
         </nave-slider>
       </div>
     </section>
@@ -17,28 +17,32 @@ import naveIntersect from './NaveIntersect'
 
 const vacancies = [
   {
-    title: 'php',
-    resume: 'backend ',
-    description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.',
-    img: require('../assets/img/PHP-logo.png')
+    title: '',
+    resume: 'Pessoa desenvolvedora backend',
+    description: '',
+    imgWebp: require('../assets/img/ilustra_backend.webp'),
+    imgPng: require('../assets/img/ilustra_backend.png')
   },
   {
-    title: 'Rubi on Rails',
-    resume: ' backend',
-    description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.',
-    img: require('../assets/img/Ruby_On_Rails_Logo.png')
+    title: '',
+    resume: 'Pessoa desenvolvedora frontend',
+    description: '',
+    imgWebp: require('../assets/img/ilustra_frontend.webp'),
+    imgPng: require('../assets/img/ilustra_frontend.png')
   },
   {
-    title: 'VUE.JS',
-    resume: ' Frontend',
-    description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.',
-    img: require('../assets/img/vuejs.png')
+    title: '',
+    resume: 'Product Designer',
+    description: '',
+    imgWebp: require('../assets/img/ilustra_design.webp'),
+    imgPng: require('../assets/img/ilustra_design.png')
   },
   {
-    title: 'php',
-    resume: 'Test',
-    description: 'é simplesmente uma simulação',
-    img: require('../assets/img/PHP-logo.png')
+    title: '',
+    resume: 'Product Owner',
+    description: '',
+    imgWebp: require('../assets/img/ilustra_po.webp'),
+    imgPng: require('../assets/img/ilustra_po.png')
   }
 ]
 
@@ -62,7 +66,7 @@ export default {
 <style lang="scss">
 .nave-vacancies {
   &__card {
-    min-height: 420px;
+    min-height: 366px;
 
     &:last-child {
       padding-right: 20px;
