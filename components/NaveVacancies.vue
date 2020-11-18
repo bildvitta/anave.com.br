@@ -19,26 +19,30 @@ const vacancies = [
   {
     title: '',
     resume: 'Pessoa desenvolvedora backend',
-    description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.',
-    img: require('../assets/img/ilustra_backend_1.webp')
+    description: '',
+    imgWebp: require('../assets/img/ilustra_backend.webp'),
+    imgPng: require('../assets/img/ilustra_backend.png')
   },
   {
     title: '',
     resume: 'Pessoa desenvolvedora frontend',
-    description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.',
-    img: require('../assets/img/ilustra_frontend_1.webp')
+    description: '',
+    imgWebp: require('../assets/img/ilustra_frontend.webp'),
+    imgPng: require('../assets/img/ilustra_frontend.png')
   },
   {
     title: '',
     resume: 'Product Designer',
-    description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.',
-    img: require('../assets/img/ilustra_design_1.webp')
+    description: '',
+    imgWebp: require('../assets/img/ilustra_design.webp'),
+    imgPng: require('../assets/img/ilustra_design.png')
   },
   {
     title: '',
     resume: 'Product Owner',
-    description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.',
-    img: require('../assets/img/ilustra_po_1.webp')
+    description: '',
+    imgWebp: require('../assets/img/ilustra_po.webp'),
+    imgPng: require('../assets/img/ilustra_po.png')
   }
 ]
 

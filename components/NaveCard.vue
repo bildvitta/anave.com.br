@@ -3,8 +3,8 @@
     <div class="bg-white flex flex-wrap h-full items-stretch justify-center overflow-hidden rounded-lg shadow-lg" :class="classes">
       <div class="bg-gray-100 flex h-40 items-center justify-center w-full">
         <picture>
-          <source :srcset="content.img" type="image/webp">
-          <img alt="Alt Text!" class="mx-auto w-32" :src="content.img">
+          <source :srcset="content.imgWebp" type="image/webp">
+          <img alt="Alt Text!" class="mx-auto w-32" :src="content.imgPng">
         </picture>
       </div>
       <!-- <div class="font-bold mb-2 mt-6 px-4 sm:px-8 text-gray-500 text-sm uppercase w-full">{{ content.title }}</div> -->
