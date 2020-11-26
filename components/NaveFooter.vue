@@ -24,6 +24,11 @@
         <section class="md:text-left text-center">
           <div class="mt-6 underline">contato@anave.com.br</div>
         </section>
+        <div class="flex justify-center md:justify-start mt-8 space-x-2 underline">
+          <div v-for="(media, index) in socialsLinks" :key="index" class="flex md:hidden">
+            <a :href="media.link">{{ media.name }}</a>
+          </div>
+        </div>
       </div>
       <!-- info -->
       <div class="md:w-1/3 text-white">
@@ -35,13 +40,12 @@
             Avenida Luis Eduardo Toledo Prado 800, 3º andar, Ribeirão Preto, São Paulo Brasil
           </div>
           <div class="flex justify-center md:justify-start mt-8 space-x-2 underline">
-            <div v-for="(media, index) in socialsLinks" :key="index">
+            <div v-for="(media, index) in socialsLinks" :key="index" class="hidden md:flex">
               <a :href="media.link">{{ media.name }}</a>
             </div>
           </div>
         </section>
       </div>
-    </div>
     </div>
   </footer>
 </template>
@@ -52,18 +56,11 @@ import VueTypedJs from 'vue-typed-js'
 Vue.use(VueTypedJs)
 
 const socials = [
-  { name: 'instagram', link: '#' },
-  { name: 'linkedin', link: '#' },
-  { name: 'Medium', link: '#' }
+  { name: 'instagram', link: 'https://www.instagram.com/carreirasnave/' },
+  { name: 'linkedin', link: 'https://www.linkedin.com/company/anave' },
+  { name: 'Medium', link: 'https://medium.com/anave' }
 ]
 export default {
-  data () {
-    return {
-      return: {
-      }
-    }
-  },
-
   computed: {
     socialsLinks () {
       return socials
