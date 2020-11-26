@@ -24,15 +24,15 @@
         <section class="md:text-left text-center">
           <div class="mt-6 underline">contato@anave.com.br</div>
         </section>
-        <div class="flex justify-center md:justify-start mt-8 space-x-2 underline">
-          <div v-for="(media, index) in socialsLinks" :key="index" class="flex md:hidden">
+        <div class="flex justify-center md:hidden md:justify-start mt-8 space-x-2 underline">
+          <div v-for="(media, index) in socialsLinks" :key="index">
             <a :href="media.link">{{ media.name }}</a>
           </div>
         </div>
       </div>
       <!-- info -->
       <div class="md:w-1/3 text-white">
-        <section class="flex-row md:flex-col mt-16">
+        <section class="flex-row md:flex-col md:mt-16 mt-8">
           <div class="font-bold mb-5 md:text-left text-2xl text-center">
             Shopping Iguatemi Business
           </div>

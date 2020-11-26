@@ -63,6 +63,12 @@ export default {
     vacanciesList () {
       return vacancies
     }
+  },
+
+  mounted () {
+    this.$ga.screenview({
+      screenName: 'vacancies'
+    })
   }
 }
 </script>
