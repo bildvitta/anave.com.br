@@ -61,6 +61,7 @@ export default {
 
   modules: [
     '@nuxtjs/style-resources'
+    // ['@nuxtjs/google-tag-manager', { id: 'G-W0E4V89RV3' }]
   ],
 
   build: {
