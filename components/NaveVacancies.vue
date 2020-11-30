@@ -66,8 +66,11 @@ export default {
   },
 
   mounted () {
-    this.$ga.screenview({
-      screenName: 'vacancies'
+    this.$ga.screenview('Vacancies')
+    this.$ga.page({
+      page: 'Section: Vacancies',
+      title: 'Vacancies',
+      location: window.location.href
     })
   }
 }

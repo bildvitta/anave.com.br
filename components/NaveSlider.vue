@@ -87,6 +87,7 @@ export default {
 
       if (!event) {
         event = window.event
+        this.$ga.event('Scroll', 'Move Cards', 'Vacancies', true)
       }
 
       event.preventDefault()

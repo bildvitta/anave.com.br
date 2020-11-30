@@ -16,7 +16,6 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
-    "@nuxtjs/google-tag-manager": "^2.3.2",
     "@nuxtjs/style-resources": "^1.0.0",
     "nuxt": "^2.14.0",
     "scroll-to-element": "^2.0.3",

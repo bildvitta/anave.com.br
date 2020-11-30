@@ -44,7 +44,7 @@ export default {
   plugins: [
     { src: '~/plugins/components.js' },
     { src: '~/plugins/modernizr-custom.js', mode: 'client' },
-    { src: '~plugins/ga.js', mode: 'client' }
+    { src: '~/plugins/ga.js', mode: 'client' }
   ],
 
   components: true,
@@ -55,13 +55,13 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/style-resources',
     ['@nuxtjs/google-analytics', {
-      id: 'G-W0E4V89RV3'
+      id: 'UA-184046667-1',
+      debug: true
     }]
   ],
 
   modules: [
     '@nuxtjs/style-resources'
-    // ['@nuxtjs/google-tag-manager', { id: 'G-W0E4V89RV3' }]
   ],
 
   build: {
