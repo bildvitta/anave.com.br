@@ -42,4 +42,3 @@ export default ({ app }) => {
       ga('send', 'pageview')
     })
   }
-  
