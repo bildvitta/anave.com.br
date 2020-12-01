@@ -63,6 +63,15 @@ export default {
     vacanciesList () {
       return vacancies
     }
+  },
+
+  mounted () {
+    this.$ga.screenview('Vacancies')
+    this.$ga.page({
+      page: 'Section: Vacancies',
+      title: 'Vacancies',
+      location: window.location.href
+    })
   }
 }
 </script>
