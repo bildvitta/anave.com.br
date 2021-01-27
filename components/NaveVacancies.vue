@@ -22,7 +22,7 @@ const vacancies = [
     description: '',
     imgWebp: require('../assets/img/ilustra_backend.webp'),
     imgPng: require('../assets/img/ilustra_backend.png'),
-    link: 'https://bild.gupy.io/jobs/506524?jobBoardSource=gupy_public_page'
+    link: 'https://bild.gupy.io/jobs/656048'
   },
   {
     title: '',
