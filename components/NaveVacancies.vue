@@ -26,7 +26,7 @@ const vacancies = [
   },
   {
     title: '',
-    resume: 'Estágio Desenvolvimento Front-end',
+    resume: 'Estágio em frontend',
     description: '',
     imgWebp: require('../assets/img/ilustra_frontend.webp'),
     imgPng: require('../assets/img/ilustra_frontend.png'),
