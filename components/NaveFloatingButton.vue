@@ -1,5 +1,5 @@
 <template>
-  <a class="bg-gradient-to-r block block cursor-pointer fixed font-bold from-primary md:hidden nave-floating-button px-6 py-4 shadow-floating to-secondary z-10" :class="activeFloatingButton" @click="scrollTo('#vacancies')">Quero trabalhar na Nave</a>
+  <a class="bg-gradient-to-r block cursor-pointer fixed font-bold from-primary md:hidden nave-floating-button px-6 py-4 shadow-floating to-secondary z-10" :class="activeFloatingButton" @click="scrollTo('#vacancies')">Quero trabalhar na Nave</a>
 </template>
 
 <script>
