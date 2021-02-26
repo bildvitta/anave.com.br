@@ -26,14 +26,6 @@ const vacancies = [
   },
   {
     title: '',
-    resume: 'Estágio em frontend',
-    description: '',
-    imgWebp: require('../assets/img/ilustra_frontend.webp'),
-    imgPng: require('../assets/img/ilustra_frontend.png'),
-    link: 'https://bild.gupy.io/jobs/652369'
-  },
-  {
-    title: '',
     resume: 'Pessoa desenvolvedora frontend',
     description: '',
     imgWebp: require('../assets/img/ilustra_frontend.webp'),
