@@ -1,0 +1,82 @@
+/*!
+  * vue-router v3.4.3
+  * (c) 2020 Evan You
+  * @license MIT
+  */
+
+/*!
+  {
+  "name": "Webp",
+  "async": true,
+  "property": "webp",
+  "tags": ["image"],
+  "builderAliases": ["img_webp"],
+  "authors": ["Krister Kari", "@amandeep", "Rich Bradshaw", "Ryan Seddon", "Paul Irish"],
+  "notes": [{
+    "name": "Webp Info",
+    "href": "https://developers.google.com/speed/webp/"
+  }, {
+    "name": "Chormium blog - Chrome 32 Beta: Animated WebP images and faster Chrome for Android touch input",
+    "href": "https://blog.chromium.org/2013/11/chrome-32-beta-animated-webp-images-and.html"
+  }, {
+    "name": "Webp Lossless Spec",
+    "href": "https://developers.google.com/speed/webp/docs/webp_lossless_bitstream_specification"
+  }, {
+    "name": "Article about WebP support on Android browsers",
+    "href": "http://www.wope-framework.com/en/2013/06/24/webp-support-on-android-browsers/"
+  }, {
+    "name": "Chormium WebP announcement",
+    "href": "https://blog.chromium.org/2011/11/lossless-and-transparency-encoding-in.html?m=1"
+  }]
+  }
+  ! */
+
+/*!
+ * 
+ *   typed.js - A JavaScript Typing Animation Library
+ *   Author: Matt Boldt <me@mattboldt.com>
+ *   Version: v2.0.6
+ *   Url: https://github.com/mattboldt/typed.js
+ *   License(s): MIT
+ * 
+ */
+
+/*!
+ * Vue.js v2.6.12
+ * (c) 2014-2020 Evan You
+ * Released under the MIT License.
+ */
+
+/*!
+ * modernizr v3.6.0
+ * Build https://modernizr.com/download?-webp-setclasses-dontmin
+ *
+ * Copyright (c)
+ *  Faruk Ates
+ *  Paul Irish
+ *  Alex Sexton
+ *  Ryan Seddon
+ *  Patrick Kettner
+ *  Stu Cox
+ *  Richard Herrera
+
+ * MIT License
+ */
+
+/*!
+ * vue-client-only v2.0.0
+ * (c) 2019-present egoist <0x142857@gmail.com>
+ * Released under the MIT License.
+ */
+
+/*!
+ * vue-no-ssr v1.1.1
+ * (c) 2018-present egoist <0x142857@gmail.com>
+ * Released under the MIT License.
+ */
+
+/*!
+ * vuex v3.5.1
+ * (c) 2020 Evan You
+ * @license MIT
+ */
