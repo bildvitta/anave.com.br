@@ -2,28 +2,32 @@
   <div>
     <header class="bg-white fixed inset nave-header py-5 shadow-md w-full z-50">
       <div class="flex flex-wrap items-center lg:container md:flex-row mx-5">
-        <nuxt-link class="md:mb-0" to="/">
-          <img alt="NAVE - Espaço Nave" :sizes="logoSrcsetSizes" src="~/assets/img/logo@2x.png"
-               srcset="~/assets/img/logo@2x.png 106w, ~/assets/img/logo.png 53w" @click="scrollToTop"
+        <nuxt-link class="flex flex-row md:mb-0" to="/">
+          <img alt="NAVE - Espaço Nave" :sizes="logoSrcsetSizes" src="~/assets/img/nave-logo.svg"
+               srcset="~/assets/img/nave-logo.svg, ~/assets/img/nave-logo.svg 53w" @click="scrollToTop"
+          >
+          <div class="bg-gray-400 mx-6 my-1 nave-header__desktop-separator" />
+          <img alt="NAVE - Espaço Nave" :sizes="logoSrcsetSizes" src="~/assets/img/bild-vitta-logo.svg"
+               srcset="~/assets/img/bild-vitta-logo.svg, ~/assets/img/bild-vitta-logo.svg 53w" @click="scrollToTop"
           >
         </nuxt-link>
 
         <nav class="hidden items-center justify-center lg:flex md:ml-auto">
           <a v-for="(link, index) in links" :key="index"
-             class="cursor-pointer duration-200 hover:text-purple-100 lowercase mr-10 nave-header__desktop-menu-link tracking-widest transition"
+             class="cursor-pointer duration-200 font-medium hover:text-secondary-500 hover:underline lowercase mr-10 nave-header__desktop-menu-link text-black tracking-widest transition"
              :class="activateLink(link.href)" :href="link.href"
              @click="scrollTo(link.href)"
           >
             {{ link.label }}
           </a>
-          <nave-link-button class="lowercase nave-header__desktop-menu-link tracking-widest" label="Vagas" link="#vacancies" />
+          <nave-link-button bg-color="secondary" class="nave-header__desktop-menu-link tracking-widest" label="Ver vagas" link="#vacancies" />
         </nav>
 
         <!-- MENU MOBILE BUTTON -->
         <div class="cursor-pointer lg:hidden menu-icon ml-auto" :class="openedMobileMenu" @click="toggleMobileMenu">
-          <div class="bg-gray-900 duration-300 ease-linear h-1 menu-icon__bar--1 transition-all w-6" />
-          <div class="bg-gray-900 duration-300 ease-linear h-1 menu-icon__bar--2 mt-1 transition-all w-6" />
-          <div class="bg-gray-900 duration-300 ease-linear h-1 menu-icon__bar--3 mt-1 transition-all w-6" />
+          <div class="bg-primary-700 duration-300 ease-linear h-1 menu-icon__bar--1 transition-all w-6" />
+          <div class="bg-primary-700 duration-300 ease-linear h-1 menu-icon__bar--2 mt-1 transition-all w-6" />
+          <div class="bg-primary-700 duration-300 ease-linear h-1 menu-icon__bar--3 mt-1 transition-all w-6" />
         </div>
       </div>
     </header>
@@ -37,11 +41,11 @@
       <nav v-if="showMobileMenu" class="bg-primary fixed lg:hidden nave-header__mobile-menu w-screen z-40">
         <div class="align-center flex flex-col h-full justify-center">
           <a v-for="link in links" :key="link.label" :ref="link.href"
-             class="block cursor-pointer lowercase p-3 text-center text-white text-xl tracking-widest w-full"
+             class="block cursor-pointer p-3 text-center text-white text-xl tracking-widest w-full"
              :href="link.href" @click="toggleMobileMenu(), scrollTo(link.href)"
           >{{ link.label }}</a>
-          <nave-link-button bg-color="white" class="lowercase mt-6 mx-auto text-center text-xl tracking-widest w-56"
-                            label="Vagas" link="#vacancies" text-color="primary" @click.native="toggleMobileMenu"
+          <nave-link-button bg-color="secondary" class="mt-6 mx-auto px-14 text-center text-xl tracking-widest w-56"
+                            label="Ver vagas" link="#vacancies" @click.native="toggleMobileMenu"
           />
         </div>
       </nav>
@@ -63,10 +67,6 @@ export default {
         {
           label: 'Sobre',
           href: '#about'
-        },
-        {
-          label: 'Nosso time',
-          href: '#team'
         },
         {
           label: 'Acreditamos',
@@ -119,9 +119,15 @@ export default {
 
 <style lang="scss">
 .nave-header {
-  &__desktop-menu-link {
-    &.is-active {
-      color: $color-primary;
+  &__desktop {
+    &-separator {
+      width: 2px;
+    }
+
+    &-menu-link {
+      &.is-active {
+        color: #f26e36;
+      }
     }
   }
 

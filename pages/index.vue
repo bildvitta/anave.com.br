@@ -6,9 +6,6 @@
     <!-- Seção Sobre -->
     <nave-about data-active-link="about" />
 
-    <!-- Seção Nosso Time -->
-    <nave-our-team data-active-link="team" />
-
     <!-- Seção Believe -->
     <nave-believe data-active-link="believe" />
 

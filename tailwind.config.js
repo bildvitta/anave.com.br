@@ -15,15 +15,22 @@ module.exports = {
 
     extend: {
       gradientColorStops: {
-        primary: '#7F2BED',
-        secondary: '#401677',
+        primary: '#006DD2',
+        secondary: '#062B55',
+        'primary-400': '#1785EC',
         'primary-500': '#8A46EA',
-        'secondary-500': '#452375'
+        'secondary-500': '#F26E36'
       },
 
       backgroundColor: {
-        primary: '#7F2BED',
-        secondary: '#1b162d'
+        primary: '#006DD2',
+        'primary-400': '#1785EC',
+        'primary-700': '#004392',
+        secondary: '#1b162d',
+        'secondary-300': '#F7A886',
+        'secondary-500': '#F26E36',
+        gray: '#F1F4F6',
+        'gray-400': '#C4C4C4'
       },
 
       boxShadow: {
@@ -31,6 +38,8 @@ module.exports = {
       },
 
       textColor: {
+        primary: '#006DD2',
+        'primary-700': '#004392',
         'purple-100': '#7C34EF',
         'purple-200': '#6d2ed3',
         'purple-300': '#6028ba',
@@ -40,7 +49,7 @@ module.exports = {
         'purple-700': '#2b1254',
         'purple-800': '#1e0c3a',
         'purple-900': '#110721',
-        'text-gray-400': '#A5A5A5'
+        'secondary-500': '#F26E36'
       },
 
       letterSpacing: {

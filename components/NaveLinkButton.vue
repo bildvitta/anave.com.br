@@ -1,5 +1,5 @@
 <template>
-  <a class="inline-block nave-link-button px-5 py-3"
+  <a class="inline-block nave-link-button px-12 py-3"
      :class="linkButtonClasses"
      :href="link"
      @click="scrollTo(link)"
@@ -12,7 +12,7 @@
 import scrollHelper from '../mixins/scrollHelper'
 
 const backgroundColors = {
-  primary: 'bg-gradient-to-r from-primary hover:from-primary-500 hover:to-secondary-500 to-secondary',
+  secondary: 'bg-secondary-500 hover:bg-secondary-300',
   white: 'bg-white'
 }
 
@@ -50,6 +50,11 @@ export default {
     bgColor: {
       type: String,
       default: 'primary'
+    },
+
+    bgGradient: {
+      type: Boolean,
+      default: false
     }
   },
 
@@ -63,7 +68,7 @@ export default {
     },
 
     backgroundClass () {
-      return backgroundColors[this.bgColor]
+      return this.bgGradient ? 'nave-link-button--gradient' : backgroundColors[this.bgColor]
     },
 
     textClass () {
@@ -72,3 +77,14 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+  .nave-link-button {
+    &--gradient {
+      background: radial-gradient(193.3% 139.39% at 49.97% 0%, #006dd2 0%, #062b55 100%);
+
+      &:hover {
+        background: #1785ec;
+      }
+    }
+  }
+</style>

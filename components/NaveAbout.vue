@@ -12,12 +12,16 @@
       </div>
 
       <div class="col-span-12 lg:col-span-5 lg:col-start-8 lg:mt-0 mt-10 nave-about__text-wrapper">
-        <h2 class="font-bold text-5xl text-white">O universo é o nosso quintal</h2>
-        <p class="mt-4 text-base text-white">
+        <h2 class="font-bold text-5xl">O universo é o nosso quintal</h2>
+        <p class="mt-4 text-base">
           Estamos crescendo. E através de uma nova cultura de inovação e uma inteligência estratégica, estamos mudando o cenário de desenvolvimento e tecnologia no interior de São Paulo, aprimorando talentos e criando experiências para melhorar milhares de vidas. Tudo isso, porque acreditamos que a verdadeira inovação está nas pessoas e não na tecnologia.
-          A NAVE já está em órbita, rumo ao desconhecido e inspirador futuro!
         </p>
-        <img alt="Bild Vitta - NAVE" class="mt-6" src="../assets/img/Bild_Vitta.svg">
+        <p class="font-bold mt-12">A <span class="text-primary-700">NAVE</span><span class="text-secondary-500">°</span> já está em órbita, rumo ao desconhecido e inspirador futuro!</p>
+        <div class="flex flex-row mt-6">
+          <img alt="Bild Vitta - NAVE" src="../assets/img/logo-bild.svg">
+          <div class="bg-gray-400 mx-6 my-6 nave-about__separator" />
+          <img alt="Bild Vitta - NAVE" class="mb-4" src="../assets/img/logo-vitta.svg">
+        </div>
       </div>
     </div>
   </section>
@@ -40,16 +44,8 @@ export default {
 
 <style lang="scss">
   .nave-about {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .webp .nave-about {
-    background-image: url('../assets/img/nave_tela-proposito_.webp');
-  }
-
-  .no-webp .nave-about {
-    background-image: url('../assets/img/nave_tela-proposito_.png');
+    &__separator {
+      width: 2px;
+    }
   }
 </style>
