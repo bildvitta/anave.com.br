@@ -19,7 +19,9 @@ module.exports = {
         secondary: '#062B55',
         'primary-400': '#1785EC',
         'primary-500': '#8A46EA',
-        'secondary-500': '#F26E36'
+        'secondary-500': '#F26E36',
+        orange: '#D95720',
+        'orange-400': '#F58B5E'
       },
 
       backgroundColor: {
