@@ -32,7 +32,8 @@ module.exports = {
         'secondary-300': '#F7A886',
         'secondary-500': '#F26E36',
         gray: '#F1F4F6',
-        'gray-400': '#C4C4C4'
+        'gray-400': '#C4C4C4',
+        'orange-700': '#D95721'
       },
 
       boxShadow: {
