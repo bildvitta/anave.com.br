@@ -38,7 +38,15 @@ export default {
 
   mixins: [
     intersect
-  ]
+  ],
+
+  mounted () {
+    this.$ga.page({
+      page: 'Section: About',
+      title: 'About',
+      location: window.location.href
+    })
+  }
 }
 </script>
 

@@ -4,7 +4,7 @@
       <h2 class="font-bold leading-none mb-16 md:text-5xl sm:text-4xl text-3xl">Embarque na 🚀 NAVE°</h2>
       <div v-if="renders.vacancies" class="overflow-hidden">
         <nave-slider>
-          <nave-card v-for="(vacancie, index) in vacanciesList" :key="index" class="nave-vacancies__card" classes="w-64 sm:w-350" :content="vacancie" />
+          <nave-card v-for="(vacancie, index) in vacanciesList" :key="index" class="nave-vacancies__card" classes="w-auto sm:w-350" :content="vacancie" />
         </nave-slider>
       </div>
     </section>
@@ -17,20 +17,36 @@ import naveIntersect from './NaveIntersect'
 
 const vacancies = [
   {
-    title: 'Pessoa desenvolvedora backend',
-    img: require('../assets/img/backend.svg')
+    title: '',
+    resume: 'Pessoa desenvolvedora backend',
+    description: '',
+    imgWebp: require('../assets/img/ilustra_backend.webp'),
+    imgPng: require('../assets/img/ilustra_backend.png'),
+    link: 'https://bild.gupy.io/jobs/656048'
   },
   {
-    title: 'Pessoa desenvolvedora Frontend',
-    img: require('../assets/img/frontend.svg')
+    title: '',
+    resume: 'Pessoa desenvolvedora frontend',
+    description: '',
+    imgWebp: require('../assets/img/ilustra_frontend.webp'),
+    imgPng: require('../assets/img/ilustra_frontend.png'),
+    link: 'https://bild.gupy.io/jobs/689054'
   },
   {
-    title: 'Designer',
-    img: require('../assets/img/designer.svg')
+    title: '',
+    resume: 'Designer',
+    description: '',
+    imgWebp: require('../assets/img/ilustra_design.webp'),
+    imgPng: require('../assets/img/ilustra_design.png'),
+    link: 'https://bild.gupy.io/jobs/575636?jobBoardSource=gupy_public_page'
   },
   {
-    title: 'Product Owner',
-    img: require('../assets/img/Product-Owner.svg')
+    title: '',
+    resume: 'Product Owner',
+    description: '',
+    imgWebp: require('../assets/img/ilustra_po.webp'),
+    imgPng: require('../assets/img/ilustra_po.png'),
+    link: 'https://bild.gupy.io/'
   }
 ]
 
@@ -47,6 +63,15 @@ export default {
     vacanciesList () {
       return vacancies
     }
+  },
+
+  mounted () {
+    this.$ga.screenview('Vacancies')
+    this.$ga.page({
+      page: 'Section: Vacancies',
+      title: 'Vacancies',
+      location: window.location.href
+    })
   }
 }
 </script>
@@ -54,7 +79,7 @@ export default {
 <style lang="scss">
 .nave-vacancies {
   &__card {
-    min-height: 420px;
+    min-height: 366px;
 
     &:last-child {
       padding-right: 20px;

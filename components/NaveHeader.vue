@@ -68,6 +68,11 @@ export default {
           label: 'Sobre',
           href: '#about'
         },
+        //  TODO seção oculta por ora, aguardando conteúdo
+        // {
+        //   label: 'Nosso time',
+        //   href: '#team'
+        // },
         {
           label: 'Acreditamos',
           href: '#believe'
