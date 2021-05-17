@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="align-center mr-8 text-right">
-      <button ref="arrow" class="h-10 hover:bg-primary-100" style="border: none; border-radius: 50%; outline: inherit; width: 40px;" @click="next">
+      <button ref="arrow" class="h-10 hover:bg-primary-100 rounded-full" style="width: 40px;" @click="next">
         <img class="" :hidden="hiddenArrow" src="@/assets/img/proximo.png" style="width: 21px;">
       </button>
     </div>

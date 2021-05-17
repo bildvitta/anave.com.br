@@ -4,7 +4,7 @@
       <div class="bg-gray-100 flex h-40 items-center justify-center w-full">
         <picture>
           <source :srcset="content.imgWebp" type="image/webp">
-          <img alt="Alt Text!" class="mx-auto w-32" :src="content.imgPng">
+          <img alt="Alt Text!" class="mx-auto w-64" :src="content.imgPng">
         </picture>
       </div>
       <!-- <div class="font-bold mb-2 mt-6 px-4 sm:px-8 text-gray-500 text-sm uppercase w-full">{{ content.title }}</div> -->

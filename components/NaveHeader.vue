@@ -3,9 +3,9 @@
     <header class="bg-white fixed inset nave-header py-5 shadow-md w-full z-50">
       <div class="flex flex-wrap items-center lg:container md:flex-row mx-5">
         <nuxt-link class="flex flex-row md:mb-0" to="/">
-          <img alt="NAVE - Espaço Nave" :sizes="logoSrcsetSizes" src="~/assets/img/nave-logo.svg" @click="scrollToTop">
-          <div class="bg-gray-400 mx-6 my-1 nave-header__desktop-separator" />
-          <img alt="NAVE - Espaço Nave" :sizes="logoSrcsetSizes" src="~/assets/img/bild-vitta-logo.svg" @click="scrollToTop">
+          <img alt="NAVE - Espaço Nave" class="w-32" src="~/assets/img/nave-logo.svg" @click="scrollToTop">
+          <div v-if="!showMobileMenu" class="bg-gray-400 mx-6 my-1 nave-header__desktop-separator" />
+          <img v-if="!showMobileMenu" alt="NAVE - Espaço Nave" src="~/assets/img/bild-vitta-logo.svg" @click="scrollToTop">
         </nuxt-link>
 
         <nav class="hidden items-center justify-center lg:flex md:ml-auto">
@@ -40,9 +40,15 @@
              class="block cursor-pointer p-3 text-center text-white text-xl tracking-widest w-full"
              :href="link.href" @click="toggleMobileMenu(), scrollTo(link.href)"
           >{{ link.label }}</a>
-          <nave-link-button bg-color="secondary" class="mt-6 mx-auto px-14 text-center text-xl tracking-widest w-56"
-                            label="Ver vagas" link="#vacancies" @click.native="toggleMobileMenu"
-          />
+          <nave-link-button bg-color="secondary" class="mt-6 mx-auto px-14 text-center text-xl tracking-widest w-56" label="Ver vagas" link="#vacancies" @click.native="toggleMobileMenu" />
+          <div class="flex flex-col items-center mt-10 opacity-25 text-white">
+            <div>Labs de inovação</div>
+            <div class="flex flex-row mt-2">
+              <img alt="Bild Vitta - NAVE" class="w-16" src="../assets/img/logo-bild-white.svg">
+              <div class="bg-gray-400 mx-6 my-4 nave-header__mobile-menu-separator" />
+              <img alt="Bild Vitta - NAVE" class="mb-4 w-16" src="../assets/img/logo-vitta-white.svg">
+            </div>
+          </div>
         </div>
       </nav>
     </transition>
@@ -92,9 +98,9 @@ export default {
       return state.activeLink
     },
 
-    logoSrcsetSizes () {
-      return '(max-width: 1023px) 20px, 23px'
-    },
+    // logoSrcsetSizes () {
+    //   return '(max-width: 1023px) 20px, 23px'
+    // },
 
     openedMobileMenu () {
       return this.showMobileMenu && 'mobile-menu-opened'
@@ -147,8 +153,13 @@ export default {
   }
 
   &__mobile-menu {
+    background: radial-gradient(193.3% 139.39% at 49.97% 0%, #006dd2 0%, #062b55 100%);
     height: calc(100vh - 58px);
     top: 58px;
+
+    &-separator {
+      width: 2px;
+    }
   }
 
   &__mobile-close {

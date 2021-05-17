@@ -1,8 +1,10 @@
 <template>
   <nave-intersect :root-margin="rootMargin" @~enter="onEnter('believe')">
-    <section id="believe" class="flex flex-col items-center md:flex-row nave-believe py-12">
-      <div v-if="renders.believe" class="lg:container w-full">
-        <nave-vertical-carousel :phrases="phrases" :slide-timer="4000" />
+    <section id="believe" class="nave-believe">
+      <div class="flex flex-col items-center md:flex-row nave-believe__image py-12">
+        <div v-if="renders.believe" class="lg:container w-full">
+          <nave-vertical-carousel :phrases="phrases" :slide-timer="4000" />
+        </div>
       </div>
     </section>
   </nave-intersect>
@@ -39,16 +41,21 @@ export default {
 
 <style lang="scss">
   .nave-believe {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: radial-gradient(193.3% 139.39% at 49.97% 0%, #006dd2 0%, #062b55 100%);
+
+    &__image {
+      background-image: url('../assets/img/grafismo.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 
-  .webp .nave-believe {
-    background-image: url('../assets/img/grafismo.svg');
-  }
+  // .webp .nave-believe {
+  //   background-image: url('../assets/img/grafismo.svg');
+  // }
 
-  .no-webp .nave-believe {
-    background-image: url('../assets/img/grafismo.svg');
-  }
+  // .no-webp .nave-believe {
+  //   background-image: url('../assets/img/grafismo.svg');
+  // }
 </style>

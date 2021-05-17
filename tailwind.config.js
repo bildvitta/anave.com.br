@@ -47,6 +47,7 @@ module.exports = {
         'primary-300': '#2998FF',
         'primary-500': '#006DD2',
         'primary-700': '#004392',
+        'primary-800': '#01336C',
         'purple-100': '#7C34EF',
         'purple-200': '#6d2ed3',
         'purple-300': '#6028ba',
