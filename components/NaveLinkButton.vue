@@ -1,10 +1,14 @@
 <template>
-  <a class="inline-block nave-link-button px-12 py-3"
+  <a class="inline-block nave-link-button"
      :class="linkButtonClasses"
      :href="link"
      @click="scrollTo(link)"
   >
-    {{ label }}
+    <div class="flex flex-row items-center">
+      <img v-if="icon" alt="Media icon" class="mr-2 nave-link-button__icon" :src="require(`~/assets/img/${icon}.svg`)">
+      {{ label }}
+    </div>
+
   </a>
 </template>
 
@@ -55,6 +59,16 @@ export default {
     bgGradient: {
       type: Boolean,
       default: false
+    },
+
+    small: {
+      type: Boolean,
+      default: false
+    },
+
+    icon: {
+      type: String,
+      default: ''
     }
   },
 
@@ -64,11 +78,15 @@ export default {
     },
 
     linkButtonClasses () {
-      return [this.backgroundClass, this.borderRadius, this.textClass]
+      return [this.backgroundClass, this.borderRadius, this.textClass, this.isSmall]
     },
 
     backgroundClass () {
       return this.bgGradient ? 'nave-link-button--gradient' : backgroundColors[this.bgColor]
+    },
+
+    isSmall () {
+      return this.small ? 'px-3 py-1 text-sm' : 'px-12 py-3'
     },
 
     textClass () {
@@ -85,6 +103,10 @@ export default {
       &:hover {
         background: #1785ec;
       }
+    }
+
+    &__icon {
+      width: 15px;
     }
   }
 </style>

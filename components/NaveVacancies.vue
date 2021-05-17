@@ -1,7 +1,7 @@
 <template>
   <nave-intersect :root-margin="rootMargin" @~enter="onEnter('vacancies')">
     <section id="vacancies" class="bg-gray nave-vacancies py-12">
-      <h2 class="font-bold leading-none mb-16 md:text-5xl sm:text-4xl text-3xl">Embarque na 🚀 NAVE°</h2>
+      <h2 class="font-bold leading-none mb-16 md:text-5xl px-24 sm:text-4xl text-3xl">Embarque na 🚀 NAVE°</h2>
       <div v-if="renders.vacancies" class="overflow-hidden">
         <nave-slider>
           <nave-card v-for="(vacancie, index) in vacanciesList" :key="index" class="nave-vacancies__card" classes="w-auto sm:w-350" :content="vacancie" />
@@ -16,6 +16,38 @@ import intersect from '../mixins/intersect'
 import naveIntersect from './NaveIntersect'
 
 const vacancies = [
+  {
+    title: '',
+    resume: 'Pessoa desenvolvedora Backend',
+    description: '',
+    imgWebp: require('../assets/img/ilustra_backend.webp'),
+    imgPng: require('../assets/img/ilustra_backend.png'),
+    link: 'https://bild.gupy.io/jobs/656048'
+  },
+  {
+    title: '',
+    resume: 'Pessoa desenvolvedora Frontend',
+    description: '',
+    imgWebp: require('../assets/img/ilustra_frontend.webp'),
+    imgPng: require('../assets/img/ilustra_frontend.png'),
+    link: 'https://bild.gupy.io/jobs/689054'
+  },
+  {
+    title: '',
+    resume: 'Designer',
+    description: '',
+    imgWebp: require('../assets/img/ilustra_design.webp'),
+    imgPng: require('../assets/img/ilustra_design.png'),
+    link: 'https://bild.gupy.io/jobs/575636?jobBoardSource=gupy_public_page'
+  },
+  {
+    title: '',
+    resume: 'Product Owner',
+    description: '',
+    imgWebp: require('../assets/img/ilustra_po.webp'),
+    imgPng: require('../assets/img/ilustra_po.png'),
+    link: 'https://bild.gupy.io/'
+  },
   {
     title: '',
     resume: 'Pessoa desenvolvedora backend',

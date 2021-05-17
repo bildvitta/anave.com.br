@@ -18,9 +18,9 @@
         </p>
         <p class="font-bold mt-12">A <span class="text-primary-700">NAVE</span><span class="text-secondary-500">°</span> já está em órbita, rumo ao desconhecido e inspirador futuro!</p>
         <div class="flex flex-row mt-6">
-          <img alt="Bild Vitta - NAVE" src="../assets/img/logo-bild.svg">
+          <img alt="Bild Vitta - NAVE" class="nave-about__logo" src="../assets/img/logo-bild.svg">
           <div class="bg-gray-400 mx-6 my-6 nave-about__separator" />
-          <img alt="Bild Vitta - NAVE" class="mb-4" src="../assets/img/logo-vitta.svg">
+          <img alt="Bild Vitta - NAVE" class="mb-4 nave-about__logo" src="../assets/img/logo-vitta.svg">
         </div>
       </div>
     </div>
@@ -54,6 +54,14 @@ export default {
   .nave-about {
     &__separator {
       width: 2px;
+    }
+
+    &__logo {
+      transition: all 0.3s ease-out;
+
+      &:hover {
+        filter: opacity(50%);
+      }
     }
   }
 </style>

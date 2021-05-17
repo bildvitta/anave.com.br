@@ -1,5 +1,5 @@
 <template>
-  <div v-bind="$attrs" class="bg-primary nave-card">
+  <div v-bind="$attrs" class="bg-gray hover:text-primary-500 nave-card">
     <div class="bg-white flex flex-wrap h-full items-stretch justify-center overflow-hidden rounded-lg shadow-lg" :class="classes">
       <div class="bg-gray-100 flex h-40 items-center justify-center w-full">
         <picture>
@@ -8,11 +8,11 @@
         </picture>
       </div>
       <!-- <div class="font-bold mb-2 mt-6 px-4 sm:px-8 text-gray-500 text-sm uppercase w-full">{{ content.title }}</div> -->
-      <div class="font-bold h-21 mb-2 nave-card__resume px-4 sm:px-8 text-xl w-full whitespace-normal">{{ content.resume }}</div>
+      <div class="font-bold h-21 mb-2 nave-card__resume px-4 sm:px-8 text-center text-xl w-full whitespace-normal">{{ content.resume }}</div>
       <!-- TODO oculto por ora, aguardando conteúdo -->
       <!-- <div class="mb-2 nave-card__description px-8 text-base text-gray-700 text-justify whitespace-normal">{{ content.description }}</div> -->
-      <div class="mb-8 px-4 sm:px-8 text-base w-full">
-        <nave-link-button class="font-bold tracking-widest" :href="content.link" label="Quero me Candidatar" link="content.link" target="_bank" />
+      <div class="mb-8 px-4 self-end sm:px-8 text-base w-full">
+        <nave-link-button class="bg-primary-100 font-bold nave-card__button text-primary-300" :href="content.link" label="Quero me Candidatar" link="content.link" target="_bank" />
       </div>
     </div>
   </div>
@@ -41,6 +41,23 @@ export default {
 
 <style lang="scss">
 .nave-card {
+  border: 3px solid transparent;
+  border-radius: 0.5rem;
+  transition: all 0.2s linear;
+
+  &:hover {
+    border: 3px solid #2998ff;
+  }
+
+  &__button {
+    transition: all 0.2s linear;
+  }
+
+  &:hover &__button {
+    background: radial-gradient(193.3% 139.39% at 49.97% 0%, #006dd2 0%, #062b55 100%);
+    color: #fff;
+  }
+
   &__description {
     -webkit-box-orient: vertical;
     display: -webkit-box;

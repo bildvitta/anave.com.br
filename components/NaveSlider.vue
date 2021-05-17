@@ -5,8 +5,10 @@
         <slot />
       </div>
     </div>
-    <div class="mr-8 nave-slider__button text-right">
-      <button ref="arrow" class="h-10" style="border: none; outline: inherit;" @click="next"><img class="w-8" :hidden="hiddenArrow" src="@/assets/img/proximo .png"></button>
+    <div class="align-center mr-8 text-right">
+      <button ref="arrow" class="h-10 hover:bg-primary-100" style="border: none; border-radius: 50%; outline: inherit; width: 40px;" @click="next">
+        <img class="" :hidden="hiddenArrow" src="@/assets/img/proximo.png" style="width: 21px;">
+      </button>
     </div>
   </div>
 </template>

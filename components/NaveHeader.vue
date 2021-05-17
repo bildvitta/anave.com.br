@@ -3,13 +3,9 @@
     <header class="bg-white fixed inset nave-header py-5 shadow-md w-full z-50">
       <div class="flex flex-wrap items-center lg:container md:flex-row mx-5">
         <nuxt-link class="flex flex-row md:mb-0" to="/">
-          <img alt="NAVE - Espaço Nave" :sizes="logoSrcsetSizes" src="~/assets/img/nave-logo.svg"
-               srcset="~/assets/img/nave-logo.svg, ~/assets/img/nave-logo.svg 53w" @click="scrollToTop"
-          >
+          <img alt="NAVE - Espaço Nave" :sizes="logoSrcsetSizes" src="~/assets/img/nave-logo.svg" @click="scrollToTop">
           <div class="bg-gray-400 mx-6 my-1 nave-header__desktop-separator" />
-          <img alt="NAVE - Espaço Nave" :sizes="logoSrcsetSizes" src="~/assets/img/bild-vitta-logo.svg"
-               srcset="~/assets/img/bild-vitta-logo.svg, ~/assets/img/bild-vitta-logo.svg 53w" @click="scrollToTop"
-          >
+          <img alt="NAVE - Espaço Nave" :sizes="logoSrcsetSizes" src="~/assets/img/bild-vitta-logo.svg" @click="scrollToTop">
         </nuxt-link>
 
         <nav class="hidden items-center justify-center lg:flex md:ml-auto">
@@ -97,7 +93,7 @@ export default {
     },
 
     logoSrcsetSizes () {
-      return '(max-width: 1023px) 50px, 53px'
+      return '(max-width: 1023px) 20px, 23px'
     },
 
     openedMobileMenu () {

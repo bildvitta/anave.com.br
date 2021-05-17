@@ -26,6 +26,7 @@ module.exports = {
 
       backgroundColor: {
         primary: '#006DD2',
+        'primary-100': '#CCE6FF',
         'primary-400': '#1785EC',
         'primary-700': '#004392',
         secondary: '#1b162d',
@@ -42,6 +43,9 @@ module.exports = {
 
       textColor: {
         primary: '#006DD2',
+        'primary-200': '#66B5FF',
+        'primary-300': '#2998FF',
+        'primary-500': '#006DD2',
         'primary-700': '#004392',
         'purple-100': '#7C34EF',
         'purple-200': '#6d2ed3',
@@ -52,6 +56,10 @@ module.exports = {
         'purple-700': '#2b1254',
         'purple-800': '#1e0c3a',
         'purple-900': '#110721',
+        'secondary-500': '#F26E36'
+      },
+
+      borderColor: {
         'secondary-500': '#F26E36'
       },
 
