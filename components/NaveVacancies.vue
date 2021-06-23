@@ -1,7 +1,7 @@
 <template>
   <nave-intersect :root-margin="rootMargin" @~enter="onEnter('vacancies')">
     <section id="vacancies" class="bg-gray nave-vacancies py-12">
-      <h2 class="font-bold leading-none mb-16 md:px-24 md:text-5xl px-8 sm:text-4xl text-3xl">Embarque na 🚀 NAVE°</h2>
+      <h2 class="font-bold leading-none mb-16 md:px-24 md:text-5xl px-8 sm:text-4xl text-3xl text-gray-900">Embarque na 🚀 NAVE°</h2>
       <div v-if="renders.vacancies" class="overflow-hidden">
         <nave-slider>
           <nave-card v-for="(vacancie, index) in vacanciesList" :key="index" class="nave-vacancies__card" classes="w-auto sm:w-350" :content="vacancie" />
@@ -114,17 +114,11 @@ export default {
     min-height: 366px;
 
     &:last-child {
-      padding-right: 20px;
+      margin-right: 20px;
     }
 
     & + & {
-      margin-left: 90px;
-    }
-  }
-
-  @media screen and (max-width: 640px) {
-    &__card + &__card {
-      margin-left: 30px;
+      margin-left: 24px;
     }
   }
 }

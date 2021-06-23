@@ -5,9 +5,9 @@
         <slot />
       </div>
     </div>
-    <div class="align-center mr-8 text-right">
-      <button ref="arrow" class="h-10 hover:bg-primary-100 rounded-full" style="width: 40px;" @click="next">
-        <img class="" :hidden="hiddenArrow" src="@/assets/img/proximo.png" style="width: 21px;">
+    <div class="mr-8 text-right">
+      <button ref="arrow" class="h-10 hover:bg-primary-100 rounded-full w-10" @click="next">
+        <img class="ml-2 w-5" :hidden="hiddenArrow" src="@/assets/img/proximo.png">
       </button>
     </div>
   </div>

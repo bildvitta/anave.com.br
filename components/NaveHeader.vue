@@ -10,7 +10,7 @@
 
         <nav class="hidden items-center justify-center lg:flex md:ml-auto">
           <a v-for="(link, index) in links" :key="index"
-             class="cursor-pointer duration-200 font-medium hover:text-secondary-500 hover:underline lowercase mr-10 nave-header__desktop-menu-link text-black tracking-widest transition"
+             class="cursor-pointer duration-200 font-medium hover:text-secondary-500 hover:underline lowercase mr-10 nave-header__desktop-menu-link text-gray-900 tracking-widest transition"
              :class="activateLink(link.href)" :href="link.href"
              @click="scrollTo(link.href)"
           >

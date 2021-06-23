@@ -8,7 +8,7 @@
         </picture>
       </div>
       <!-- <div class="font-bold mb-2 mt-6 px-4 sm:px-8 text-gray-500 text-sm uppercase w-full">{{ content.title }}</div> -->
-      <div class="font-bold h-21 mb-2 nave-card__resume px-4 sm:px-8 text-center text-xl w-full whitespace-normal">{{ content.resume }}</div>
+      <div class="font-bold h-21 mb-2 nave-card__resume px-4 sm:px-8 text-center text-gray-900 text-xl w-full whitespace-normal">{{ content.resume }}</div>
       <!-- TODO oculto por ora, aguardando conteúdo -->
       <!-- <div class="mb-2 nave-card__description px-8 text-base text-gray-700 text-justify whitespace-normal">{{ content.description }}</div> -->
       <div class="mb-8 px-4 self-end sm:px-8 text-base w-full">

@@ -13,10 +13,10 @@
             </div>
           </section>
           <section class="md:text-left text-center">
-            <div class="flex flex-row hover:text-primary-500 mt-6 text-primary-200">
+            <a class="flex flex-row hover:text-primary-500 mt-6 text-primary-200" href="mailto:contato@anave.com.br">
               <img alt="email icon" class="mr-2" src="../assets/img/email.svg">
               <div>contato@anave.com.br</div>
-            </div>
+            </a>
           </section>
           <div class="flex mt-8 space-x-2">
             <div v-for="(media, index) in socialsLinks" :key="index" class="hidden md:flex">
@@ -32,9 +32,9 @@
         <!-- info -->
         <div class="text-white">
           <section class="flex flex-row md:text-left text-center">
-            <div class="mr-2 text-3xl">Vamos tomar um </div>
+            <div class="font-bold mr-2 text-3xl">Vamos tomar um </div>
             <!-- typed -->
-            <div class="flex text-3xl">
+            <div class="flex font-bold text-3xl">
               <vue-typed-js :loop="true" :show-cursor="false" :strings="['café', 'capuccino', 'sorvete']">
                 <h1 class="typing" />
               </vue-typed-js>
@@ -49,10 +49,10 @@
               <div>Avenida Luis Eduardo Toledo Prado 800, 3º andar,</div>
               <div>Ribeirão Preto, São Paulo Brasil</div>
             </div>
-            <div class="flex flex-row hover:text-primary-500 mt-6 text-primary-200">
+            <a class="flex flex-row hover:text-primary-500 mt-6 text-primary-200" href="https://bit.ly/3vMYmob">
               <img alt="Bild Vitta - NAVE" class="mr-2" src="../assets/img/location.svg">
               Como chegar?
-            </div>
+            </a>
           </section>
         </div>
       </div>
@@ -101,10 +101,10 @@
               <div>Avenida Luis Eduardo Toledo Prado 800, 3º andar,</div>
               <div>Ribeirão Preto, São Paulo Brasil</div>
             </div>
-            <div class="flex flex-row hover:text-primary-500 justify-center mt-6 text-primary-200">
+            <a class="flex flex-row hover:text-primary-500 justify-center mt-6 text-primary-200" href="https://bit.ly/3vMYmob" target="_blank">
               <img alt="Bild Vitta - NAVE" class="mr-2" src="../assets/img/location.svg">
               Como chegar?
-            </div>
+            </a>
           </section>
         </div>
       </div>

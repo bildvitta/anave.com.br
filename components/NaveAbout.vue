@@ -12,15 +12,19 @@
       </div>
 
       <div class="col-span-12 lg:col-span-5 lg:col-start-8 lg:mt-0 mt-10 nave-about__text-wrapper">
-        <h2 class="font-bold md:text-5xl text-2xl">O universo é o nosso quintal</h2>
-        <p class="mt-4 text-base">
+        <h2 class="font-bold md:text-5xl text-2xl text-gray-900">O universo é o nosso quintal</h2>
+        <p class="mt-4 text-base text-gray-900">
           Estamos crescendo. E através de uma nova cultura de inovação e uma inteligência estratégica, estamos mudando o cenário de desenvolvimento e tecnologia no interior de São Paulo, aprimorando talentos e criando experiências para melhorar milhares de vidas. Tudo isso, porque acreditamos que a verdadeira inovação está nas pessoas e não na tecnologia.
         </p>
-        <p class="font-bold mt-12">A <span class="text-primary-700">NAVE</span><span class="text-secondary-500">°</span> já está em órbita, rumo ao desconhecido e inspirador futuro!</p>
-        <div class="flex flex-row md:mt-6 mt-12">
-          <img alt="Bild Vitta - NAVE" class="md:w-32 nave-about__logo w-48" src="../assets/img/logo-bild.svg">
-          <div class="bg-gray-400 mx-6 my-6 nave-about__separator" />
-          <img alt="Bild Vitta - NAVE" class="mb-4 md:w-32 nave-about__logo w-48" src="../assets/img/logo-vitta.svg">
+        <p class="font-bold mt-12 text-gray-900">A <span class="text-primary-700">NAVE</span><span class="text-secondary-500">°</span> já está em órbita, rumo ao desconhecido e inspirador futuro!</p>
+        <div class="flex flex-row items-center md:mt-6 mt-12">
+          <a class="md:w-24 w-28" href="https://www.bild.com.br/" target="_blank">
+            <img alt="Bild Vitta - NAVE" class="nave-about__logo" src="../assets/img/logo-bild.svg">
+          </a>
+          <div class="bg-gray-400 mx-6 my-6 nave-about__separator self-stretch" />
+          <a class="mb-4 md:w-24 w-28" href="https://vittaresidencial.com.br/ribeirao-preto" target="_blank">
+            <img alt="Bild Vitta - NAVE" class="nave-about__logo" src="../assets/img/logo-vitta.svg">
+          </a>
         </div>
       </div>
     </div>
