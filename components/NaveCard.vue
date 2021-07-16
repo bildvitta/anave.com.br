@@ -12,7 +12,7 @@
       <!-- TODO oculto por ora, aguardando conteúdo -->
       <!-- <div class="mb-2 nave-card__description px-8 text-base text-gray-700 text-justify whitespace-normal">{{ content.description }}</div> -->
       <div class="mb-8 px-4 self-end sm:px-8 text-base w-full">
-        <nave-link-button class="bg-primary-100 font-bold nave-card__button text-primary-300" :href="content.link" label="Quero me Candidatar" link="content.link" target="_bank" />
+        <nave-link-button bg-color="primary" bg-gradient class="font-bold nave-card__button" :href="content.link" label="Quero me Candidatar" link="content.link" target="_bank" />
       </div>
     </div>
   </div>
@@ -54,7 +54,7 @@ export default {
   }
 
   &:hover &__button {
-    background: radial-gradient(193.3% 139.39% at 49.97% 0%, #006dd2 0%, #062b55 100%);
+    background: #1785ec;
     color: #fff;
   }
 

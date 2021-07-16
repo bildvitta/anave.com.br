@@ -86,7 +86,7 @@ export default {
     },
 
     isSmall () {
-      return this.small ? 'px-3 py-1 text-sm' : 'px-12 py-3'
+      return this.small ? 'px-2 py-1 text-xs' : 'px-12 py-3'
     },
 
     textClass () {

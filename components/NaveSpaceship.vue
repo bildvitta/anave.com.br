@@ -1,9 +1,9 @@
 <template>
   <nave-intersect :root-margin="rootMargin" @~enter="onEnter('spaceShip')">
-    <section id="spaceship" class="grid grid-cols-12 md:px-24 nave-spaceship nave-spaceship__background px-8 py-12">
-      <div class="col-end-12 col-start-1 lg:col-end-11 lg:col-start-3 lg:text-center md:text-left text-center">
+    <section id="spaceship" class="grid grid-cols-12 md:px-24 nave-spaceship nave-spaceship__background px-8 py-12 text-center">
+      <div class="col-span-12 col-start-1 lg:col-end-11 lg:col-start-3 text-center">
         <h2 class="font-bold mb-4 text-4xl text-white">Espaço NAVE°</h2>
-        <p class="block mb-10 mx-auto text-base text-white">
+        <p class="col-span-12 mb-10 mx-auto text-white">
           Com um andar inteiro dedicado à construção de um ambiente plural, criativo e inovador, a NAVE está de portas abertas para receber toda a comunidade de tecnologia e promover a transformação do futuro.
         </p>
       </div>

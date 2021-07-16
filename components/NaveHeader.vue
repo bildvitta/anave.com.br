@@ -3,9 +3,9 @@
     <header class="bg-white fixed inset nave-header py-5 shadow-md w-full z-50">
       <div class="flex flex-wrap items-center lg:container md:flex-row mx-5">
         <nuxt-link class="flex flex-row md:mb-0" to="/">
-          <img alt="NAVE - Espaço Nave" class="w-32" src="~/assets/img/nave-logo.svg" @click="scrollToTop">
+          <img alt="NAVE - Espaço Nave" class="md:w-32 w-20" src="~/assets/img/nave-logo.svg" @click="scrollToTop">
           <div v-if="!showMobileMenu" class="bg-gray-400 mx-6 my-1 nave-header__desktop-separator" />
-          <img v-if="!showMobileMenu" alt="NAVE - Espaço Nave" src="~/assets/img/bild-vitta-logo.svg" @click="scrollToTop">
+          <img v-if="!showMobileMenu" alt="NAVE - Espaço Nave" class="md:w-32 w-20" src="~/assets/img/bild-vitta-logo.svg" @click="scrollToTop">
         </nuxt-link>
 
         <nav class="hidden items-center justify-center lg:flex md:ml-auto">

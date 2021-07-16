@@ -1,6 +1,6 @@
 <template>
   <footer id="contact" class="nave-footer">
-    <div class="nave-footer__image py-20 space-x-2">
+    <div class="nave-footer__image py-20">
       <div class="flex flex-col hidden items-center lg:container md:flex md:flex-row md:items-end md:justify-between mx-5">
         <div class="text-white">
           <section class="md:text-left md:w-3/4 text-center">
@@ -23,16 +23,11 @@
               <nave-link-button class="bg-transparent border-2 border-white font-bold hover:bg-secondary-500 hover:border-secondary-500" :href="media.link" :icon="media.icon" :label="media.name" link="content.link" small target="_bank" />
             </div>
           </div>
-          <div class="flex md:hidden mt-8 space-x-2">
-            <div v-for="(media, index) in socialsLinks" :key="index">
-              <nave-link-button class="bg-transparent border-2 border-white font-bold hover:bg-secondary-500 hover:border-secondary-500" :href="media.link" :icon="media.icon" :label="media.name" link="content.link" small target="_bank" />
-            </div>
-          </div>
         </div>
         <!-- info -->
         <div class="text-white">
           <section class="flex flex-row md:text-left text-center">
-            <div class="font-bold mr-2 text-3xl">Vamos tomar um </div>
+            <div class="font-bold mr-2 text-3xl text-left">Vamos tomar um </div>
             <!-- typed -->
             <div class="flex font-bold text-3xl">
               <vue-typed-js :loop="true" :show-cursor="false" :strings="['café', 'capuccino', 'sorvete']">
@@ -85,7 +80,7 @@
               <div>contato@anave.com.br</div>
             </div>
           </section>
-          <div class="flex justify-between mt-8">
+          <div class="flex justify-center mt-8 space-x-2">
             <div v-for="(media, index) in socialsLinks" :key="index">
               <nave-link-button class="bg-transparent border-2 border-white" :href="media.link" :icon="media.icon" :label="media.name" link="content.link" small target="_bank" />
             </div>
