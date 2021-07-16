@@ -36,6 +36,7 @@
   }
 
   &__image {
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
@@ -50,7 +51,7 @@
     }
 
     &:hover {
-      background-image: url('../assets/img/img-header2.png');
+      background-size: 125%;
     }
   }
 
