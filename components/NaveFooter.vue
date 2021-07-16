@@ -3,7 +3,7 @@
     <div class="nave-footer__image py-20">
       <div class="flex flex-col hidden items-center lg:container md:flex md:flex-row md:items-end md:justify-between mx-5">
         <div class="text-white">
-          <section class="md:text-left md:w-3/4 text-center">
+          <section class="md:text-left text-center">
             <!-- logo -->
             <div class="flex justify-center mb-12 md:justify-start text-4xl">
               <img alt="logo nave" class="self-start w-48" src="@/assets/img/nave-logo-full.svg" style="max-width: 240px;">
@@ -14,7 +14,7 @@
           </section>
           <section class="md:text-left text-center">
             <a class="flex flex-row hover:text-primary-500 mt-6 text-primary-200" href="mailto:contato@anave.com.br">
-              <img alt="email icon" class="mr-2" src="../assets/img/email.svg">
+              <email-outline-icon class="mr-2" />
               <div>contato@anave.com.br</div>
             </a>
           </section>
@@ -25,8 +25,8 @@
           </div>
         </div>
         <!-- info -->
-        <div class="text-white">
-          <section class="flex flex-row md:text-left text-center">
+        <div class="md:w-5/12 text-white">
+          <section class="flex flex-row flex-wrap md:text-left text-center">
             <div class="font-bold mr-2 text-3xl text-left">Vamos tomar um </div>
             <!-- typed -->
             <div class="flex font-bold text-3xl">
@@ -45,7 +45,7 @@
               <div>Ribeirão Preto, São Paulo Brasil</div>
             </div>
             <a class="flex flex-row hover:text-primary-500 mt-6 text-primary-200" href="https://bit.ly/3vMYmob">
-              <img alt="Bild Vitta - NAVE" class="mr-2" src="../assets/img/location.svg">
+              <map-marker-outline-icon class="mr-2" />
               Como chegar?
             </a>
           </section>
@@ -75,10 +75,10 @@
             </div>
           </section>
           <section class="md:text-left text-center">
-            <div class="flex flex-row hover:text-primary-500 justify-center mt-6 text-center text-primary-200">
-              <img alt="email icon" class="mr-2" src="../assets/img/email.svg">
+            <a class="flex flex-row hover:text-primary-500 justify-center mt-6 text-center text-primary-200" href="mailto:contato@anave.com.br">
+              <email-outline-icon class="mr-2" />
               <div>contato@anave.com.br</div>
-            </div>
+            </a>
           </section>
           <div class="flex justify-center mt-8 space-x-2">
             <div v-for="(media, index) in socialsLinks" :key="index">
@@ -97,7 +97,7 @@
               <div>Ribeirão Preto, São Paulo Brasil</div>
             </div>
             <a class="flex flex-row hover:text-primary-500 justify-center mt-6 text-primary-200" href="https://bit.ly/3vMYmob" target="_blank">
-              <img alt="Bild Vitta - NAVE" class="mr-2" src="../assets/img/location.svg">
+              <map-marker-outline-icon class="mr-2" />
               Como chegar?
             </a>
           </section>
@@ -110,6 +110,9 @@
 <script>
 import Vue from 'vue'
 import VueTypedJs from 'vue-typed-js'
+import MapMarkerOutlineIcon from 'vue-material-design-icons/MapMarkerOutline.vue'
+import EmailOutlineIcon from 'vue-material-design-icons/EmailOutline.vue'
+
 Vue.use(VueTypedJs)
 
 const socials = [
@@ -118,6 +121,11 @@ const socials = [
   { name: 'Medium', link: 'https://medium.com/anave', icon: 'Medium' }
 ]
 export default {
+  components: {
+    MapMarkerOutlineIcon,
+    EmailOutlineIcon
+  },
+
   computed: {
     socialsLinks () {
       return socials

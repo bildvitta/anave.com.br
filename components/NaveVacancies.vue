@@ -47,38 +47,6 @@ const vacancies = [
     imgWebp: require('../assets/img/ilustra_po.png'),
     imgPng: require('../assets/img/ilustra_po.png'),
     link: 'https://bild.gupy.io/'
-  },
-  {
-    title: '',
-    resume: 'Pessoa desenvolvedora backend',
-    description: '',
-    imgWebp: require('../assets/img/ilustra_backend.png'),
-    imgPng: require('../assets/img/ilustra_backend.png'),
-    link: 'https://bild.gupy.io/jobs/656048'
-  },
-  {
-    title: '',
-    resume: 'Pessoa desenvolvedora frontend',
-    description: '',
-    imgWebp: require('../assets/img/ilustra_frontend.png'),
-    imgPng: require('../assets/img/ilustra_frontend.png'),
-    link: 'https://bild.gupy.io/jobs/689054'
-  },
-  {
-    title: '',
-    resume: 'Designer',
-    description: '',
-    imgWebp: require('../assets/img/ilustra_design.png'),
-    imgPng: require('../assets/img/ilustra_design.png'),
-    link: 'https://bild.gupy.io/jobs/575636?jobBoardSource=gupy_public_page'
-  },
-  {
-    title: '',
-    resume: 'Product Owner',
-    description: '',
-    imgWebp: require('../assets/img/ilustra_po.png'),
-    imgPng: require('../assets/img/ilustra_po.png'),
-    link: 'https://bild.gupy.io/'
   }
 ]
 
