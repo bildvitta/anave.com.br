@@ -1,10 +1,14 @@
 <template>
-  <a class="inline-block nave-link-button px-5 py-3"
+  <a class="inline-block nave-link-button"
      :class="linkButtonClasses"
      :href="link"
      @click="scrollTo(link)"
   >
-    {{ label }}
+    <div class="flex flex-row items-center">
+      <img v-if="icon" alt="Media icon" class="mr-2 nave-link-button__icon" :src="require(`~/assets/img/${icon}.svg`)">
+      {{ label }}
+    </div>
+
   </a>
 </template>
 
@@ -12,7 +16,7 @@
 import scrollHelper from '../mixins/scrollHelper'
 
 const backgroundColors = {
-  primary: 'bg-gradient-to-r from-primary hover:from-primary-500 hover:to-secondary-500 to-secondary',
+  secondary: 'bg-secondary-500 hover:bg-secondary-300',
   white: 'bg-white'
 }
 
@@ -50,6 +54,21 @@ export default {
     bgColor: {
       type: String,
       default: 'primary'
+    },
+
+    bgGradient: {
+      type: Boolean,
+      default: false
+    },
+
+    small: {
+      type: Boolean,
+      default: false
+    },
+
+    icon: {
+      type: String,
+      default: ''
     }
   },
 
@@ -59,11 +78,15 @@ export default {
     },
 
     linkButtonClasses () {
-      return [this.backgroundClass, this.borderRadius, this.textClass]
+      return [this.backgroundClass, this.borderRadius, this.textClass, this.isSmall]
     },
 
     backgroundClass () {
-      return backgroundColors[this.bgColor]
+      return this.bgGradient ? 'nave-link-button--gradient' : backgroundColors[this.bgColor]
+    },
+
+    isSmall () {
+      return this.small ? 'px-2 py-1 text-xs' : 'px-12 py-3'
     },
 
     textClass () {
@@ -72,3 +95,18 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+  .nave-link-button {
+    &--gradient {
+      background: radial-gradient(193.3% 139.39% at 49.97% 0%, #006dd2 0%, #062b55 100%);
+
+      &:hover {
+        background: #1785ec;
+      }
+    }
+
+    &__icon {
+      width: 15px;
+    }
+  }
+</style>

@@ -5,8 +5,10 @@
         <slot />
       </div>
     </div>
-    <div class="mr-8 nave-slider__button text-right">
-      <button ref="arrow" class="h-10" style="border: none; outline: inherit;" @click="next"><img class="w-10" :hidden="hiddenArrow" src="@/assets/img/proximo .png"></button>
+    <div class="mr-8 text-right">
+      <button ref="arrow" class="h-10 hover:bg-primary-100 rounded-full w-10" @click="next">
+        <img class="ml-2 w-5" :hidden="hiddenArrow" src="@/assets/img/proximo.png">
+      </button>
     </div>
   </div>
 </template>
@@ -87,6 +89,7 @@ export default {
 
       if (!event) {
         event = window.event
+        this.$ga.event('Scroll', 'Move Cards', 'Vacancies', true)
       }
 
       event.preventDefault()

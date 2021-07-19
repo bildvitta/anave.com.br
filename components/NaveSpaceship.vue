@@ -1,16 +1,17 @@
 <template>
   <nave-intersect :root-margin="rootMargin" @~enter="onEnter('spaceShip')">
-    <section id="spaceship" class="container grid grid-cols-12 nave-spaceship py-12">
-      <div class="col-end-12 col-start-1 lg:col-end-11 lg:col-start-3 lg:text-center">
-        <h2 class="font-bold mb-4 nave-spaceship__title text-4xl">Espaço Nave</h2>
-        <p class="block mb-10 mx-auto text-base text-gray-800">
+    <section id="spaceship" class="grid grid-cols-12 md:px-24 nave-spaceship nave-spaceship__background px-8 py-12 text-center">
+      <div class="col-span-12 col-start-1 lg:col-end-11 lg:col-start-3 text-center">
+        <h2 class="font-bold mb-4 text-4xl text-white">Espaço NAVE°</h2>
+        <p class="col-span-12 mb-10 mx-auto text-white">
           Com um andar inteiro dedicado à construção de um ambiente plural, criativo e inovador, a NAVE está de portas abertas para receber toda a comunidade de tecnologia e promover a transformação do futuro.
         </p>
       </div>
       <div v-if="renders.spaceShip" class="col-span-12 flex flex-wrap justify-between nave-spaceship__gallery">
         <picture v-for="(image, index) in spaceshipImages" :key="index" class="mb-4 nave-spaceship__gallery-picture self-start">
           <source :srcset="image.webp" type="image/webp">
-          <img alt="Alt Text!" class="nave-spaceship__gallery-image" :src="image.jpg">
+          <img alt="Alt Text!" class="md:hidden rounded-lg" :src="image.jpg">
+          <img alt="Alt Text!" class="hidden md:block nave-spaceship__gallery-image rounded-lg" :src="image.jpg">
         </picture>
       </div>
     </section>
@@ -65,6 +66,10 @@ export default {
 
 <style lang="scss">
 .nave-spaceship {
+  &__background {
+    background: linear-gradient(154.7deg, #d95720 19.81%, #f58b5e 92.7%);
+  }
+
   &__gallery-picture {
     width: calc(33% - 8px);
 
@@ -78,7 +83,13 @@ export default {
   }
 
   &__gallery-image {
-    border-radius: $default-radius;
+    filter: brightness(60%);
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      box-shadow: 2px 2px 32px -2px #892e07;
+      filter: brightness(100%);
+    }
   }
 }
 </style>

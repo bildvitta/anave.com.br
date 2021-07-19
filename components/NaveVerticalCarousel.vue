@@ -1,14 +1,14 @@
 <template>
   <div class="flex flex-col-reverse items-center lg:flex-row lg:order-1 nave-vertical-carousel w-full">
     <div class="flex flex-row h-auto justify-between lg:flex-col lg:h-70 lg:mt-0 lg:w-8 mt-20 nave-vertical-carousel__slider-items-wrapper relative sm:w-70 w-64">
-      <div v-for="item in phrasesLength" :key="item" class="cursor-pointer flex font-bold h-6 items-center justify-center lg:w-full nave-vertical-carousel__slide-number sm:h-8 sm:w-8 text-black w-6 z-2" :class="activateNumber(item - 1)" @click="changeActiveIndex(item)">
+      <div v-for="item in phrasesLength" :key="item" class="cursor-pointer flex font-bold h-6 items-center justify-center lg:w-full nave-vertical-carousel__slide-number sm:h-8 sm:w-8 text-orange-700 w-6 z-2" :class="activateNumber(item - 1)" @click="changeActiveIndex(item)">
         {{ item }}
       </div>
     </div>
 
     <div class="lg:w-7/12 mx-auto nave-vertical-carousel__text-area w-full">
       <transition animated enter-active-class="animate-text" mode="out-in">
-        <p v-if="showText" :key="activeIndex" class="break-words font-bold lg:px-0 lg:text-6xl nave-vertical-carousel__text px-4 text-5xl text-white w-full">{{ activeText.text }}</p>
+        <p v-if="showText" :key="activeIndex" class="break-words font-bold lg:px-0 lg:text-6xl md:text-5xl md:text-left nave-vertical-carousel__text px-4 text-3xl text-center text-white w-full">{{ activeText.text }}</p>
       </transition>
     </div>
   </div>
@@ -90,7 +90,7 @@ export default {
 .nave-vertical-carousel {
   &__slider-items-wrapper {
     &::after {
-      background-color: #fff;
+      background: linear-gradient(#f1f1f1 0%, #f1f1f1 46%, #f1f1f1 0%);
       content: "";
       display: block;
       height: 100%;
@@ -110,11 +110,11 @@ export default {
   }
 
   &__slide-number {
-    background-color: #fff;
+    background-color: #fce2d7;
     border-radius: 100%;
 
     &.is-active {
-      background-color: $color-primary;
+      background-color: #df622e;
       color: #fff;
     }
   }

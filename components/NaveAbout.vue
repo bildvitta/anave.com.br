@@ -1,5 +1,5 @@
 <template>
-  <section id="about" class="flex items-center nave-about py-24">
+  <section id="about" class="flex items-center md:py-24 nave-about py-16">
     <div class="grid grid-cols-12 items-center md:container mx-5">
       <div class="col-span-12 lg:col-span-6 lg:col-start-1">
         <nave-intersect :root-margin="rootMargin" @~enter="onEnter('youtubeEmbed')">
@@ -12,12 +12,20 @@
       </div>
 
       <div class="col-span-12 lg:col-span-5 lg:col-start-8 lg:mt-0 mt-10 nave-about__text-wrapper">
-        <h2 class="font-bold text-5xl text-white">O universo é o nosso quintal</h2>
-        <p class="mt-4 text-base text-white">
+        <h2 class="font-bold md:text-5xl text-2xl text-gray-900">O universo é o nosso quintal</h2>
+        <p class="mt-4 text-base text-gray-900">
           Estamos crescendo. E através de uma nova cultura de inovação e uma inteligência estratégica, estamos mudando o cenário de desenvolvimento e tecnologia no interior de São Paulo, aprimorando talentos e criando experiências para melhorar milhares de vidas. Tudo isso, porque acreditamos que a verdadeira inovação está nas pessoas e não na tecnologia.
-          A NAVE já está em órbita, rumo ao desconhecido e inspirador futuro!
         </p>
-        <img alt="Bild Vitta - NAVE" class="mt-6" src="../assets/img/Bild_Vitta.svg">
+        <p class="font-bold mt-12 text-gray-900">A <span class="text-primary-700">NAVE</span><span class="text-secondary-500">°</span> já está em órbita, rumo ao desconhecido e inspirador futuro!</p>
+        <div class="flex flex-row items-center md:mt-6 mt-12">
+          <a class="md:w-24 w-28" href="https://www.bild.com.br/" target="_blank">
+            <img alt="Bild Vitta - NAVE" class="nave-about__logo" src="../assets/img/logo-bild.svg">
+          </a>
+          <div class="bg-gray-400 mx-6 my-6 nave-about__separator self-stretch" />
+          <a class="mb-4 md:w-24 w-28" href="https://vittaresidencial.com.br/ribeirao-preto" target="_blank">
+            <img alt="Bild Vitta - NAVE" class="nave-about__logo" src="../assets/img/logo-vitta.svg">
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -34,22 +42,30 @@ export default {
 
   mixins: [
     intersect
-  ]
+  ],
+
+  mounted () {
+    this.$ga.page({
+      page: 'Section: About',
+      title: 'About',
+      location: window.location.href
+    })
+  }
 }
 </script>
 
 <style lang="scss">
   .nave-about {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+    &__separator {
+      width: 2px;
+    }
 
-  .webp .nave-about {
-    background-image: url('../assets/img/nave_tela-proposito_.webp');
-  }
+    &__logo {
+      transition: all 0.3s ease-out;
 
-  .no-webp .nave-about {
-    background-image: url('../assets/img/nave_tela-proposito_.png');
+      &:hover {
+        filter: opacity(50%);
+      }
+    }
   }
 </style>

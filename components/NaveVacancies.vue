@@ -1,10 +1,10 @@
 <template>
   <nave-intersect :root-margin="rootMargin" @~enter="onEnter('vacancies')">
-    <section id="vacancies" class="bg-primary nave-vacancies py-12">
-      <h2 class="font-bold leading-none mb-16 md:text-5xl sm:text-4xl text-3xl text-center text-white">Embarque na Nave</h2>
+    <section id="vacancies" class="bg-gray nave-vacancies py-12">
+      <h2 class="font-bold leading-none mb-16 md:px-24 md:text-5xl px-8 sm:text-4xl text-3xl text-gray-900">Embarque na 🚀 NAVE°</h2>
       <div v-if="renders.vacancies" class="overflow-hidden">
         <nave-slider>
-          <nave-card v-for="(vacancie, index) in vacanciesList" :key="index" class="nave-vacancies__card" classes="w-64 sm:w-350" :content="vacancie" />
+          <nave-card v-for="(vacancie, index) in vacanciesList" :key="index" class="nave-vacancies__card" classes="w-auto sm:w-350" :content="vacancie" />
         </nave-slider>
       </div>
     </section>
@@ -17,28 +17,36 @@ import naveIntersect from './NaveIntersect'
 
 const vacancies = [
   {
-    title: 'php',
-    resume: 'backend ',
-    description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.',
-    img: require('../assets/img/PHP-logo.png')
+    title: '',
+    resume: 'Pessoa desenvolvedora Backend',
+    description: '',
+    imgWebp: require('../assets/img/ilustra_backend.png'),
+    imgPng: require('../assets/img/ilustra_backend.png'),
+    link: 'https://bild.gupy.io/jobs/656048'
   },
   {
-    title: 'Rubi on Rails',
-    resume: ' backend',
-    description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.',
-    img: require('../assets/img/Ruby_On_Rails_Logo.png')
+    title: '',
+    resume: 'Pessoa desenvolvedora Frontend',
+    description: '',
+    imgWebp: require('../assets/img/ilustra_frontend.png'),
+    imgPng: require('../assets/img/ilustra_frontend.png'),
+    link: 'https://bild.gupy.io/jobs/689054'
   },
   {
-    title: 'VUE.JS',
-    resume: ' Frontend',
-    description: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um.modelos de tipos.',
-    img: require('../assets/img/vuejs.png')
+    title: '',
+    resume: 'Designer',
+    description: '',
+    imgWebp: require('../assets/img/ilustra_design.png'),
+    imgPng: require('../assets/img/ilustra_design.png'),
+    link: 'https://bild.gupy.io/jobs/575636?jobBoardSource=gupy_public_page'
   },
   {
-    title: 'php',
-    resume: 'Test',
-    description: 'é simplesmente uma simulação',
-    img: require('../assets/img/PHP-logo.png')
+    title: '',
+    resume: 'Product Owner',
+    description: '',
+    imgWebp: require('../assets/img/ilustra_po.png'),
+    imgPng: require('../assets/img/ilustra_po.png'),
+    link: 'https://bild.gupy.io/'
   }
 ]
 
@@ -55,6 +63,15 @@ export default {
     vacanciesList () {
       return vacancies
     }
+  },
+
+  mounted () {
+    this.$ga.screenview('Vacancies')
+    this.$ga.page({
+      page: 'Section: Vacancies',
+      title: 'Vacancies',
+      location: window.location.href
+    })
   }
 }
 </script>
@@ -62,20 +79,14 @@ export default {
 <style lang="scss">
 .nave-vacancies {
   &__card {
-    min-height: 420px;
+    min-height: 366px;
 
     &:last-child {
-      padding-right: 20px;
+      margin-right: 20px;
     }
 
     & + & {
-      margin-left: 90px;
-    }
-  }
-
-  @media screen and (max-width: 640px) {
-    &__card + &__card {
-      margin-left: 30px;
+      margin-left: 24px;
     }
   }
 }

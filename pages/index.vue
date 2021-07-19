@@ -7,7 +7,8 @@
     <nave-about data-active-link="about" />
 
     <!-- Seção Nosso Time -->
-    <nave-our-team data-active-link="team" />
+    <!-- TODO seção oculta por ora, aguardando conteúdo -->
+    <!-- <nave-our-team data-active-link="team" /> -->
 
     <!-- Seção Believe -->
     <nave-believe data-active-link="believe" />
